@@ -1,0 +1,236 @@
+---
+---
+
+<div
+  id="search-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="search-modal-title"
+  class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-sm p-0 sm:p-6 md:p-10"
+>
+  <div class="mx-auto flex h-full sm:h-auto sm:max-h-[85vh] w-full max-w-3xl flex-col bg-white sm:rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+    <div class="flex items-center gap-3 border-b border-slate-200 px-4 py-3.5 sm:px-6">
+      <svg class="w-5 h-5 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-3.5-3.5" stroke-linecap="round" />
+      </svg>
+      <label for="modal-search-input" id="search-modal-title" class="sr-only">全站中文智能搜索</label>
+      <input
+        id="modal-search-input"
+        type="search"
+        autocomplete="off"
+        placeholder="搜索设备、品牌、AI或故障，例如：苹果手机、Windows 11、ChatGPT、节点超时、灵动云..."
+        class="w-full min-h-[44px] bg-transparent text-base text-slate-900 placeholder:text-slate-400 focus:outline-none"
+      />
+      <button
+        type="button"
+        id="close-search-btn"
+        aria-label="关闭搜索"
+        class="min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 cursor-pointer"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="flex items-center gap-1.5 overflow-x-auto border-b border-slate-100 bg-slate-50/70 px-4 py-2.5 sm:px-6 text-xs font-semibold">
+      {[
+        { id: 'all', label: '全部' },
+        { id: 'brand', label: '品牌' },
+        { id: 'device', label: '设备' },
+        { id: 'ai', label: 'AI' },
+        { id: 'streaming', label: '流媒体' },
+        { id: 'beginners', label: '新手知识' },
+        { id: 'safety', label: '安全' },
+        { id: 'troubleshooting', label: '排障' },
+      ].map((cat) => (
+        <button
+          type="button"
+          data-modal-cat={cat.id}
+          class:list={[
+            'modal-cat-btn shrink-0 min-h-[36px] px-3 py-1 rounded-full border transition-colors cursor-pointer',
+            cat.id === 'all'
+              ? 'bg-blue-600 text-white border-blue-600'
+              : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300',
+          ]}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <!-- Results -->
+    <div id="modal-search-results" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-2.5">
+      <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">热门百科检索词（支持中文同义词匹配）</div>
+      <div class="flex flex-wrap gap-2">
+        {['Windows 11', '苹果手机', '小米', '华为', 'OpenWrt', 'ChatGPT', 'Claude', 'Gemini', 'Netflix', 'YouTube', '订阅失效', '节点超时', 'DNS', '流量倍率', '机场是什么', '灵动云', '暮光加速'].map((tag) => (
+          <button
+            type="button"
+            data-quick-q={tag}
+            class="quick-q-btn min-h-[38px] px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-blue-50 hover:text-blue-700 text-slate-700 text-xs font-semibold transition-colors cursor-pointer"
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between border-t border-slate-100 bg-slate-50 px-4 py-2.5 sm:px-6 text-xs text-slate-500">
+      <span>按 <kbd class="px-1.5 py-0.5 rounded bg-white border border-slate-200">↑</kbd> <kbd class="px-1.5 py-0.5 rounded bg-white border border-slate-200">↓</kbd> 选择 · <kbd class="px-1.5 py-0.5 rounded bg-white border border-slate-200">Enter</kbd> 打开完整结果</span>
+      <a id="modal-full-search-link" href="/search/" class="font-semibold text-blue-600 hover:underline">前往独立搜索页 →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { loadSearchAssets, searchDocuments, highlightText, type SearchDoc } from '../utils/search-client';
+
+  (() => {
+    const modal = document.getElementById('search-modal');
+    const openBtn = document.getElementById('open-search-btn');
+    const closeBtn = document.getElementById('close-search-btn');
+    const input = document.getElementById('modal-search-input') as HTMLInputElement | null;
+    const resultsBox = document.getElementById('modal-search-results');
+    const fullLink = document.getElementById('modal-full-search-link') as HTMLAnchorElement | null;
+    const catBtns = document.querySelectorAll('.modal-cat-btn');
+
+    if (!modal || !input || !resultsBox) return;
+
+    let currentCat = 'all';
+    let selectedIdx = -1;
+    let currentMatches: Array<{ doc: SearchDoc; expandedTerms: string[] }> = [];
+
+    function openModal(initialQuery = '') {
+      modal!.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      if (initialQuery) {
+        input!.value = initialQuery;
+        runSearch();
+      }
+      setTimeout(() => input!.focus(), 30);
+    }
+
+    function closeModal() {
+      modal!.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openBtn?.addEventListener('click', () => openModal());
+    closeBtn?.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.key === '/' || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k')) && document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        openModal();
+      } else if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    document.querySelectorAll('[data-open-search-query]').forEach((el) => {
+      el.addEventListener('click', () => {
+        const q = el.getAttribute('data-open-search-query') || '';
+        openModal(q);
+      });
+    });
+
+    resultsBox.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('[data-quick-q]');
+      if (btn) {
+        input.value = btn.getAttribute('data-quick-q') || '';
+        runSearch();
+      }
+    });
+
+    catBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentCat = btn.getAttribute('data-modal-cat') || 'all';
+        catBtns.forEach((b) => {
+          const active = b.getAttribute('data-modal-cat') === currentCat;
+          b.className = `modal-cat-btn shrink-0 min-h-[36px] px-3 py-1 rounded-full border transition-colors cursor-pointer ${
+            active ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300'
+          }`;
+        });
+        runSearch();
+      });
+    });
+
+    async function runSearch() {
+      const q = input!.value.trim();
+      if (fullLink) {
+        fullLink.href = q ? `/search/?q=${encodeURIComponent(q)}` : '/search/';
+      }
+      if (!q) {
+        selectedIdx = -1;
+        currentMatches = [];
+        return;
+      }
+
+      const { docs, synonyms } = await loadSearchAssets();
+      const matches = searchDocuments(docs, synonyms, q, currentCat).slice(0, 14);
+      currentMatches = matches;
+      selectedIdx = -1;
+
+      if (matches.length === 0) {
+        resultsBox!.innerHTML = `
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center space-y-3">
+            <p class="text-sm font-bold text-slate-800">未找到与“${q.replace(/</g, '&lt;')}”直接匹配的知识条目</p>
+            <p class="text-xs text-slate-600">可尝试简化关键词，或浏览以下热门百科专题：</p>
+            <div class="flex flex-wrap justify-center gap-2">
+              <a href="/devices/" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-blue-700 hover:border-blue-400">设备教程中心</a>
+              <a href="/beginners/" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-blue-700 hover:border-blue-400">新手入门百科</a>
+              <a href="/troubleshooting/" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-blue-700 hover:border-blue-400">网络排障中心</a>
+              <a href="/brands/" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-blue-700 hover:border-blue-400">18家品牌目录</a>
+            </div>
+          </div>`;
+        return;
+      }
+
+      resultsBox!.innerHTML = matches
+        .map(
+          (m, idx) => `
+          <a href="${m.doc.url}" data-result-idx="${idx}" class="search-res-item block rounded-2xl border border-slate-200 bg-white p-3.5 hover:border-blue-400 hover:bg-blue-50/40 transition-colors">
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span class="inline-flex items-center rounded-md bg-blue-50 text-blue-700 px-2 py-0.5 text-[11px] font-bold">${m.doc.kindLabel}</span>
+              <span class="text-[11px] text-slate-500">${m.doc.meta || m.doc.category}</span>
+            </div>
+            <div class="text-sm font-bold text-slate-900">${highlightText(m.doc.title, m.expandedTerms)}</div>
+            <div class="mt-0.5 text-xs text-slate-600 line-clamp-2">${highlightText(m.doc.subtitle || m.doc.body, m.expandedTerms)}</div>
+          </a>`
+        )
+        .join('');
+    }
+
+    input.addEventListener('input', () => {
+      runSearch();
+    });
+
+    input.addEventListener('keydown', (e) => {
+      const items = resultsBox.querySelectorAll('.search-res-item');
+      if (e.key === 'ArrowDown' && items.length > 0) {
+        e.preventDefault();
+        selectedIdx = Math.min(selectedIdx + 1, items.length - 1);
+        items.forEach((el, i) => el.classList.toggle('ring-2', i === selectedIdx));
+        items[selectedIdx]?.scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'ArrowUp' && items.length > 0) {
+        e.preventDefault();
+        selectedIdx = Math.max(selectedIdx - 1, 0);
+        items.forEach((el, i) => el.classList.toggle('ring-2', i === selectedIdx));
+        items[selectedIdx]?.scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter') {
+        if (selectedIdx >= 0 && currentMatches[selectedIdx]) {
+          e.preventDefault();
+          window.location.href = currentMatches[selectedIdx].doc.url;
+        } else if (input.value.trim()) {
+          e.preventDefault();
+          window.location.href = `/search/?q=${encodeURIComponent(input.value.trim())}`;
+        }
+      }
+    });
+  })();
+</script>

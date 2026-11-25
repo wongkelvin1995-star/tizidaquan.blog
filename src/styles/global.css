@@ -1,0 +1,281 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --bg-glacier: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --accent-blue: #2563EB;
+  --accent-blue-dark: #1D4ED8;
+  --accent-cyan: #06B6D4;
+  --accent-purple: #8B5CF6;
+  --deep-sea: #0F172A;
+  --text-body: #334155;
+  --text-secondary: #64748B;
+  --border-subtle: #E2E8F0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  background-color: var(--bg-glacier);
+  color: var(--deep-sea);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: clip;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-body);
+  background-color: var(--bg-glacier);
+}
+
+/* Section Ambient Gradients — Ladder Encyclopedia ULTIMATE MAX */
+.bg-zone-hero {
+  background: linear-gradient(155deg, #F8FAFC 0%, #EFF6FF 55%, #E0F2FE 100%);
+  background-size: 180% 180%;
+  animation: ambientShift 18s ease-in-out infinite alternate;
+}
+
+.bg-zone-devices {
+  background: linear-gradient(160deg, #EFF6FF 0%, #ECFEFF 52%, #F0F9FF 100%);
+}
+
+.bg-zone-ai {
+  background: linear-gradient(160deg, #F5F3FF 0%, #EDE9FE 42%, #EFF6FF 100%);
+}
+
+.bg-zone-streaming {
+  background: linear-gradient(165deg, #FFFFFF 0%, #FDF2F8 54%, #FFF1F2 100%);
+}
+
+.bg-zone-beginners {
+  background: linear-gradient(165deg, #ECFDF5 0%, #F0FDF4 50%, #F8FAFC 100%);
+}
+
+.bg-zone-safety {
+  background: linear-gradient(165deg, #F8FAFC 0%, #F1F5F9 52%, #F5F3FF 100%);
+}
+
+.bg-zone-footer {
+  background: linear-gradient(145deg, #0F172A 0%, #1E293B 55%, #172554 100%);
+}
+
+@keyframes ambientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-slow {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+.float-delayed {
+  animation: floatGentle 7.2s ease-in-out 1.4s infinite;
+}
+
+/* Glass header */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* Bento surface */
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 26px -10px rgba(37, 99, 235, 0.08);
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  border-color: #BFDBFE;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05), 0 18px 34px -12px rgba(37, 99, 235, 0.14);
+}
+
+/* Interactive buttons with tactile feedback & minimum 44px touch target */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.875rem;
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: transform 0.16s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.24);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.32);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.625rem 1.15rem;
+  border-radius: 0.875rem;
+  background: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid #CBD5E1;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: transform 0.16s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #2563EB;
+  background-color: #EFF6FF;
+}
+
+/* Smooth reveal that NEVER hides content when JS is disabled or slow */
+.reveal-section {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.48s ease, transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js-enhanced .reveal-section[data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.js-enhanced .reveal-section[data-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive table scroll wrapper */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 1rem;
+  border: 1px solid var(--border-subtle);
+  background: #FFFFFF;
+}
+
+.table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.table-scroll th {
+  background: #F8FAFC;
+  color: #0F172A;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  white-space: nowrap;
+}
+
+.table-scroll td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+  vertical-align: top;
+}
+
+.table-scroll tr:last-child td {
+  border-bottom: none;
+}
+
+/* Professional reading prose */
+.prose-encyclopedia {
+  color: #334155;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+
+.prose-encyclopedia h2 {
+  color: #0F172A;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 2.25rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  scroll-margin-top: 5.5rem;
+}
+
+.prose-encyclopedia h3 {
+  color: #0F172A;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.65rem;
+  scroll-margin-top: 5.5rem;
+}
+
+.prose-encyclopedia a {
+  color: #2563EB;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-encyclopedia table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Mobile & reduced motion optimizations */
+@media (max-width: 768px) {
+  .bg-zone-hero {
+    animation: none;
+    background-size: 100% 100%;
+  }
+  .float-slow, .float-delayed {
+    animation: none;
+  }
+  .bento-card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .bg-zone-hero,
+  .float-slow,
+  .float-delayed {
+    animation: none !important;
+  }
+  .bento-card,
+  .btn-primary,
+  .btn-secondary,
+  .reveal-section {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

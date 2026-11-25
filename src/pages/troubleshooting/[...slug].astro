@@ -1,0 +1,50 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('troubleshooting', ({ data }) => !data.draft);
+  return entries.map((entry) => {
+    const slug = (entry.data.slug || entry.id.replace(/\.md$/, '')).replace(/^\/+|\/+$/g, '');
+    return {
+      params: { slug },
+      props: { entry, slug },
+    };
+  });
+}
+
+const { entry, slug } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const relatedLinks = [
+  { title: '智能网络故障排查助手', href: '/troubleshooting/', tag: '排障导航' },
+  { title: '机场客服售后怎么判断', href: '/safety/customer-support/', tag: '客服求助' },
+  { title: '系统代理与TUN原理', href: '/beginners/system-proxy/', tag: '底层原理' },
+  { title: '设备与系统兼容中心', href: '/devices/', tag: '设备教程' },
+];
+---
+
+<KnowledgeLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  category={entry.data.category}
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '故障排查', url: '/troubleshooting/' },
+    { name: entry.data.primaryKeyword, url: `/troubleshooting/${slug}/` },
+  ]}
+  publishDate={entry.data.publishDate}
+  updatedDate={entry.data.updatedDate}
+  documentedVersion={entry.data.documentedVersion}
+  author={entry.data.author}
+  headings={headings}
+  faqs={entry.data.faqs}
+  howToSteps={entry.data.howToSteps}
+  relatedBrands={entry.data.relatedBrands}
+  relatedLinks={relatedLinks}
+  sources={entry.data.sources}
+  indexable={entry.data.indexable}
+  canonicalPath={`/troubleshooting/${slug}/`}
+>
+  <Content />
+</KnowledgeLayout>

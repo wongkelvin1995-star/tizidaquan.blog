@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '全站中文搜索', url: '/search/' },
+];
+---
+
+<BaseLayout
+  title="全站中文智能搜索｜梯子大全知识百科"
+  description="搜索梯子大全中的设备教程、18家机场品牌档案、AI与流媒体知识、新手概念、安全核验及故障排查指南。"
+  canonicalPath="/search/"
+  indexable={false}
+  schemas={[buildBreadcrumbSchema(breadcrumbs)]}
+>
+  <section class="bg-zone-hero border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="text-slate-800 font-semibold">全站中文搜索</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">全站中文智能搜索</h1>
+      <p class="mt-2 text-sm sm:text-base text-slate-600">
+        支持中文部分词匹配、同义词扩展（如 苹果手机 ↔ iPhone、安卓 ↔ Android、小火箭 ↔ Shadowrocket、V2云 ↔ 唯兔云）、多关键词与分类筛选。
+      </p>
+
+      <form id="page-search-form" class="mt-6 flex flex-col sm:flex-row gap-3">
+        <label for="page-search-input" class="sr-only">输入搜索关键词</label>
+        <input
+          id="page-search-input"
+          name="q"
+          type="search"
+          autocomplete="off"
+          placeholder="输入关键词，例如：Windows 11、苹果手机、ChatGPT、Netflix、订阅失效、灵动云..."
+          class="flex-1 min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 shadow-xs focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+        />
+        <button type="submit" class="btn-primary min-h-[48px] px-6 cursor-pointer">
+          立即搜索
+        </button>
+      </form>
+
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <span class="text-slate-500 py-1 font-semibold">快捷测试词：</span>
+        {['Windows 11', '苹果手机', '小米', '华为', 'OPPO', 'OpenWrt', 'ChatGPT', 'Claude', 'Gemini', 'Netflix', 'YouTube', '订阅失效', '节点超时', 'DNS', '流量倍率', '机场是什么', '灵动云', '暮光加速'].map((tag) => (
+          <button
+            type="button"
+            data-page-quick={tag}
+            class="page-quick-btn rounded-xl bg-white border border-slate-200 px-3 py-1.5 font-semibold text-slate-700 hover:border-blue-400 hover:text-blue-700 cursor-pointer"
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+    <!-- Category Tabs -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 border-b border-slate-200 text-xs sm:text-sm font-semibold">
+      {[
+        { id: 'all', label: '全部结果' },
+        { id: 'brand', label: '机场品牌' },
+        { id: 'device', label: '设备教程' },
+        { id: 'ai', label: 'AI 知识' },
+        { id: 'streaming', label: '流媒体' },
+        { id: 'beginners', label: '新手百科' },
+        { id: 'safety', label: '安全隐私' },
+        { id: 'troubleshooting', label: '故障排查' },
+      ].map((cat) => (
+        <button
+          type="button"
+          data-page-cat={cat.id}
+          class:list={[
+            'page-cat-btn shrink-0 min-h-[40px] px-4 py-1.5 rounded-xl border transition-colors cursor-pointer',
+            cat.id === 'all'
+              ? 'bg-blue-600 text-white border-blue-600'
+              : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300',
+          ]}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <div id="page-search-summary" class="text-sm text-slate-600 mb-4"></div>
+    <div id="page-search-results" class="space-y-3"></div>
+    <div id="page-search-pagination" class="mt-8 flex items-center justify-center gap-2"></div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { loadSearchAssets, searchDocuments, highlightText } from '../utils/search-client';
+
+  (() => {
+    const form = document.getElementById('page-search-form') as HTMLFormElement | null;
+    const input = document.getElementById('page-search-input') as HTMLInputElement | null;
+    const summaryEl = document.getElementById('page-search-summary');
+    const resultsEl = document.getElementById('page-search-results');
+    const paginationEl = document.getElementById('page-search-pagination');
+    const catBtns = document.querySelectorAll('.page-cat-btn');
+    const quickBtns = document.querySelectorAll('.page-quick-btn');
+
+    if (!form || !input || !summaryEl || !resultsEl || !paginationEl) return;
+
+    let currentCat = 'all';
+    let currentPage = 1;
+    const PAGE_SIZE = 12;
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('q')) {
+      input.value = params.get('q') || '';
+    }
+
+    function updateUrl(q: string) {
+      const next = q ? `/search/?q=${encodeURIComponent(q)}` : '/search/';
+      window.history.replaceState({}, '', next);
+    }
+
+    async function executeSearch() {
+      const q = input!.value.trim();
+      updateUrl(q);
+
+      const { docs, synonyms } = await loadSearchAssets();
+
+      if (!q) {
+        summaryEl!.textContent = `当前知识库已索引 ${docs.length} 条百科记录（含 18 家品牌、设备教程、AI 与流媒体、新手与排障专题）。请输入关键词开始检索。`;
+        const featured = docs.filter((d) => d.kind === 'device' || d.kind === 'brand').slice(0, 8);
+        resultsEl!.innerHTML = featured
+          .map(
+            (doc) => `
+            <a href="${doc.url}" class="block bento-card p-4 sm:p-5 hover:border-blue-400">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span class="rounded-md bg-blue-50 text-blue-700 px-2.5 py-0.5 text-xs font-bold">${doc.kindLabel}</span>
+                <span class="text-xs text-slate-500">${doc.meta || doc.category}</span>
+              </div>
+              <h2 class="text-base font-extrabold text-slate-900">${doc.title}</h2>
+              <p class="mt-1 text-sm text-slate-600">${doc.subtitle}</p>
+            </a>`
+          )
+          .join('');
+        paginationEl!.innerHTML = '';
+        return;
+      }
+
+      const matches = searchDocuments(docs, synonyms, q, currentCat);
+      const totalPages = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = 1;
+
+      summaryEl!.innerHTML = `关键词 <strong>“${q.replace(/</g, '&lt;')}”</strong> 共找到 <strong>${matches.length}</strong> 条相关百科内容`;
+
+      if (matches.length === 0) {
+        resultsEl!.innerHTML = `
+          <div class="bento-card p-6 sm:p-8 text-center space-y-4">
+            <h2 class="text-lg font-extrabold text-slate-900">未找到完全匹配的条目</h2>
+            <p class="text-sm text-slate-600">您可以尝试更换近义词（例如“小火箭”或“iPhone”），或直接进入以下热门知识栏目：</p>
+            <div class="flex flex-wrap justify-center gap-2.5">
+              <a href="/devices/" class="btn-secondary text-xs">设备与系统教程</a>
+              <a href="/ai/" class="btn-secondary text-xs">AI 网络知识</a>
+              <a href="/streaming/" class="btn-secondary text-xs">流媒体知识</a>
+              <a href="/beginners/" class="btn-secondary text-xs">新手百科</a>
+              <a href="/troubleshooting/" class="btn-secondary text-xs">网络故障排查</a>
+              <a href="/brands/" class="btn-secondary text-xs">18 家品牌目录</a>
+            </div>
+          </div>`;
+        paginationEl!.innerHTML = '';
+        return;
+      }
+
+      const slice = matches.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+      resultsEl!.innerHTML = slice
+        .map(
+          (m) => `
+          <a href="${m.doc.url}" class="block bento-card p-4 sm:p-5 hover:border-blue-400">
+            <div class="flex items-center justify-between gap-2 mb-1.5">
+              <span class="rounded-md bg-blue-50 text-blue-700 px-2.5 py-0.5 text-xs font-bold">${m.doc.kindLabel}</span>
+              <span class="text-xs text-slate-500">${m.doc.meta || m.doc.category}</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900">${highlightText(m.doc.title, m.expandedTerms)}</h2>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">${highlightText(m.doc.subtitle || m.doc.body, m.expandedTerms)}</p>
+          </a>`
+        )
+        .join('');
+
+      if (totalPages > 1) {
+        paginationEl!.innerHTML = Array.from({ length: totalPages }, (_, i) => i + 1)
+          .map(
+            (p) => `<button type="button" data-page="${p}" class="page-num-btn min-h-[40px] min-w-[40px] rounded-xl border text-sm font-bold cursor-pointer ${
+              p === currentPage ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400'
+            }">${p}</button>`
+          )
+          .join('');
+        paginationEl!.querySelectorAll('.page-num-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            currentPage = Number(btn.getAttribute('data-page')) || 1;
+            executeSearch();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        });
+      } else {
+        paginationEl!.innerHTML = '';
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      currentPage = 1;
+      executeSearch();
+    });
+
+    input.addEventListener('input', () => {
+      currentPage = 1;
+      executeSearch();
+    });
+
+    catBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentCat = btn.getAttribute('data-page-cat') || 'all';
+        currentPage = 1;
+        catBtns.forEach((b) => {
+          const active = b.getAttribute('data-page-cat') === currentCat;
+          b.className = `page-cat-btn shrink-0 min-h-[40px] px-4 py-1.5 rounded-xl border transition-colors cursor-pointer ${
+            active ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-600 border-slate-200 hover:border-blue-300'
+          }`;
+        });
+        executeSearch();
+      });
+    });
+
+    quickBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        input.value = btn.getAttribute('data-page-quick') || '';
+        currentPage = 1;
+        executeSearch();
+      });
+    });
+
+    executeSearch();
+  })();
+</script>

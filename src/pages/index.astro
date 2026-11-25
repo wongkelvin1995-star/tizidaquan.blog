@@ -1,0 +1,568 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BrandCard from '../components/BrandCard.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import DeviceAssistant from '../components/DeviceAssistant.astro';
+import TroubleshootingAssistant from '../components/TroubleshootingAssistant.astro';
+import brandsData from '../data/brands.json';
+import devicesData from '../data/device-compatibility.json';
+import scenariosData from '../data/service-scenarios.json';
+import { getCollection } from 'astro:content';
+import { buildWebSiteSchema, buildOrganizationSchema, buildFaqSchema } from '../utils/site';
+
+const allArticles = (await getCollection('articles', ({ data }) => !data.draft)).slice(0, 9);
+
+const HOME_FAQS = [
+  {
+    q: '梯子大全与常见的“机场推荐排行站”有什么区别？',
+    a: '梯子大全（tizidaquan.blog）专注于设备与操作系统配置教程、AI 与流媒体网络知识、新手基础概念、隐私安全及常见连接故障排查。首页与目录中的 18 家机场品牌顺序属于编辑展示与资料索引顺序，不伪造任何测速跑分、延迟排名或主观个人使用体验。',
+  },
+  {
+    q: '新手第一次购买机场，如何防止买到与自己设备不兼容的套餐？',
+    a: '下单前务必先使用本页“智能设备选择助手”或浏览设备教程中心核对两点：① 自己的系统版本是否符合要求（如 Windows 7 已停止安全支持、华为鸿蒙须区分 HarmonyOS 3/4 与不支持安卓 APK 的 HarmonyOS NEXT）；② 确认自己需要封闭官方客户端还是开放第三方订阅（OpenWrt 路由器、Linux 或小火箭均依赖后者）。',
+  },
+  {
+    q: '为什么用香港节点经常打不开 ChatGPT、Claude、Gemini 或 TikTok？',
+    a: '因为 OpenAI、Anthropic、Google Gemini 与 TikTok 国际版官方支持地区列表均未包含中国香港。无论线路本身速度如何，只要出口 IP 位于香港就会触发地区拦截。使用上述工具请切换到日本、新加坡、台湾或美国节点，并避免短时间内跨多国频繁切换。',
+  },
+  {
+    q: '苹果手机使用机场必须花钱购买 Shadowrocket（小火箭）吗？',
+    a: '不一定。18 家品牌中已有多家（如微风网络、隐形人、FLYV、Firefly、Sogo云、暮光加速）主打官方自研 iOS 客户端或通过 Nextin 输入品牌识别码直接账号登录，不支持导入第三方订阅；只有明确支持第三方通用订阅的品牌才适合在海外区 App Store 购买正版小火箭配合使用。',
+  },
+  {
+    q: '为什么在后台翻了半天找不到“复制订阅链接”按钮？',
+    a: '2026 年以来，多家机场为防止订阅 URL 外泄被盗用造成节点拥挤，已暂停对新订单发放通用订阅链接，改为纯官方客户端账号登录模式。遇到找不到订阅链接时，先核对品牌客户端政策，切勿强行把网页登录地址复制进 Clash 导入。',
+  },
+  {
+    q: '机场标注的“全节点 1× 倍率”和“2× 倍率”有什么实际影响？',
+    a: '倍率是实际扣除流量的乘数系数。在 1× 节点传输 1GB 数据扣除 1GB 套餐流量；在 2× 节点看 1GB 视频则会扣除 2GB 额度。看重流量准确可控的用户可关注明确标注全节点 1× 倍率的品牌，同时日常务必使用规则分流（Rule）避免国内业务消耗套餐流量。',
+  },
+  {
+    q: '客户端显示“已连接”，为什么浏览器却完全打不开任何网站？',
+    a: '界面显示“已连接”并不等于流量未耗尽或端口正常响应。高频原因包括：① 当月流量已用光或套餐今天到期；② 上次异常关机留下错误的 127.0.0.1 系统代理端口残留；③ 同时运行了多款代理软件或浏览器开启了冲突的安全 DNS (DoH)。',
+  },
+  {
+    q: '如何判断机场官网真假，防止误入仿冒钓鱼下载站？',
+    a: '浏览器地址栏带有 HTTPS 小绿锁不能单独证明网站就是真官网，因为钓鱼站同样可以申请免费证书。请通过注册时官方邮件或公告频道保存防失联主入口，核对页面历史订单数据，并坚持仅在官网用户中心或开源项目官方 GitHub Release 下载客户端，切勿在网盘下载压缩包或关闭系统核心防护。',
+  },
+  {
+    q: '周期套餐每月没用完的流量能结转到下个月吗？',
+    a: '18 家品牌的常规周期订阅套餐普遍采用按月或每 30 天周期重置，当期未用完流量不清零结转。如果每月用量极不稳定或仅需备用，建议留意各品牌提供的“不限时一次性流量包”。',
+  },
+];
+
+const schemas = [buildWebSiteSchema(), buildOrganizationSchema(), buildFaqSchema(HOME_FAQS)];
+
+const featuredBrands = brandsData.slice(0, 6);
+const desktopDevices = devicesData.filter((d) => ['windows-11', 'windows-10', 'windows-7', 'macos', 'linux', 'router', 'openwrt', 'chrome', 'edge'].includes(d.id));
+const mobileDevices = devicesData.filter((d) => ['iphone', 'ipad', 'android', 'oppo', 'xiaomi', 'huawei'].includes(d.id));
+---
+
+<BaseLayout
+  title="2026梯子大全｜设备使用教程、机场新手指南与网络问题排查"
+  description="梯子大全提供2026网络工具知识、Windows、Mac、iPhone、安卓及路由器使用教程，涵盖机场订阅、AI与流媒体网络问题、新手入门、安全隐私及常见连接故障排查。"
+  canonicalPath="/"
+  schemas={schemas}
+>
+  <!-- 1. 科技百科 Hero -->
+  <section class="bg-zone-hero border-b border-slate-200/80 py-10 sm:py-16 lg:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/90 border border-blue-200 px-3.5 py-1.5 text-xs font-bold text-blue-700 shadow-2xs">
+            <span class="h-2 w-2 rounded-full bg-cyan-500"></span>
+            梯子大全 · Ladder Encyclopedia ULTIMATE MAX
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+            2026 梯子大全
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl">
+            汇集机场品牌、网络工具、Windows与手机使用教程、AI与流媒体网络知识、新手入门及安全排障指南，帮助用户系统了解网络服务及解决常见使用问题。
+          </p>
+
+          <!-- Full-site Chinese Intelligent Search Bar -->
+          <form action="/search/" method="get" class="pt-1">
+            <div class="flex flex-col sm:flex-row gap-2.5 max-w-2xl">
+              <div class="relative flex-1">
+                <label for="hero-search-q" class="sr-only">搜索梯子大全知识百科</label>
+                <input
+                  id="hero-search-q"
+                  name="q"
+                  type="search"
+                  placeholder="搜索设备、品牌、AI或故障：如 Windows 11、苹果手机、ChatGPT、节点超时..."
+                  class="w-full min-h-[50px] rounded-2xl border border-slate-300 bg-white pl-11 pr-4 py-3 text-sm sm:text-base text-slate-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                />
+                <svg class="w-5 h-5 text-blue-600 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M20 20l-3.5-3.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <button type="submit" class="btn-primary min-h-[50px] px-6 shrink-0 cursor-pointer">
+                中文智能搜索
+              </button>
+            </div>
+            <div class="mt-3 flex flex-wrap items-center gap-2 text-xs">
+              <span class="font-semibold text-slate-500">高频直达：</span>
+              {['Windows 11', '苹果手机', '华为', 'OpenWrt', 'ChatGPT', 'Netflix', '订阅失效', '流量倍率', '灵动云'].map((kw) => (
+                <button
+                  type="button"
+                  data-open-search-query={kw}
+                  class="rounded-full bg-white/90 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 px-3 py-1 font-semibold text-slate-700 hover:text-blue-700 transition-colors cursor-pointer"
+                >
+                  {kw}
+                </button>
+              ))}
+            </div>
+          </form>
+
+          <div class="pt-2 flex flex-wrap gap-3 text-xs sm:text-sm text-slate-600">
+            <span class="inline-flex items-center gap-1.5 rounded-xl bg-white/80 border border-slate-200 px-3 py-1.5 font-semibold">15 类设备与系统终端</span>
+            <span class="inline-flex items-center gap-1.5 rounded-xl bg-white/80 border border-slate-200 px-3 py-1.5 font-semibold">18 家已核对品牌档案</span>
+            <span class="inline-flex items-center gap-1.5 rounded-xl bg-white/80 border border-slate-200 px-3 py-1.5 font-semibold">100 项结构化知识专题</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-3xl bg-white/75 border border-white shadow-lg p-3 sm:p-5 backdrop-blur-sm">
+            <img
+              src="/illustrations/hero-encyclopedia.svg"
+              alt="梯子大全多设备网络知识与科技地球插画"
+              width="560"
+              height="440"
+              loading="eager"
+              fetchpriority="high"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 知识快捷入口 -->
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 reveal-section">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-6">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">网络工具知识百科快捷入口</h2>
+        <p class="text-sm text-slate-600 mt-1">按使用阶段与核心场景进入对应知识专题，避免在零散重复内容中迷失。</p>
+      </div>
+      <a href="/beginners/choosing-service/" class="text-sm font-bold text-blue-600 hover:underline">第一次买机场怎么选 →</a>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-6">
+      {[
+        { title: '梯子知识', desc: '工具生态与VPN区别', href: '/tools/', accent: 'text-blue-700 bg-blue-50 border-blue-200' },
+        { title: '设备教程', desc: 'Win/Mac/手机/路由', href: '/devices/', accent: 'text-cyan-800 bg-cyan-50 border-cyan-200' },
+        { title: 'AI 知识', desc: 'ChatGPT/Claude/Gemini', href: '/ai/', accent: 'text-violet-700 bg-violet-50 border-violet-200' },
+        { title: '流媒体', desc: 'Netflix/YT/Disney+', href: '/streaming/', accent: 'text-rose-700 bg-rose-50 border-rose-200' },
+        { title: '新手入门', desc: '术语/流量/倍率/选购', href: '/beginners/', accent: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
+        { title: '安全排障', desc: '防骗核验与故障诊断', href: '/troubleshooting/', accent: 'text-slate-800 bg-slate-100 border-slate-300' },
+      ].map((card) => (
+        <a href={card.href} class="bento-card p-4 sm:p-5 flex flex-col justify-between gap-3 group">
+          <span class:list={['inline-flex self-start rounded-lg border px-2.5 py-0.5 text-xs font-bold', card.accent]}>
+            {card.title}
+          </span>
+          <div>
+            <div class="font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors text-sm sm:text-base">{card.title}中心</div>
+            <p class="text-xs text-slate-600 mt-1 leading-snug">{card.desc}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- 3. 精选机场品牌（按指定顺序展示真实资料） -->
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 reveal-section">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-blue-600">编辑展示顺序 01–06 预览</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">精选机场品牌真实资料档案</h2>
+        <p class="text-sm text-slate-600 mt-1">
+          以下展示序列属于编辑精选及商业展示顺序，并非客观性能或测速排名。全部数据源自有日期记录的公开品牌档案与总索引（2026-10/11）。
+        </p>
+      </div>
+      <a href="/brands/" class="btn-secondary text-sm shrink-0">查看全部 18 家品牌目录 →</a>
+    </div>
+
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {featuredBrands.map((b) => (
+        <BrandCard brand={b} />
+      ))}
+    </div>
+  </section>
+
+  <!-- 4. 设备教程中心（Bento Grid + 智能设备选择助手） -->
+  <section class="bg-zone-devices border-y border-slate-200/80 py-14 reveal-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-cyan-800">核心专题集群一 · 多设备网络使用指南</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">设备与操作系统使用教程中心</h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-1 max-w-3xl">
+            不同操作系统对代理接口（System Proxy、Wintun/utun 虚拟网卡、VpnService）和客户端架构的要求截然不同。本中心严格区分官方支持基线与系统安全边界，不建议旧系统强行使用来历不明的安装包。
+          </p>
+        </div>
+        <a href="/devices/" class="btn-primary text-sm shrink-0">进入全部 15 类设备中心 →</a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {desktopDevices.map((dev) => (
+          <a href={dev.url} class="bento-card p-5 flex flex-col justify-between gap-3 group">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-lg bg-cyan-50 border border-cyan-200 px-2.5 py-0.5 text-xs font-bold text-cyan-800">{dev.categoryLabel}</span>
+                <span class="text-xs font-semibold text-blue-600 group-hover:translate-x-0.5 transition-transform">阅读教程 →</span>
+              </div>
+              <h3 class="mt-3 text-lg font-extrabold text-slate-900 group-hover:text-blue-600">{dev.name}</h3>
+              <p class="mt-1.5 text-sm text-slate-600 leading-relaxed">{dev.supportSummary}</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 text-xs text-slate-500">
+              基线：{dev.minRequirement}
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <DeviceAssistant />
+    </div>
+  </section>
+
+  <!-- 5. 手机品牌与移动终端教程 -->
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 reveal-section">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-blue-600">移动终端系统差异指南</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">手机与平板教程：iPhone、OPPO、小米、华为与通用安卓</h2>
+        <p class="text-sm text-slate-600 mt-1 max-w-3xl">
+          移动端教程重点关注国产定制系统的后台保活差异、苹果 App Store 账户防锁机原则，以及华为鸿蒙 HarmonyOS 3/4 与 HarmonyOS NEXT 的真实兼容边界。
+        </p>
+      </div>
+      <a href="/devices/multi-device/" class="text-sm font-bold text-blue-600 hover:underline shrink-0">电脑和手机共用订阅规则 →</a>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {mobileDevices.map((dev) => (
+        <a href={dev.url} class="bento-card p-5 flex flex-col justify-between gap-3 group">
+          <div>
+            <div class="flex items-center justify-between gap-2">
+              <span class="rounded-lg bg-blue-50 border border-blue-200 px-2.5 py-0.5 text-xs font-bold text-blue-700">{dev.osFamily}</span>
+              <span class="text-xs font-semibold text-blue-600">查看说明 →</span>
+            </div>
+            <h3 class="mt-3 text-lg font-extrabold text-slate-900 group-hover:text-blue-600">{dev.name}</h3>
+            <p class="mt-1.5 text-sm text-slate-600 leading-relaxed">{dev.supportSummary}</p>
+          </div>
+          <p class="text-xs text-amber-800 bg-amber-50 border border-amber-200/80 rounded-xl p-2.5 leading-relaxed">
+            {dev.caution}
+          </p>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/devices/iphone/shadowrocket-install/" class="bento-card p-5 flex items-center justify-between gap-4 hover:border-blue-400">
+        <div>
+          <div class="text-xs font-bold text-blue-600">iOS 第三方工具前置条件</div>
+          <div class="text-base font-extrabold text-slate-900 mt-0.5">苹果手机小火箭 (Shadowrocket) 正规获取与适用条件</div>
+          <p class="text-xs text-slate-600 mt-1">说明海外区 App Store 购买前提、防共享 ID 锁机警告及封闭端品牌不适用说明。</p>
+        </div>
+        <span class="text-blue-600 font-bold text-sm shrink-0">查看 →</span>
+      </a>
+      <a href="/devices/android/clash-install/" class="bento-card p-5 flex items-center justify-between gap-4 hover:border-blue-400">
+        <div>
+          <div class="text-xs font-bold text-cyan-700">Android 开源内核安全指南</div>
+          <div class="text-base font-extrabold text-slate-900 mt-0.5">安卓手机 Clash 安装来源校验与订阅前置要求</div>
+          <p class="text-xs text-slate-600 mt-1">核对 Clash Meta for Android 官方 GitHub Releases，拒绝网盘篡改包。</p>
+        </div>
+        <span class="text-cyan-700 font-bold text-sm shrink-0">查看 →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 6. AI 使用知识 -->
+  <section class="bg-zone-ai border-y border-slate-200/80 py-14 reveal-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-7">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-violet-700">核心专题集群二 · AI 服务网络知识</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">AI 工具使用知识：ChatGPT、Claude、Gemini 与地区排障</h2>
+          <p class="text-sm text-slate-600 mt-1 max-w-3xl">
+            使用 AI 平台不仅涉及节点出口地区（例如香港普遍不在官方消费版支持范围内），还受平台状态、账号注册验证、IP 切换频率与浏览器安全 DNS 影响。本站只依据品牌实际公开资料展示适配清单。
+          </p>
+        </div>
+        <a href="/ai/" class="btn-secondary text-sm shrink-0">进入 AI 知识中心 →</a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+        {scenariosData.ai.map((item) => (
+          <div class="bento-card p-6 flex flex-col justify-between gap-4">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-extrabold text-slate-900">{item.name}</h3>
+                <span class="rounded-full bg-violet-50 border border-violet-200 px-2.5 py-0.5 text-xs font-bold text-violet-700">官方政策指引</span>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">{item.officialPolicySummary}</p>
+              <div class="text-xs text-slate-700 bg-slate-50 rounded-xl p-3 border border-slate-200/70">
+                <strong>高频问题：</strong>{item.commonIssues.slice(0, 2).join('；')}
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
+              <a href={item.url} class="text-xs font-bold text-blue-700 hover:underline">平台与品牌资料 →</a>
+              <span class="text-slate-300">|</span>
+              <a href={item.errorGuideUrl} class="text-xs font-bold text-violet-700 hover:underline">访问报错排查 →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/ai/network-guide/" class="bento-card p-4 hover:border-violet-300">
+          <div class="text-sm font-extrabold text-slate-900">AI 工具网络加速与 IDE 配置指南</div>
+          <p class="text-xs text-slate-600 mt-1">覆盖 WebSocket 长连接、Copilot/Cursor 终端代理与 SSE 断流处理。</p>
+        </a>
+        <a href="/ai/node-selection/" class="bento-card p-4 hover:border-violet-300">
+          <div class="text-sm font-extrabold text-slate-900">AI 解锁节点怎么选？（选区原则）</div>
+          <p class="text-xs text-slate-600 mt-1">日本/新加坡/台湾/美国各自适用场景与防高频切换风控建议。</p>
+        </a>
+        <a href="/ai/region-comparison/" class="bento-card p-4 hover:border-violet-300">
+          <div class="text-sm font-extrabold text-slate-900">AI 工具多地区节点对比（18家覆盖表）</div>
+          <p class="text-xs text-slate-600 mt-1">依据各地区官方政策与品牌覆盖档案对照，不编造节点延迟。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 流媒体使用知识 -->
+  <section class="bg-zone-streaming border-b border-slate-200/80 py-14 reveal-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-7">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-rose-700">核心专题集群三 · 流媒体网络知识</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">流媒体使用知识：Netflix、YouTube、Disney+ 与 TikTok</h2>
+          <p class="text-sm text-slate-600 mt-1 max-w-3xl">
+            所有流媒体使用应以合法订阅与官方授权条款为前提。本专区帮您区分地区片库版权限制、4K 视频每小时真实流量消耗、本地硬件解码与网络缓冲原因。
+          </p>
+        </div>
+        <a href="/streaming/" class="btn-secondary text-sm shrink-0">进入流媒体中心 →</a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {scenariosData.streaming.map((st) => (
+          <div class="bento-card p-5 flex flex-col justify-between gap-4">
+            <div class="space-y-2">
+              <h3 class="text-lg font-extrabold text-slate-900">{st.name}</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{st.officialPolicySummary}</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-1.5 text-xs font-bold">
+              <a href={st.url} class="text-blue-700 hover:underline">{st.name} 品牌资料与使用说明 →</a>
+              <a href={st.subUrl} class="text-rose-700 hover:underline">专项自查 / 选区 / 排障 →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/streaming/service-selection/" class="bento-card p-4 hover:border-rose-300">
+          <div class="text-sm font-extrabold text-slate-900">流媒体解锁机场：理性选型与边界</div>
+          <p class="text-xs text-slate-600 mt-1">解读版权 IP 检测机制，不承诺任何永久 100% 解锁。</p>
+        </a>
+        <a href="/streaming/network-types/" class="bento-card p-4 hover:border-rose-300">
+          <div class="text-sm font-extrabold text-slate-900">流媒体专线机场科普（BGP / IEPL / IPLC）</div>
+          <p class="text-xs text-slate-600 mt-1">梳理 18 家品牌真实资料中的线路档位标注差异。</p>
+        </a>
+        <a href="/streaming/live-streaming/" class="bento-card p-4 hover:border-rose-300">
+          <div class="text-sm font-extrabold text-slate-900">视频直播低延迟与推流网络条件</div>
+          <p class="text-xs text-slate-600 mt-1">区分观看与推流对上行带宽及独享定制资源的真实要求。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 新手知识百科 -->
+  <section class="bg-zone-beginners border-b border-slate-200/80 py-14 reveal-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-7">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-700">核心专题集群四 · 零基础入门体系</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">新手知识百科与核心网络术语词典</h2>
+          <p class="text-sm text-slate-600 mt-1 max-w-3xl">
+            用通俗易懂的中文分六阶段掌握“机场”的底层运行逻辑——从认识节点和订阅，到算准流量、看懂倍率、安全注册及首次月付选购避坑。
+          </p>
+        </div>
+        <a href="/beginners/" class="btn-primary text-sm shrink-0">查看六阶段学习手册 →</a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          { title: '1. 机场与节点是什么', href: '/beginners/what-is-airport/', desc: '理解纸飞机由来、中转入口、落地 IP 与客户端分工。' },
+          { title: '2. 订阅机制与链接查找', href: '/beginners/subscription-links/', desc: '辨别官方客户端模式与订阅URL，保护个人 Token 不泄密。' },
+          { title: '3. 流量计算与节点倍率', href: '/beginners/traffic-calculation/', desc: '算清上行+下行双向扣费与 1×/2× 倍率对可用流量的影响。' },
+          { title: '4. 规则、全局与系统代理', href: '/beginners/proxy-modes/', desc: '日常常驻 Rule 分流省流量，彻底理清 System Proxy 与 TUN。' },
+          { title: '5. 首次买机场怎么选', href: '/beginners/choosing-service/', desc: '先核对设备兼容，再估算流量，首选月付体验不冲长期锁定。' },
+          { title: '6. 购买后上手与节点切换', href: '/beginners/after-purchase/', desc: '购后从官网用户中心获取软件、导入配置与验证双通方法。' },
+          { title: '7. 流量重置与套餐升级', href: '/beginners/traffic-reset/', desc: '区分自然月与每 30 天重置，避开误覆盖旧套餐的升级坑。' },
+          { title: '8. 新手避坑防骗指南', href: '/beginners/avoid-pitfalls/', desc: '严防共享 Apple ID 锁机、虚假终身买断与网盘木马客户端。' },
+        ].map((item) => (
+          <a href={item.href} class="bento-card p-5 hover:border-emerald-300 group">
+            <h3 class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700">{item.title}</h3>
+            <p class="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 & 10. 安全隐私中心 & 网络故障排查中心 -->
+  <section class="bg-zone-safety border-b border-slate-200/80 py-14 reveal-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+      <!-- 9. 故障排查 -->
+      <div class="space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-violet-700">核心专题集群五 · 10步结构化诊断</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">网络故障排查中心</h2>
+            <p class="text-sm text-slate-600 mt-1">
+              覆盖官网打不开、节点连接超时、订阅失效、DNS 异常、锁屏断线及已连接无法上网。坚决不诱导用户关闭防火墙或运行不明修复脚本。
+            </p>
+          </div>
+          <a href="/troubleshooting/" class="btn-secondary text-sm shrink-0">全部故障排查专题 →</a>
+        </div>
+
+        <TroubleshootingAssistant />
+      </div>
+
+      <!-- 10. 安全与隐私 -->
+      <div>
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-slate-600">安全、隐私与客观比较</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">安全与隐私保护中心</h2>
+          </div>
+          <a href="/safety/" class="text-sm font-bold text-blue-600 hover:underline">查看官网识别检查清单 →</a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {[
+            { title: '官网真假识别', href: '/safety/website-verification/', desc: 'HTTPS 绿锁与 AFF 跳转均不等同真官网，附五步交叉核对清单。' },
+            { title: '钓鱼网站识别', href: '/safety/phishing/', desc: '拆解假 Clash 下载站、高仿面板与 Telegram 假客服私信套路。' },
+            { title: '机场安全与隐私', href: '/safety/airport-security/', desc: '厘清 HTTPS 加密与服务端元数据可见性边界，不吹嘘绝对匿名。' },
+            { title: '购买与跑路风控', href: '/safety/purchase-risk/', desc: '识别激进低价陷阱与长周期锁定风险，控制预付资金敞口。' },
+            { title: '横向对比评分标准', href: '/comparison/methodology/', desc: '公开五维对比方法与证据边界，不发布无依据虚构分数。' },
+          ].map((s) => (
+            <a href={s.href} class="bento-card p-5 hover:border-violet-300 group">
+              <h3 class="text-base font-extrabold text-slate-900 group-hover:text-blue-600">{s.title}</h3>
+              <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">{s.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. 机场品牌数据库（完整18家真实资料表） -->
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 reveal-section">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-blue-600">统一品牌及历史价目数据库</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">18 家机场品牌兼容与历史参考总表</h2>
+        <p class="text-sm text-slate-600 mt-1">
+          全部金额均为各品牌档案注明的<strong>历史公开记录日期价格</strong>，不直接等同当日实时结算价，具体以官网结算页为准。
+        </p>
+      </div>
+      <a href="/comparison/" class="btn-secondary text-sm shrink-0">打开多维横向对比库 →</a>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>展示序</th>
+            <th>品牌名称</th>
+            <th>客户端与订阅政策</th>
+            <th>设备数限制</th>
+            <th>公开覆盖地区</th>
+            <th>历史起步门槛（记录日）</th>
+            <th>操作入口</th>
+          </tr>
+        </thead>
+        <tbody>
+          {brandsData.map((b) => (
+            <tr>
+              <td class="font-mono text-xs font-bold text-slate-500">#{String(b.rank).padStart(2, '0')}</td>
+              <td>
+                <a href={`/brands/${b.slug}/`} class="font-extrabold text-slate-900 hover:text-blue-600">{b.name}</a>
+                {b.nameEn && <div class="text-[11px] text-slate-500">{b.nameEn}</div>}
+              </td>
+              <td class="text-xs">
+                <span class="inline-block rounded-md bg-slate-100 px-2 py-0.5 font-semibold text-slate-700">{b.clientFlags.thirdPartyLabel}</span>
+              </td>
+              <td class="text-xs max-w-[180px]">{b.deviceLimit}</td>
+              <td class="text-xs max-w-[180px]">{b.regions.slice(0, 5).join('、')}{b.regions.length > 5 ? ` 等${b.regions.length}区` : ''}</td>
+              <td class="text-xs whitespace-nowrap">
+                <strong class="text-blue-700">¥{b.minFirstPurchase}</strong>
+                <span class="block text-[11px] text-slate-400">{b.historyPriceDate}</span>
+              </td>
+              <td class="whitespace-nowrap">
+                <a href={`/brands/${b.slug}/`} class="text-xs font-bold text-blue-600 hover:underline mr-2">档案</a>
+                <a href={b.affiliateUrl} target="_blank" rel="sponsored nofollow noopener noreferrer" class="text-xs font-bold text-slate-700 hover:text-blue-600">官网 ↗</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 12 & 13. 最新深度文章 & 热门知识专题 -->
+  <section class="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8 reveal-section">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+      <div class="lg:col-span-8">
+        <div class="flex items-center justify-between mb-5">
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">最新品牌深度解析文章</h2>
+          <a href="/articles/" class="text-sm font-bold text-blue-600 hover:underline">全部 {brandsData.length * 5}+ 篇 →</a>
+        </div>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {allArticles.slice(0, 6).map((art) => (
+            <a href={`/articles/${art.id.replace(/\.md$/, '')}/`} class="bento-card p-5 group">
+              <div class="flex items-center justify-between gap-2 text-xs mb-2">
+                <span class="rounded-md bg-blue-50 text-blue-700 px-2 py-0.5 font-bold">{art.data.category}</span>
+                <span class="text-slate-400">{art.data.updatedDate}</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-extrabold text-slate-900 group-hover:text-blue-600 leading-snug">{art.data.title}</h3>
+              <p class="mt-1.5 text-xs text-slate-600 line-clamp-2">{art.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="lg:col-span-4">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-5">热门知识专题索引</h2>
+        <div class="bento-card p-5 space-y-2.5 text-sm">
+          {[
+            { label: 'VPN 和机场有什么区别？哪个划算', href: '/tools/vpn-and-proxy/' },
+            { label: '梯子推荐与网络工具知识总览', href: '/tools/' },
+            { label: 'Windows 11 科学上网与 TUN 教程', href: '/devices/windows-11/' },
+            { label: 'iPhone 官方端与小火箭安装前提', href: '/devices/iphone/' },
+            { label: '华为 HarmonyOS NEXT 兼容边界', href: '/devices/android/huawei/' },
+            { label: 'OpenWrt 软路由与 DNS 防泄露', href: '/devices/openwrt/' },
+            { label: 'ChatGPT 与 OpenAI 访问异常排查', href: '/ai/chatgpt/access-errors/' },
+            { label: 'Netflix 官方账户状态自查方法', href: '/streaming/netflix/status-check/' },
+            { label: '机场倍率与月度流量消耗估算', href: '/beginners/traffic-calculation/' },
+            { label: '机场客服售后与退款核查指南', href: '/safety/customer-support/' },
+          ].map((topic) => (
+            <a href={topic.href} class="flex items-center justify-between gap-2 rounded-xl border border-slate-100 px-3.5 py-2.5 hover:border-blue-300 hover:bg-blue-50/40 font-semibold text-slate-800 hover:text-blue-700 transition-colors">
+              <span class="truncate">{topic.label}</span>
+              <span class="text-xs text-blue-600 shrink-0">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. 9个高质量FAQ -->
+  <section class="mx-auto max-w-4xl px-4 pb-10 sm:px-6 lg:px-8 reveal-section">
+    <FaqAccordion faqs={HOME_FAQS} title="2026 梯子大全高频常见问题 (FAQ)" />
+  </section>
+</BaseLayout>

@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="页面未找到 (404)｜梯子大全"
+  description="您访问的页面可能已迁移或网址拼写有误，请使用全站中文搜索或返回梯子大全知识百科首页。"
+  canonicalPath="/404/"
+  indexable={false}
+>
+  <section class="mx-auto max-w-3xl px-4 py-20 text-center space-y-6">
+    <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-2xl font-extrabold text-blue-600 border border-blue-200">
+      404
+    </div>
+    <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">抱歉，未找到该百科页面</h1>
+    <p class="text-sm sm:text-base text-slate-600">
+      请检查网址是否完整，或直接前往全站中文搜索与核心百科导航。
+    </p>
+    <div class="flex flex-wrap justify-center gap-3 pt-2">
+      <a href="/" class="btn-primary text-sm">返回梯子大全首页</a>
+      <a href="/search/" class="btn-secondary text-sm">全站中文搜索</a>
+      <a href="/devices/" class="btn-secondary text-sm">设备教程中心</a>
+      <a href="/troubleshooting/" class="btn-secondary text-sm">网络故障排查</a>
+    </div>
+  </section>
+</BaseLayout>

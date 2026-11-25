@@ -1,0 +1,284 @@
+---
+---
+
+<section class="bento-card p-6 sm:p-8" id="troubleshooting-assistant">
+  <div class="pb-5 border-b border-slate-100">
+    <span class="inline-flex items-center rounded-full bg-violet-50 border border-violet-200 px-3 py-0.5 text-xs font-bold text-violet-700">
+      故障知识导航 · 安全自查不碰隐私
+    </span>
+    <h2 class="mt-2 text-xl sm:text-2xl font-extrabold text-slate-900">智能网络问题排查助手</h2>
+    <p class="mt-1 text-sm text-slate-600">
+      选择当前遇到的现象，获取可能原因、安全基础自查路径与对应排障专题。本工具仅提供知识导航，不会读取您的订阅链接、密码或修改本地网络设置。
+    </p>
+  </div>
+
+  <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-12">
+    <div class="lg:col-span-5">
+      <div class="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-3">请选择当前故障现象</div>
+      <div id="ta-symptoms" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+        {[
+          { id: 'site-down', label: '1. 机场网站 / 用户面板打不开' },
+          { id: 'app-fail', label: '2. 客户端无法启动或白屏' },
+          { id: 'node-fail', label: '3. 节点无法连接 / 全部超时' },
+          { id: 'sub-fail', label: '4. 订阅链接失效 / 更新报错' },
+          { id: 'slow', label: '5. 网络速度慢 / 网页加载卡' },
+          { id: 'disconnect', label: '6. 连接频繁中断 / 锁屏断流' },
+          { id: 'dns', label: '7. DNS 异常 / 国内网站受影响' },
+          { id: 'no-net', label: '8. 显示已连接但完全无法上网' },
+          { id: 'partial', label: '9. 部分海外网站仍无法访问' },
+          { id: 'buffering', label: '10. 视频播放缓冲 / 降画质' },
+          { id: 'ai-error', label: '11. ChatGPT / Claude / Gemini 登录异常' },
+        ].map((s, i) => (
+          <button
+            type="button"
+            data-ta-symptom={s.id}
+            class:list={[
+              'ta-btn text-left min-h-[44px] px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold transition-colors cursor-pointer',
+              i === 0
+                ? 'bg-violet-600 text-white border-violet-600'
+                : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-violet-400 hover:bg-violet-50',
+            ]}
+          >
+            {s.label}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6 space-y-4 h-full" id="ta-panel">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 id="ta-title" class="text-lg font-extrabold text-slate-900">机场网站或用户面板打不开</h3>
+          <span id="ta-tag" class="rounded-full bg-violet-100 text-violet-800 px-3 py-0.5 text-xs font-bold">域名与本地网络排查</span>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">可能的问题类型</div>
+          <p id="ta-causes" class="text-sm text-slate-700 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">安全基础检查建议</div>
+          <ul id="ta-checks" class="list-disc pl-5 text-sm text-slate-700 space-y-1"></ul>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="rounded-xl bg-white border border-slate-200 p-3.5">
+            <div class="text-xs font-bold text-slate-500">对应设备指南</div>
+            <a id="ta-device-link" href="/devices/chrome/" class="mt-1 inline-block text-sm font-bold text-blue-700 hover:underline">Chrome / Edge 网络检查 →</a>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-3.5">
+            <div class="text-xs font-bold text-slate-500">官方状态与客服建议</div>
+            <p id="ta-support" class="mt-1 text-xs text-slate-700 leading-relaxed"></p>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+          <a id="ta-article-link" href="/troubleshooting/website-unavailable/" class="btn-primary text-sm">
+            阅读完整排障专题 →
+          </a>
+          <a href="/safety/customer-support/" class="text-xs font-semibold text-slate-600 hover:text-blue-700 hover:underline">
+            查看客服售后判断指南
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const CASES = {
+      'site-down': {
+        title: '机场网站或用户面板打不开',
+        tag: '域名与本地网络排查',
+        causes: '常见于旧域名在部分地区网络被屏蔽、本地 DNS 污染缓存，或品牌方更换了最新官方备用入口；也可能是误点了搜索引擎中的仿冒链接。',
+        checks: [
+          '先确认本地基础宽带或移动网络是否能正常访问常规国内网站。',
+          '检查浏览器是否保存了过期跳转地址，避免使用来源不明的第三方短链。',
+          '查看该品牌在用户中心或官方 Telegram 公告频道发布的最新可用入口。',
+        ],
+        deviceText: 'Chrome / Edge 浏览器代理与 DNS 设置 →',
+        deviceUrl: '/devices/chrome/',
+        support: '优先通过品牌官方公告频道或已保存的工单邮件入口核对域名真伪。',
+        articleUrl: '/troubleshooting/website-unavailable/',
+      },
+      'app-fail': {
+        title: '客户端无法启动或打开后白屏',
+        tag: '系统运行库与版本兼容',
+        causes: 'Windows 10/11 常因缺失 Microsoft Edge WebView2 运行库或安装包不完整引起；Windows 7 与旧版 macOS 则常因不再兼容新内核。',
+        checks: [
+          '核对操作系统版本是否达到该客户端最低基线（例如 Windows 10+ / macOS 10.15+）。',
+          '在官网重新下载对应架构安装包（区分 x64 与 ARM64 / Apple Silicon），不要使用网盘二次打包版本。',
+          '检查是否同时开启了多个同类代理软件造成本地端口（如 7890）抢占。',
+        ],
+        deviceText: 'Windows 10 客户端运行库与兼容说明 →',
+        deviceUrl: '/devices/windows-10/',
+        support: '若官方安装包在兼容系统仍闪退，截图报错编号提交官网工单。',
+        articleUrl: '/devices/windows-11/',
+      },
+      'node-fail': {
+        title: '节点全部超时或无法连接',
+        tag: '时间校验与账户状态',
+        causes: '本地设备系统时间误差超过 90 秒（导致 VMess/VLESS/Trojan TLS 握手失败）、当月流量耗尽、套餐到期或节点列表未更新。',
+        checks: [
+          '优先检查电脑或手机系统时间是否开启“自动设置日期与时间”。',
+          '登录品牌官网用户中心核对剩余流量与套餐有效期（注意倍率扣费后是否提前用完）。',
+          '确认当前机场是否仅限官方客户端登录（部分品牌已停用旧第三方订阅）。',
+        ],
+        deviceText: '系统代理与节点选择基础检查 →',
+        deviceUrl: '/beginners/selecting-nodes/',
+        support: '确认时间与流量均正常后仍全线超时，请向客服反馈当前地区运营商与客户端版本。',
+        articleUrl: '/troubleshooting/node-connection/',
+      },
+      'sub-fail': {
+        title: '订阅链接失效或客户端更新失败',
+        tag: '订阅政策与拉取排查',
+        causes: '品牌调整为“仅限官方客户端”（2026 年 10 月起多家品牌执行）、用户在后台重置过订阅令牌，或拉取订阅时本地网络阻断了订阅域名。',
+        checks: [
+          '先核对所用机场是否支持第三方订阅（例如微风网络、隐形人、Sogo云等新订单不支持第三方订阅）。',
+          '在官网用户中心重新复制完整订阅 URL，确保首尾无多余空格或截断。',
+          '若在后台点过“重置订阅”，旧链接会立即作废，需重新导入新链接。',
+        ],
+        deviceText: '订阅链接查找与保护规范 →',
+        deviceUrl: '/beginners/subscription-links/',
+        support: '需要申请或核对订阅权限的品牌（如灵动云高流量档）请联系官网在线客服。',
+        articleUrl: '/troubleshooting/subscription-invalid/',
+      },
+      slow: {
+        title: '连接后加载缓慢或带宽不足',
+        tag: '本地链路与分流排查',
+        causes: '本地 Wi-Fi 信号干扰、同时下载占满宽带、误开启全局代理使国内流量绕行海外，或当前节点距离过远/晚间共享带宽拥堵。',
+        checks: [
+          '确认代理模式设为“规则分流 (Rule)”而非“全局 (Global)”，避免国内业务绕远路。',
+          '检查自身宽带或手机信号基准速度，切换同地区其他备用节点对比。',
+          '留意浏览器是否开启了 QUIC / HTTP3 与部分代理协议产生兼容降速。',
+        ],
+        deviceText: '代理模式与规则分流说明 →',
+        deviceUrl: '/beginners/proxy-modes/',
+        support: '排查本地网络后若特定线路长期异常，通过工单向客服报告节点名称。',
+        articleUrl: '/troubleshooting/slow-connection/',
+      },
+      disconnect: {
+        title: '连接频繁中断或手机锁屏断流',
+        tag: '后台保活与设备并发',
+        causes: '手机系统（尤其 ColorOS / HyperOS）省电策略清理后台进程、电脑休眠重置网卡，或同一账号并发设备数触发限制。',
+        checks: [
+          '在安卓手机电源管理中为正在使用的合法客户端允许后台运行与自启动（OPPO/小米常见）。',
+          '检查是否超出账号允许设备数（如部分一次性流量包限制 1–3 台同时在线）。',
+          '在路由器或 Wi-Fi/蜂窝网络频繁切换场景下，手动重连一次客户端接口。',
+        ],
+        deviceText: 'OPPO / 小米后台保活设置说明 →',
+        deviceUrl: '/devices/android/oppo/',
+        support: '若多端均掉线且未超设备数，向品牌公告频道核对是否正在进行节点维护。',
+        articleUrl: '/troubleshooting/disconnections/',
+      },
+      dns: {
+        title: 'DNS 解析异常或国内网站打不开',
+        tag: 'DNS 污染与 DoH 冲突',
+        causes: '浏览器安全 DNS (DoH) 绕过客户端分流、手机开启了系统“私人 DNS”、或上一次异常退出留下了失效的本地 DNS/代理配置。',
+        checks: [
+          '检查 Chrome / Edge“安全 DNS”设置以及安卓系统“私人 DNS”是否与客户端规则冲突。',
+          '使用 Clash/Mihomo 时，分清 Fake-IP 与 Redir-Host 模式，切换后刷新系统 DNS 缓存。',
+          '切勿在排障时随意修改不明来源的 hosts 或安装未验证证书。',
+        ],
+        deviceText: 'Edge 浏览器 DNS 与代理说明 →',
+        deviceUrl: '/devices/edge/',
+        support: '官方客户端用户若遇特定域名解析失败，可将域名反馈给官方客服排查规则库。',
+        articleUrl: '/troubleshooting/dns/',
+      },
+      'no-net': {
+        title: '客户端显示已连接但完全无法上网',
+        tag: '端口冲突与残余代理',
+        causes: '最常见于异常关机后系统代理残留、多款代理软件端口冲突、账户余额/流量耗尽，或 TUN 虚拟网卡未正确接管默认路由。',
+        checks: [
+          '关闭全部代理软件后，进入系统网络设置检查“使用代理服务器”开关是否自动复位。',
+          '确认仅运行一个代理客户端，避免同时开启系统 VPN 与浏览器代理扩展造成死循环。',
+          '登录面板核实套餐是否仍有效且流量未归零。',
+        ],
+        deviceText: '系统代理工作原理与清理 →',
+        deviceUrl: '/beginners/system-proxy/',
+        support: '关闭代理后本地恢复上网但开启即断网，请核查客户端版本并联系客服。',
+        articleUrl: '/troubleshooting/connected-no-internet/',
+      },
+      partial: {
+        title: '部分网站可访问但特定平台打不开',
+        tag: '地区版权与规则分流',
+        causes: '目标网站不在默认规则列表中（被走了直连）、目标平台屏蔽了当前节点所在地区（如香港无法访问 ChatGPT/TikTok），或浏览器缓存了旧地理信息。',
+        checks: [
+          '先核实目标服务的官方地区支持范围（如日本/新加坡/美国 vs 香港限制）。',
+          '在隐私无痕窗口重新打开测试，排除旧 Cookie 与浏览器缓存导致的地区记忆。',
+          '确认不是将应走代理的域名错误加入了直连规则。',
+        ],
+        deviceText: 'AI 工具多地区节点政策对比 →',
+        deviceUrl: '/ai/region-comparison/',
+        support: '不同平台授权与地区政策各异，不能要求任何机场保证永久覆盖所有站点。',
+        articleUrl: '/troubleshooting/clash-access/',
+      },
+      buffering: {
+        title: 'YouTube / Netflix 视频播放缓冲或降画质',
+        tag: '带宽吞吐与解码检查',
+        causes: '4K/HDR 视频需要较高持续下行带宽（约 25Mbps 以上），同时受本地解码性能、QUIC 协议丢包、节点高倍率负载或浏览器硬件加速影响。',
+        checks: [
+          '在 YouTube 播放窗口右键开启“详细统计信息 (Stats for nerds)”查看 Connection Speed 与 Dropped Frames。',
+          '区分是本地 CPU 掉帧（硬解未开启）还是网络下行速率不足。',
+          '注意高倍率和 4K 视频会快速消耗月流量（4K 约 5–7 GB/小时），检查账户剩余流量。',
+        ],
+        deviceText: 'YouTube 流量计算与网络要求 →',
+        deviceUrl: '/streaming/youtube/',
+        support: '若使用 fast.com 观察当前带宽远低于本地宽带且非全局模式误用，可切换节点或咨询客服。',
+        articleUrl: '/streaming/youtube/buffering/',
+      },
+      'ai-error': {
+        title: 'ChatGPT / Claude / Gemini 登录或访问异常',
+        tag: '官方地区与风控核查',
+        causes: '误用非官方支持地区节点（如香港节点）、多人共享出口 IP 触发 Cloudflare 或平台风控、平台自身服务宕机（如 status.openai.com），或 Google/Anthropic 账号地区限制。',
+        checks: [
+          '首先访问官方状态页（例如 OpenAI / Anthropic Status Page）确认非平台全球性故障。',
+          '确认节点地区在目标 AI 官方支持清单内（避开香港，优先检查日本/新加坡/台湾/美国）。',
+          '避免在短时间内跨多个国家频繁切换节点登录同一个 AI 账号。',
+        ],
+        deviceText: 'AI 解锁节点选择原则 →',
+        deviceUrl: '/ai/node-selection/',
+        support: 'AI 平台风控与账户归属策略由 AI 厂商决定，机场无法保证单个账号不被平台风控。',
+        articleUrl: '/ai/chatgpt/access-errors/',
+      },
+    };
+
+    const btns = document.querySelectorAll('.ta-btn');
+    const elTitle = document.getElementById('ta-title');
+    const elTag = document.getElementById('ta-tag');
+    const elCauses = document.getElementById('ta-causes');
+    const elChecks = document.getElementById('ta-checks');
+    const elDevice = document.getElementById('ta-device-link');
+    const elSupport = document.getElementById('ta-support');
+    const elArticle = document.getElementById('ta-article-link');
+
+    function renderCase(id) {
+      const c = CASES[id] || CASES['site-down'];
+      elTitle.textContent = c.title;
+      elTag.textContent = c.tag;
+      elCauses.textContent = c.causes;
+      elChecks.innerHTML = c.checks.map((item) => `<li>${item}</li>`).join('');
+      elDevice.textContent = c.deviceText;
+      elDevice.setAttribute('href', c.deviceUrl);
+      elSupport.textContent = c.support;
+      elArticle.setAttribute('href', c.articleUrl);
+
+      btns.forEach((b) => {
+        const active = b.getAttribute('data-ta-symptom') === id;
+        b.className = `ta-btn text-left min-h-[44px] px-4 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
+          active
+            ? 'bg-violet-600 text-white border-violet-600'
+            : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-violet-400 hover:bg-violet-50'
+        }`;
+      });
+    }
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => renderCase(btn.getAttribute('data-ta-symptom')));
+    });
+
+    renderCase('site-down');
+  })();
+</script>

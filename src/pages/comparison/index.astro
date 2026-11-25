@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import brandsData from '../../data/brands.json';
+import { buildBreadcrumbSchema, buildCollectionSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '18家机场横向对比数据库', url: '/comparison/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildCollectionSchema({
+    title: '18家机场多维度横向对比数据库｜客户端、设备、地区与历史价目对照',
+    description: '基于可核对品牌资料对18家机场进行客户端政策、设备限制、地区覆盖、AI/流媒体标签与历史起步价格横向比较，不发布虚构测速跑分。',
+    url: '/comparison/',
+  }),
+];
+---
+
+<BaseLayout
+  title="18家机场横向对比数据库｜客户端支持、设备限制与历史价格对照"
+  description="客观横向对比18家机场品牌的客户端开放政策、支持操作系统、同时在线设备上限、地区覆盖数量及带日期的历史最低价格门槛。"
+  canonicalPath="/comparison/"
+  schemas={schemas}
+>
+  <section class="bg-zone-hero border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">机场横向对比数据库</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">18 家机场多维度横向对比数据库</h1>
+      <p class="mt-3 text-sm sm:text-base text-slate-700 max-w-3xl leading-relaxed">
+        本表严格依据各品牌原始档案对照整理，不打虚构主观星级评分。如需了解对比维度的选取依据与数据局限，请查阅 <a href="/comparison/methodology/" class="text-blue-700 font-bold hover:underline">机场横向对比方法与评分标准 →</a>
+      </p>
+
+      <div class="mt-5 flex flex-wrap gap-2">
+        <button type="button" data-cmp-filter="all" class="cmp-btn min-h-[40px] px-4 py-1.5 rounded-xl bg-blue-600 text-white border border-blue-600 text-xs font-bold cursor-pointer">全部 18 家</button>
+        <button type="button" data-cmp-filter="third" class="cmp-btn min-h-[40px] px-4 py-1.5 rounded-xl bg-white text-slate-700 border border-slate-200 text-xs font-bold cursor-pointer">支持/可申请第三方订阅</button>
+        <button type="button" data-cmp-filter="official" class="cmp-btn min-h-[40px] px-4 py-1.5 rounded-xl bg-white text-slate-700 border border-slate-200 text-xs font-bold cursor-pointer">仅限官方客户端登录</button>
+        <button type="button" data-cmp-filter="datapack" class="cmp-btn min-h-[40px] px-4 py-1.5 rounded-xl bg-white text-slate-700 border border-slate-200 text-xs font-bold cursor-pointer">含不限时流量包</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>展示序</th>
+            <th>品牌</th>
+            <th>客户端政策</th>
+            <th>设备限制</th>
+            <th>地区数量</th>
+            <th>AI / 流媒体资料</th>
+            <th>历史月付起步</th>
+            <th>历史年付最低</th>
+            <th>不限时包</th>
+            <th>记录日期</th>
+          </tr>
+        </thead>
+        <tbody id="cmp-tbody">
+          {brandsData.map((b) => (
+            <tr
+              class="cmp-row"
+              data-mode={b.clientFlags.thirdPartyMode}
+              data-has-dp={String((b.planGroups?.dataPacks?.length || 0) > 0)}
+            >
+              <td class="font-mono text-xs text-slate-500">#{b.rank}</td>
+              <td class="font-extrabold">
+                <a href={`/brands/${b.slug}/`} class="text-blue-700 hover:underline">{b.name}</a>
+              </td>
+              <td class="text-xs">{b.clientFlags.thirdPartyLabel}</td>
+              <td class="text-xs max-w-[160px]">{b.deviceLimit}</td>
+              <td class="text-xs whitespace-nowrap">{b.regions.length} 地区{b.nodeCount ? ` (${b.nodeCount}节点)` : ''}</td>
+              <td class="text-xs max-w-[200px]">
+                {b.aiTools.length > 0 && <div><strong>AI:</strong> {b.aiTools.join('、')}</div>}
+                {b.streaming.length > 0 && <div><strong>流媒体:</strong> {b.streaming.slice(0, 3).join('、')}</div>}
+              </td>
+              <td class="text-xs whitespace-nowrap font-bold text-slate-800">{b.minMonthlyPrice ? `¥${b.minMonthlyPrice}` : '—'}</td>
+              <td class="text-xs whitespace-nowrap font-bold text-slate-800">{b.minYearlyPrice ? `¥${b.minYearlyPrice}` : '—'}</td>
+              <td class="text-xs whitespace-nowrap">{b.minDataPackPrice ? `¥${b.minDataPackPrice}起` : '—'}</td>
+              <td class="text-xs whitespace-nowrap text-slate-500">{b.historyPriceDate}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const btns = document.querySelectorAll('.cmp-btn');
+    const rows = document.querySelectorAll('.cmp-row');
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const f = btn.getAttribute('data-cmp-filter');
+        btns.forEach((b) => {
+          const active = b.getAttribute('data-cmp-filter') === f;
+          b.className = `cmp-btn min-h-[40px] px-4 py-1.5 rounded-xl border text-xs font-bold cursor-pointer ${
+            active ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400'
+          }`;
+        });
+        rows.forEach((r) => {
+          const mode = r.getAttribute('data-mode');
+          const hasDp = r.getAttribute('data-has-dp') === 'true';
+          let show = true;
+          if (f === 'third') show = mode === 'supported' || mode === 'conditional';
+          else if (f === 'official') show = mode === 'official-only';
+          else if (f === 'datapack') show = hasDp;
+          r.classList.toggle('hidden', !show);
+        });
+      });
+    });
+  })();
+</script>

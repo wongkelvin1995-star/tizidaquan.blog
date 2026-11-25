@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import brandsData from '../../data/brands.json';
+import scenariosData from '../../data/service-scenarios.json';
+import { getCollection } from 'astro:content';
+import { buildBreadcrumbSchema, buildCollectionSchema } from '../../utils/site';
+
+const aiGuides = await getCollection('ai', ({ data }) => !data.draft);
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: 'AI 工具网络知识中心', url: '/ai/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildCollectionSchema({
+    title: 'AI 工具网络知识中心｜ChatGPT、Claude、Gemini 节点与异常排查',
+    description: '汇总OpenAI ChatGPT、Anthropic Claude与Google Gemini官方地区政策、常见访问异常排查及18家品牌实际资料提及的AI适配筛选。',
+    url: '/ai/',
+  }),
+];
+---
+
+<BaseLayout
+  title="AI工具网络知识中心｜ChatGPT、Claude、Gemini节点选择与访问排查"
+  description="提供ChatGPT、Claude、Gemini及OpenAI服务的官方支持地区、账号风控防范、浏览器DNS排查与品牌公开AI支持资料筛选。"
+  canonicalPath="/ai/"
+  schemas={schemas}
+>
+  <section class="bg-zone-ai border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">AI 工具网络知识</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">AI 工具网络知识中心</h1>
+      <p class="mt-3 text-sm sm:text-base text-slate-700 max-w-3xl leading-relaxed">
+        访问 ChatGPT、Claude、Gemini 等海外 AI 工具需要同时满足“平台官方支持地区 IP”、“合规账号环境”与“连续稳定的长连接”。本站不虚构解锁成功率排行，严格依据平台官方可用性清单及 18 家品牌真实公开记录为您提供排查与选型参考。
+      </p>
+    </div>
+  </section>
+
+  <!-- AI Platform Cards -->
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 space-y-10">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {scenariosData.ai.map((item) => (
+        <article class="bento-card p-6 flex flex-col justify-between gap-4">
+          <div class="space-y-3">
+            <h2 class="text-xl font-extrabold text-slate-900">{item.name}</h2>
+            <p class="text-sm text-slate-600 leading-relaxed">{item.officialPolicySummary}</p>
+            <div>
+              <div class="text-xs font-bold text-slate-500 mb-1">常见故障诱因：</div>
+              <ul class="list-disc pl-4 text-xs text-slate-700 space-y-1">
+                {item.commonIssues.map((iss) => (
+                  <li>{iss}</li>
+                ))}
+              </ul>
+            </div>
+            <p class="text-xs text-violet-900 bg-violet-50 border border-violet-200 rounded-xl p-3">
+              <strong>自查建议：</strong>{item.checkMethod}
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+            <a href={item.url} class="btn-primary text-xs flex-1 text-center">平台与品牌资料 →</a>
+            <a href={item.errorGuideUrl} class="btn-secondary text-xs flex-1 text-center">访问异常排查 →</a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Real Brand Compatibility Filter -->
+    <div class="bento-card p-6 sm:p-8 space-y-5">
+      <div>
+        <h2 class="text-xl font-extrabold text-slate-900">按真实品牌资料筛选 AI 适配记录</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          以下仅展示原始品牌档案中明确列出了对应 AI 工具名称的品牌（香港地区普遍不在官方消费版支持范围，请切换日/新/台/美节点，且各品牌均不作永久保证）。
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {[
+            { id: 'all', label: '全部提及 AI 的品牌' },
+            { id: 'ChatGPT', label: '资料提及 ChatGPT' },
+            { id: 'Claude', label: '资料提及 Claude' },
+            { id: 'Gemini', label: '资料提及 Gemini' },
+            { id: 'Copilot', label: '资料提及 GitHub Copilot' },
+          ].map((btn, i) => (
+            <button
+              type="button"
+              data-ai-filter={btn.id}
+              class:list={[
+                'ai-f-btn min-h-[40px] px-3.5 py-1.5 rounded-xl border text-xs font-bold cursor-pointer transition-colors',
+                i === 0 ? 'bg-violet-600 text-white border-violet-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-violet-400',
+              ]}
+            >
+              {btn.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3" id="ai-brand-grid">
+        {brandsData.map((b) => (
+          <a
+            href={`/brands/${b.slug}/`}
+            data-ai-list={b.aiTools.join('|')}
+            class="ai-brand-item rounded-2xl border border-slate-200 p-4 hover:border-violet-400 hover:bg-violet-50/30 transition-colors"
+          >
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-extrabold text-slate-900 text-sm">{b.name}</span>
+              <span class="text-[11px] font-semibold text-slate-500">{b.clientFlags.thirdPartyLabel}</span>
+            </div>
+            <div class="mt-2 flex flex-wrap gap-1">
+              {b.aiTools.map((tool: string) => (
+                <span class="rounded bg-violet-50 border border-violet-200 px-2 py-0.5 text-[11px] font-bold text-violet-800">{tool}</span>
+              ))}
+            </div>
+            <div class="mt-2 text-[11px] text-slate-500">覆盖地区：{b.regions.slice(0, 5).join('、')}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- All 9 AI Guides -->
+    <div class="bento-card p-6 sm:p-8">
+      <h2 class="text-xl font-extrabold text-slate-900 mb-4">AI 网络专题知识全集（{aiGuides.length} 篇）</h2>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {aiGuides.map((g) => {
+          const slug = g.data.slug || g.id.replace(/\.md$/, '');
+          return (
+            <a href={`/ai/${slug}/`} class="rounded-xl border border-slate-200 p-4 hover:border-violet-400 hover:bg-violet-50/30 transition-colors">
+              <div class="text-xs font-bold text-violet-700">{g.data.platform}</div>
+              <div class="text-sm font-extrabold text-slate-900 mt-1">{g.data.title}</div>
+              <p class="text-xs text-slate-600 mt-1 line-clamp-2">{g.data.description}</p>
+            </a>
+          );
+        })}
+      </div>
+      <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-3 text-sm font-bold">
+        <a href="/streaming/" class="text-blue-700 hover:underline">前往流媒体网络知识中心 →</a>
+        <a href="/devices/" class="text-cyan-700 hover:underline">查看电脑与手机端配置教程 →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const btns = document.querySelectorAll('.ai-f-btn');
+    const items = document.querySelectorAll('.ai-brand-item');
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-ai-filter');
+        btns.forEach((b) => {
+          const active = b.getAttribute('data-ai-filter') === key;
+          b.className = `ai-f-btn min-h-[40px] px-3.5 py-1.5 rounded-xl border text-xs font-bold cursor-pointer transition-colors ${
+            active ? 'bg-violet-600 text-white border-violet-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-violet-400'
+          }`;
+        });
+        items.forEach((el) => {
+          const tools = (el.getAttribute('data-ai-list') || '').toLowerCase();
+          const show = key === 'all' ? tools.length > 0 : tools.includes(key.toLowerCase());
+          el.classList.toggle('hidden', !show);
+        });
+      });
+    });
+  })();
+</script>

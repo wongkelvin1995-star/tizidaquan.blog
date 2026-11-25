@@ -1,0 +1,50 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('devices', ({ data }) => !data.draft);
+  return entries.map((entry) => {
+    const slug = (entry.data.slug || entry.id.replace(/\.md$/, '')).replace(/^\/+|\/+$/g, '');
+    return {
+      params: { slug },
+      props: { entry, slug },
+    };
+  });
+}
+
+const { entry, slug } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const relatedLinks = [
+  { title: '15类设备教程中心与选择助手', href: '/devices/', tag: '设备中心' },
+  { title: '电脑和手机共用机场订阅规则', href: '/devices/multi-device/', tag: '多端协同' },
+  { title: '机场客户端怎么安全下载', href: '/beginners/client-download/', tag: '下载安全' },
+  { title: '节点连接失败与超时排查', href: '/troubleshooting/node-connection/', tag: '故障排障' },
+];
+---
+
+<KnowledgeLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  category={entry.data.category}
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '设备教程', url: '/devices/' },
+    { name: entry.data.platform || entry.data.device || entry.data.primaryKeyword, url: `/devices/${slug}/` },
+  ]}
+  publishDate={entry.data.publishDate}
+  updatedDate={entry.data.updatedDate}
+  documentedVersion={entry.data.documentedVersion}
+  author={entry.data.author}
+  headings={headings}
+  faqs={entry.data.faqs}
+  howToSteps={entry.data.howToSteps}
+  relatedBrands={entry.data.relatedBrands}
+  relatedLinks={relatedLinks}
+  sources={entry.data.sources}
+  indexable={entry.data.indexable}
+  canonicalPath={`/devices/${slug}/`}
+>
+  <Content />
+</KnowledgeLayout>

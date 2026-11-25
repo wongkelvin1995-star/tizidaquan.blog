@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { buildBreadcrumbSchema, buildCollectionSchema } from '../../utils/site';
+
+const articles = await getCollection('articles', ({ data }) => !data.draft);
+const categories = ['全部', ...new Set(articles.map((a) => a.data.category))];
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '深度专题文章', url: '/articles/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildCollectionSchema({
+    title: '梯子大全深度文章库｜18家品牌购后、规则、兼容与安全解析',
+    description: '汇集基于18家机场品牌真实资料撰写的购后使用、套餐流量倍率、客户端政策、AI/流媒体与续费安全深度解析文章。',
+    url: '/articles/',
+  }),
+];
+---
+
+<BaseLayout
+  title="深度文章库｜18家机场品牌使用、规则与兼容性解析"
+  description="浏览梯子大全全部原创品牌深度解析文章，涵盖购后上手指南、流量倍率规则、客户端兼容性、AI与流媒体适配及账户续费安全。"
+  canonicalPath="/articles/"
+  schemas={schemas}
+>
+  <section class="bg-zone-hero border-b border-slate-200/80 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">深度文章库</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">品牌深度解析文章库（共 {articles.length} 篇）</h1>
+      <p class="mt-2 text-sm sm:text-base text-slate-600 max-w-3xl">
+        每篇文章均基于 18 家品牌的原始可核对档案编写，不编造虚构测速或无根据结论。按下方分类快速筛选：
+      </p>
+
+      <div class="mt-5 flex flex-wrap gap-2">
+        {categories.map((cat, idx) => (
+          <button
+            type="button"
+            data-art-cat={cat}
+            class:list={[
+              'art-cat-btn min-h-[40px] px-4 py-1.5 rounded-xl border text-xs sm:text-sm font-bold cursor-pointer transition-colors',
+              idx === 0 ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400',
+            ]}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3" id="articles-list">
+      {articles.map((art) => (
+        <a
+          href={`/articles/${art.id.replace(/\.md$/, '')}/`}
+          data-category={art.data.category}
+          class="art-item bento-card p-5 flex flex-col justify-between gap-3 group"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-2 text-xs mb-2">
+              <span class="rounded-md bg-blue-50 text-blue-700 px-2.5 py-0.5 font-bold">{art.data.category}</span>
+              {art.data.brand && <span class="font-semibold text-slate-500">{art.data.brand}</span>}
+            </div>
+            <h2 class="text-base font-extrabold text-slate-900 group-hover:text-blue-600 leading-snug">{art.data.title}</h2>
+            <p class="mt-1.5 text-xs text-slate-600 line-clamp-2 leading-relaxed">{art.data.description}</p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+            <span>更新：{art.data.updatedDate}</span>
+            <span class="text-blue-600 font-bold">阅读全文 →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const btns = document.querySelectorAll('.art-cat-btn');
+    const items = document.querySelectorAll('.art-item');
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-art-cat');
+        btns.forEach((b) => {
+          const active = b.getAttribute('data-art-cat') === cat;
+          b.className = `art-cat-btn min-h-[40px] px-4 py-1.5 rounded-xl border text-xs sm:text-sm font-bold cursor-pointer transition-colors ${
+            active ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400'
+          }`;
+        });
+        items.forEach((el) => {
+          const show = cat === '全部' || el.getAttribute('data-category') === cat;
+          el.classList.toggle('hidden', !show);
+        });
+      });
+    });
+  })();
+</script>

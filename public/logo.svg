@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 52" fill="none" role="img" aria-label="梯子大全 Ladder Encyclopedia">
+  <defs>
+    <linearGradient id="leGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="55%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="4" width="44" height="44" rx="13" fill="url(#leGrad)" />
+  <circle cx="24" cy="26" r="14" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.5" />
+  <ellipse cx="24" cy="26" rx="7.5" ry="14" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.4" />
+  <path d="M13 20H35M13 32H35" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M18 14V38M30 14V38" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" />
+  <circle cx="30" cy="20" r="2.6" fill="#22D3EE" stroke="#0F172A" stroke-width="1.2" />
+  <text x="58" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.02em">梯子大全</text>
+  <text x="58" y="41" fill="#64748B" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10.5" font-weight="600" letter-spacing="0.08em">LADDER ENCYCLOPEDIA</text>
+</svg>

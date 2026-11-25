@@ -1,0 +1,6526 @@
+[
+  {
+    "rank": 1,
+    "displayOrder": 1,
+    "id": "lingdongyun",
+    "slug": "lingdongyun",
+    "corpusId": "lingdongyun",
+    "badge": "编辑精选 01",
+    "highlight": "IEPL/IPLC 专线 · 全节点 1× 倍率 · 不限设备",
+    "name": "灵动云",
+    "nameEn": "LingDongYun",
+    "aliases": [
+      "LingDong Cloud"
+    ],
+    "tagline": "主打 IEPL / IPLC 专线，全节点 1x 倍率、不限设备，月付 ¥20 起",
+    "summary": "灵动云以 IEPL / IPLC 优化线路和官方客户端为主要特点，提供香港、台湾、日本、新加坡、美国五个地区共 60 个节点。周期套餐从 100 GB / 月的拂风起步，另有年付小包、不限时流量包与独享定制线路。",
+    "audiences": [
+      "第一次使用机场、不想手动配置的新手",
+      "经常使用 ChatGPT、Claude 等 AI 工具的用户",
+      "观看 YouTube、Netflix 等海外流媒体的用户",
+      "需要在电脑和手机上同时使用的多设备用户",
+      "熟悉 Clash、Mihomo、希望自行管理规则的进阶用户（需向客服申请订阅链接）"
+    ],
+    "affiliateUrl": "https://varnexa.lingdongaff.com/#/?code=HHoxxHGa",
+    "officialUrl": null,
+    "coupon": {
+      "code": "ld888",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "拂风",
+        "驭浪",
+        "破晓",
+        "凌霄"
+      ],
+      "excludes": [
+        "穿云",
+        "不限时流量包",
+        "至尊私人定制"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "资料写明四档周期套餐均含长周期"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": 60,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "台湾": 10,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10
+    },
+    "lineTypes": [
+      "IEPL 专线 + BGP 智能调度",
+      "穿云套餐为 IPLC 专线"
+    ],
+    "lineTypeSummary": "IEPL 专线 + BGP 智能调度",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "ratio": "全节点统一 1x 倍率",
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": null,
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "订阅链接需向客服询问最新情况；资料写明符合条件的高流量套餐用户可联系官方客服申请，用于兼容的第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "supported",
+      "thirdPartyLabel": "支持订阅/第三方客户端",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "HBO",
+      "YouTube",
+      "TikTok",
+      "Abema",
+      "Spotify"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude",
+      "Midjourney"
+    ],
+    "streamingNote": "资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "周期套餐流量每月重置，未用完的流量不结转到下月",
+      "月内流量用完，可购买同档重置包，价格等于该套餐月付价",
+      "穿云套餐从购买日起每 30 天刷新 70 GB",
+      "所有套餐不限速"
+    ],
+    "cycleDiscounts": "季付 95 折、半年付 9 折、年付 85 折、两年付 8 折、三年付 75 折（资料原文）",
+    "support": {
+      "channels": [
+        "Crisp 在线客服",
+        "工单",
+        "Telegram 公告频道"
+      ],
+      "hours": "工单 24 小时内回复",
+      "refund": "可申请退款与升级补差价，具体条件以平台指引为准",
+      "trial": "无免费试用",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入灵动云官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 ld888，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "资料未逐一列出官方客户端支持的操作系统；",
+      "付款方式、退款具体条件、申请订阅链接的具体套餐条件资料未写明。"
+    ],
+    "materialDate": "2026-11-09",
+    "historyPriceDate": "2026-10-31",
+    "historyRecordCount": 29,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/lingdongyun/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/灵动云.txt",
+    "minMonthlyPrice": 20,
+    "minMonthlyEffectivePrice": 16,
+    "minYearlyPrice": 99,
+    "minFirstPurchase": 16,
+    "minEffectiveMonthlyAvg": 8.25,
+    "minDataPackPrice": 199,
+    "totalPlanCount": 29,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "拂风",
+          "trafficGb": 100,
+          "prices": {
+            "monthly": {
+              "original": 20,
+              "discounted": 16,
+              "savingsAmount": 4,
+              "effectivePayable": 16,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": 16
+            },
+            "quarterly": {
+              "original": 57,
+              "discounted": 45.6,
+              "savingsAmount": 11.4,
+              "effectivePayable": 45.6,
+              "monthlyEquivalent": 19,
+              "discountedMonthlyEquivalent": 15.2
+            },
+            "half-year": {
+              "original": 108,
+              "discounted": 86.4,
+              "savingsAmount": 21.6,
+              "effectivePayable": 86.4,
+              "monthlyEquivalent": 18,
+              "discountedMonthlyEquivalent": 14.4
+            },
+            "yearly": {
+              "original": 204,
+              "discounted": 163.2,
+              "savingsAmount": 40.8,
+              "effectivePayable": 163.2,
+              "monthlyEquivalent": 17,
+              "discountedMonthlyEquivalent": 13.6
+            },
+            "two-year": {
+              "original": 384,
+              "discounted": 307.2,
+              "savingsAmount": 76.8,
+              "effectivePayable": 307.2,
+              "monthlyEquivalent": 16,
+              "discountedMonthlyEquivalent": 12.8
+            },
+            "three-year": {
+              "original": 540,
+              "discounted": 432,
+              "savingsAmount": 108,
+              "effectivePayable": 432,
+              "monthlyEquivalent": 15,
+              "discountedMonthlyEquivalent": 12
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "驭浪",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 50,
+              "discounted": 40,
+              "savingsAmount": 10,
+              "effectivePayable": 40,
+              "monthlyEquivalent": 50,
+              "discountedMonthlyEquivalent": 40
+            },
+            "quarterly": {
+              "original": 142.5,
+              "discounted": 114,
+              "savingsAmount": 28.5,
+              "effectivePayable": 114,
+              "monthlyEquivalent": 47.5,
+              "discountedMonthlyEquivalent": 38
+            },
+            "half-year": {
+              "original": 270,
+              "discounted": 216,
+              "savingsAmount": 54,
+              "effectivePayable": 216,
+              "monthlyEquivalent": 45,
+              "discountedMonthlyEquivalent": 36
+            },
+            "yearly": {
+              "original": 510,
+              "discounted": 408,
+              "savingsAmount": 102,
+              "effectivePayable": 408,
+              "monthlyEquivalent": 42.5,
+              "discountedMonthlyEquivalent": 34
+            },
+            "two-year": {
+              "original": 960,
+              "discounted": 768,
+              "savingsAmount": 192,
+              "effectivePayable": 768,
+              "monthlyEquivalent": 40,
+              "discountedMonthlyEquivalent": 32
+            },
+            "three-year": {
+              "original": 1350,
+              "discounted": 1080,
+              "savingsAmount": 270,
+              "effectivePayable": 1080,
+              "monthlyEquivalent": 37.5,
+              "discountedMonthlyEquivalent": 30
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "破晓",
+          "trafficGb": 700,
+          "prices": {
+            "monthly": {
+              "original": 100,
+              "discounted": 80,
+              "savingsAmount": 20,
+              "effectivePayable": 80,
+              "monthlyEquivalent": 100,
+              "discountedMonthlyEquivalent": 80
+            },
+            "quarterly": {
+              "original": 285,
+              "discounted": 228,
+              "savingsAmount": 57,
+              "effectivePayable": 228,
+              "monthlyEquivalent": 95,
+              "discountedMonthlyEquivalent": 76
+            },
+            "half-year": {
+              "original": 540,
+              "discounted": 432,
+              "savingsAmount": 108,
+              "effectivePayable": 432,
+              "monthlyEquivalent": 90,
+              "discountedMonthlyEquivalent": 72
+            },
+            "yearly": {
+              "original": 1020,
+              "discounted": 816,
+              "savingsAmount": 204,
+              "effectivePayable": 816,
+              "monthlyEquivalent": 85,
+              "discountedMonthlyEquivalent": 68
+            },
+            "two-year": {
+              "original": 1920,
+              "discounted": 1536,
+              "savingsAmount": 384,
+              "effectivePayable": 1536,
+              "monthlyEquivalent": 80,
+              "discountedMonthlyEquivalent": 64
+            },
+            "three-year": {
+              "original": 2700,
+              "discounted": 2160,
+              "savingsAmount": 540,
+              "effectivePayable": 2160,
+              "monthlyEquivalent": 75,
+              "discountedMonthlyEquivalent": 60
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "凌霄",
+          "trafficGb": 1500,
+          "prices": {
+            "monthly": {
+              "original": 180,
+              "discounted": 144,
+              "savingsAmount": 36,
+              "effectivePayable": 144,
+              "monthlyEquivalent": 180,
+              "discountedMonthlyEquivalent": 144
+            },
+            "quarterly": {
+              "original": 513,
+              "discounted": 410.4,
+              "savingsAmount": 102.6,
+              "effectivePayable": 410.4,
+              "monthlyEquivalent": 171,
+              "discountedMonthlyEquivalent": 136.8
+            },
+            "half-year": {
+              "original": 972,
+              "discounted": 777.6,
+              "savingsAmount": 194.4,
+              "effectivePayable": 777.6,
+              "monthlyEquivalent": 162,
+              "discountedMonthlyEquivalent": 129.6
+            },
+            "yearly": {
+              "original": 1836,
+              "discounted": 1468.8,
+              "savingsAmount": 367.2,
+              "effectivePayable": 1468.8,
+              "monthlyEquivalent": 153,
+              "discountedMonthlyEquivalent": 122.4
+            },
+            "two-year": {
+              "original": 3456,
+              "discounted": 2764.8,
+              "savingsAmount": 691.2,
+              "effectivePayable": 2764.8,
+              "monthlyEquivalent": 144,
+              "discountedMonthlyEquivalent": 115.2
+            },
+            "three-year": {
+              "original": 4860,
+              "discounted": 3888,
+              "savingsAmount": 972,
+              "effectivePayable": 3888,
+              "monthlyEquivalent": 135,
+              "discountedMonthlyEquivalent": 108
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "穿云（IPLC 专线）",
+          "trafficGb": 70,
+          "price": 99,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8.25,
+          "notes": [
+            "从购买日起每 30 天刷新 70 GB",
+            "不适用优惠码 ld888"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "闲云",
+          "trafficGb": 150,
+          "price": 199,
+          "discountedPrice": null,
+          "pricePerGb": 1.327,
+          "devices": "不限同时在线设备数",
+          "notes": [
+            "不适用优惠码 ld888"
+          ]
+        },
+        {
+          "plan": "惊云",
+          "trafficGb": 400,
+          "price": 499,
+          "discountedPrice": null,
+          "pricePerGb": 1.248,
+          "devices": "不限同时在线设备数",
+          "notes": [
+            "不适用优惠码 ld888"
+          ]
+        },
+        {
+          "plan": "飞云",
+          "trafficGb": 800,
+          "price": 899,
+          "discountedPrice": null,
+          "pricePerGb": 1.124,
+          "devices": "不限同时在线设备数",
+          "notes": [
+            "不适用优惠码 ld888"
+          ]
+        }
+      ],
+      "custom": [
+        {
+          "plan": "至尊私人定制",
+          "trafficGb": 500,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": [
+            "独立带宽、专属公网 IP，约 2–3 个工作日交付",
+            "不适用优惠码 ld888"
+          ]
+        }
+      ],
+      "notes": [
+        "周期套餐流量每月重置，未用完不结转；月内用完可购买同档重置包（价格等于月付价）",
+        "优惠码 ld888 可享 8 折（适用于拂风、驭浪、破晓、凌霄，含长周期）"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "灵动云是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；订阅链接需向客服询问最新情况；资料写明符合条件的高流量套餐用户可联系官方客服申请，用于兼容的第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "灵动云允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "灵动云的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-31）公开价目中，灵动云最低起步金额为 ¥16。常规月付原价 ¥20/月起（记录优惠码 ld888 折后首期 ¥16）；年付方案 ¥99/年起（整期一次支付，折算月均约 ¥8.25/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "灵动云有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「ld888」（8 折）。适用范围：拂风、驭浪、破晓、凌霄。排除范围：穿云、不限时流量包、至尊私人定制。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "灵动云的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点统一 1x 倍率。周期套餐流量每月重置，未用完的流量不结转到下月；月内流量用完，可购买同档重置包，价格等于该套餐月付价；穿云套餐从购买日起每 30 天刷新 70 GB；所有套餐不限速。"
+      },
+      {
+        "q": "灵动云的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude、Midjourney；列明适配流媒体包括 Netflix、Disney+、HBO、YouTube、TikTok、Abema、Spotify。资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "灵动云的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：Crisp 在线客服、工单、Telegram 公告频道。响应说明：工单 24 小时内回复。试用规则：无免费试用。退款与升级：可申请退款与升级补差价，具体条件以平台指引为准。"
+      },
+      {
+        "q": "如何辨别 灵动云 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 2,
+    "displayOrder": 2,
+    "id": "twilight",
+    "slug": "twilight",
+    "corpusId": "muguang-jiasu",
+    "badge": "编辑精选 02",
+    "highlight": "Windows/macOS/iOS/Android 官方客户端 · 60 节点",
+    "name": "暮光加速",
+    "nameEn": "Twilight",
+    "aliases": [
+      "暮光网络",
+      "暮光"
+    ],
+    "tagline": "资料显示：四档周期套餐每月 120–1500 GB，BGP 智能路由加 IPLC 专线出口，全节点 1x",
+    "summary": "暮光加速（又称暮光网络）的资料显示其提供四档周期套餐（120 GB 到 1500 GB / 月）、年付轻量版、三档不限时流量包与独享定制节点，线路为 BGP 智能路由加 IPLC 专线出口，节点覆盖香港、台湾、日本、新加坡、美国。",
+    "audiences": [
+      "AI 工具与海外流媒体用户",
+      "中高流量用户与跨境办公人员",
+      "希望在月付、年付与流量包之间灵活选择的用户",
+      "预算有限或低频使用的用户"
+    ],
+    "affiliateUrl": "https://varnexa.twilightaff.com/#/?code=1V9N5bZk",
+    "officialUrl": null,
+    "coupon": {
+      "code": "mm88",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "周期套餐（基础版、标准版、旗舰版、至尊版）"
+      ],
+      "excludes": [
+        "年付轻量版"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": null
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": 60,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "BGP 智能路由 + IPLC 专线出口"
+    ],
+    "lineTypeSummary": "BGP 智能路由 + IPLC 专线出口",
+    "protocols": [
+      "Shadowsocks"
+    ],
+    "ratio": "全节点 1x 倍率",
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤",
+      "资料称不推荐导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "DAZN"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "streamingNote": "资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "周期套餐流量每月重置，未用完的流量不结转到下月",
+      "年付轻量版每 30 天刷新 70 GB",
+      "所有套餐不限速"
+    ],
+    "cycleDiscounts": "资料未写比例；按价格计算约为季付 95 折、半年付 9 折、年付 85 折",
+    "support": {
+      "channels": [
+        "工单"
+      ],
+      "hours": "24 小时",
+      "refund": "提供退款，具体条件请先询问客服",
+      "trial": "无免费试用",
+      "payment": "支付宝；微信、USDT 需联系客服",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入暮光加速官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 mm88，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "各地区节点数未写。",
+      "长周期折扣比例未单独写明，月均价格由本站按价格计算。"
+    ],
+    "materialDate": "2026-11-09",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 21,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/muguang-jiasu/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/暮光加速.txt",
+    "minMonthlyPrice": 20,
+    "minMonthlyEffectivePrice": 20,
+    "minYearlyPrice": 109,
+    "minFirstPurchase": 20,
+    "minEffectiveMonthlyAvg": 9.08,
+    "minDataPackPrice": 219,
+    "totalPlanCount": 21,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "基础版",
+          "trafficGb": 120,
+          "prices": {
+            "monthly": {
+              "original": 20,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 20,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 57,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 57,
+              "monthlyEquivalent": 19,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 108,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 108,
+              "monthlyEquivalent": 18,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 204,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 204,
+              "monthlyEquivalent": 17,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "标准版",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 40,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 40,
+              "monthlyEquivalent": 40,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 114,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 114,
+              "monthlyEquivalent": 38,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 216,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 216,
+              "monthlyEquivalent": 36,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 408,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 408,
+              "monthlyEquivalent": 34,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "旗舰版",
+          "trafficGb": 700,
+          "prices": {
+            "monthly": {
+              "original": 100,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 100,
+              "monthlyEquivalent": 100,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 285,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 285,
+              "monthlyEquivalent": 95,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 540,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 540,
+              "monthlyEquivalent": 90,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1020,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1020,
+              "monthlyEquivalent": 85,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "至尊版",
+          "trafficGb": 1500,
+          "prices": {
+            "monthly": {
+              "original": 180,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 180,
+              "monthlyEquivalent": 180,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 513,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 513,
+              "monthlyEquivalent": 171,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 972,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 972,
+              "monthlyEquivalent": 162,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1836,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1836,
+              "monthlyEquivalent": 153,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "年付轻量版",
+          "trafficGb": 70,
+          "price": 109,
+          "discountedPrice": null,
+          "monthlyEquivalent": 9.08,
+          "notes": [
+            "每 30 天刷新",
+            "不适用优惠码 mm88"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "轻量包",
+          "trafficGb": 150,
+          "price": 219,
+          "discountedPrice": null,
+          "pricePerGb": 1.46,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "标准包",
+          "trafficGb": 400,
+          "price": 529,
+          "discountedPrice": null,
+          "pricePerGb": 1.323,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "大容量包",
+          "trafficGb": 800,
+          "price": 959,
+          "discountedPrice": null,
+          "pricePerGb": 1.199,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        }
+      ],
+      "custom": [
+        {
+          "plan": "独享私人定制节点",
+          "trafficGb": 500,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": [
+            "独立带宽、独立公网 IP，需工单咨询"
+          ]
+        }
+      ],
+      "notes": [
+        "周期套餐流量每月重置，未用完不结转",
+        "优惠码 mm88 8 折，适用于周期套餐，不适用年付轻量版"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "暮光加速支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，暮光加速标明支持平台包括：Windows、macOS、iOS、Android。"
+      },
+      {
+        "q": "暮光加速是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤；资料称不推荐导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "暮光加速允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "暮光加速的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，暮光加速最低起步金额为 ¥20。常规月付原价 ¥20/月起；年付方案 ¥109/年起（整期一次支付，折算月均约 ¥9.08/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "暮光加速有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「mm88」（8 折）。适用范围：周期套餐（基础版、标准版、旗舰版、至尊版）。排除范围：年付轻量版。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "暮光加速的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x 倍率。周期套餐流量每月重置，未用完的流量不结转到下月；年付轻量版每 30 天刷新 70 GB；所有套餐不限速。"
+      },
+      {
+        "q": "暮光加速的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude；列明适配流媒体包括 Netflix、Hulu、HBO、Disney+、DAZN。资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "暮光加速的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：工单。响应说明：24 小时。试用规则：无免费试用。退款与升级：提供退款，具体条件请先询问客服。"
+      },
+      {
+        "q": "如何辨别 暮光加速 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 3,
+    "displayOrder": 3,
+    "id": "breezenet",
+    "slug": "breezenet",
+    "corpusId": "weifeng-wangluo",
+    "badge": "编辑精选 03",
+    "highlight": "Windows 10+/macOS 10.15+/iOS 15+(Nextin)/Android 5+",
+    "name": "微风网络",
+    "nameEn": "Breezenet",
+    "aliases": [
+      "微风"
+    ],
+    "tagline": "资料显示：全 IPLC 专线、53 个节点，不限设备但所有设备共用一份流量；新订单仅限官方客户端",
+    "summary": "微风网络（Breezenet）的资料显示其为全 IPLC 专线，53 个节点覆盖香港、日本、新加坡、美国、台湾，三档周期套餐从 200 GB / 月起，另有年付小包与三档不限时流量包；2026 年 10 月起新订单只能使用官方客户端。",
+    "audiences": [
+      "海外流媒体用户",
+      "家庭多设备用户",
+      "大流量与高性价比用户",
+      "AI 工具用户",
+      "跨境办公人员、学生及开发者",
+      "低频使用用户"
+    ],
+    "affiliateUrl": "https://downloadshare.breezenetttt.sbs/#/?code=GnhAtVpF",
+    "officialUrl": null,
+    "coupon": {
+      "code": "weifeng90",
+      "discount": "9 折",
+      "rate": 0.9,
+      "appliesTo": [
+        "乘风",
+        "破风",
+        "御风"
+      ],
+      "excludes": [
+        "清风",
+        "微风·不限时",
+        "信风·不限时",
+        "长风·不限时"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": null
+    },
+    "regions": [
+      "香港",
+      "日本",
+      "新加坡",
+      "美国",
+      "台湾"
+    ],
+    "nodeCount": 53,
+    "nodeCountByRegion": {
+      "香港": 14,
+      "日本": 14,
+      "新加坡": 10,
+      "美国": 10,
+      "台湾": 5
+    },
+    "lineTypes": [
+      "全 IPLC 专线"
+    ],
+    "lineTypeSummary": "全 IPLC 专线",
+    "protocols": [
+      "VLESS"
+    ],
+    "ratio": null,
+    "deviceLimit": "不限同时在线设备数，所有设备共用同一份流量",
+    "supportedPlatforms": [
+      "Windows 10 及以上",
+      "macOS 10.15 及以上",
+      "Android 5.0 及以上",
+      "iOS 15 及以上（通过 Nextin 登录）"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响",
+      "不支持导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": true
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "HBO Max",
+      "TikTok"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude",
+      "Gemini"
+    ],
+    "streamingNote": "资料称全节点使用住宅 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "周期套餐从购买日起按月重置，未用完的流量不结转到下月",
+      "不限时流量永不过期，用完为止",
+      "所有套餐不限速"
+    ],
+    "cycleDiscounts": "资料未写比例；按价格计算约为季付 9 折、半年付 85 折、年付 8 折；御风年付 ¥998 不符合这一比例（约 66.5%），具体以结算页及官方最新说明为准",
+    "support": {
+      "hours": "7×24 小时在线，夜间由 AI 客服值守",
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "trial": "无免费试用",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入微风网络官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 weifeng90，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "倍率资料未写。",
+      "客服渠道资料未写。",
+      "御风年付 ¥998 只相当于月付 12 个月总价 ¥1500 的约 66.5%，与乘风、破风年付正好 8 折不一致；原稿如此，可能是特价或笔误，待站长向品牌核实。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 15,
+    "evidenceType": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSource": "https://jichangyouxuan.blog/airports/breezenet/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/微风网络.txt",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 22.5,
+    "minYearlyPrice": 99,
+    "minFirstPurchase": 22.5,
+    "minEffectiveMonthlyAvg": 8.25,
+    "minDataPackPrice": 100,
+    "totalPlanCount": 16,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "乘风（Riding）",
+          "trafficGb": 200,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": 22.5,
+              "savingsAmount": 2.5,
+              "effectivePayable": 22.5,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": 22.5
+            },
+            "quarterly": {
+              "original": 67,
+              "discounted": 60.3,
+              "savingsAmount": 6.7,
+              "effectivePayable": 60.3,
+              "monthlyEquivalent": 22.33,
+              "discountedMonthlyEquivalent": 20.1
+            },
+            "half-year": {
+              "original": 127,
+              "discounted": 114.3,
+              "savingsAmount": 12.7,
+              "effectivePayable": 114.3,
+              "monthlyEquivalent": 21.17,
+              "discountedMonthlyEquivalent": 19.05
+            },
+            "yearly": {
+              "original": 240,
+              "discounted": 216,
+              "savingsAmount": 24,
+              "effectivePayable": 216,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": 18
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "破风（Breaking）",
+          "trafficGb": 500,
+          "prices": {
+            "monthly": {
+              "original": 55,
+              "discounted": 49.5,
+              "savingsAmount": 5.5,
+              "effectivePayable": 49.5,
+              "monthlyEquivalent": 55,
+              "discountedMonthlyEquivalent": 49.5
+            },
+            "quarterly": {
+              "original": 148,
+              "discounted": 133.2,
+              "savingsAmount": 14.8,
+              "effectivePayable": 133.2,
+              "monthlyEquivalent": 49.33,
+              "discountedMonthlyEquivalent": 44.4
+            },
+            "half-year": {
+              "original": 280,
+              "discounted": 252,
+              "savingsAmount": 28,
+              "effectivePayable": 252,
+              "monthlyEquivalent": 46.67,
+              "discountedMonthlyEquivalent": 42
+            },
+            "yearly": {
+              "original": 528,
+              "discounted": 475.2,
+              "savingsAmount": 52.8,
+              "effectivePayable": 475.2,
+              "monthlyEquivalent": 44,
+              "discountedMonthlyEquivalent": 39.6
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "御风（Mastery）",
+          "trafficGb": 1200,
+          "prices": {
+            "monthly": {
+              "original": 125,
+              "discounted": 112.5,
+              "savingsAmount": 12.5,
+              "effectivePayable": 112.5,
+              "monthlyEquivalent": 125,
+              "discountedMonthlyEquivalent": 112.5
+            },
+            "quarterly": {
+              "original": 337,
+              "discounted": 303.3,
+              "savingsAmount": 33.7,
+              "effectivePayable": 303.3,
+              "monthlyEquivalent": 112.33,
+              "discountedMonthlyEquivalent": 101.1
+            },
+            "half-year": {
+              "original": 637,
+              "discounted": 573.3,
+              "savingsAmount": 63.7,
+              "effectivePayable": 573.3,
+              "monthlyEquivalent": 106.17,
+              "discountedMonthlyEquivalent": 95.55
+            },
+            "yearly": {
+              "original": 998,
+              "discounted": 898.2,
+              "savingsAmount": 99.8,
+              "effectivePayable": 898.2,
+              "monthlyEquivalent": 83.17,
+              "discountedMonthlyEquivalent": 74.85
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "清风（Breeze）",
+          "trafficGb": 60,
+          "price": 99,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8.25,
+          "notes": [
+            "从购买日起每月自动重置",
+            "不适用优惠码 weifeng90"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "微风·不限时",
+          "trafficGb": 100,
+          "price": 100,
+          "discountedPrice": null,
+          "pricePerGb": 1,
+          "devices": "不限同时在线设备数，所有设备共用同一份流量",
+          "notes": [
+            "不适用优惠码 weifeng90"
+          ]
+        },
+        {
+          "plan": "信风·不限时",
+          "trafficGb": 270,
+          "price": 200,
+          "discountedPrice": null,
+          "pricePerGb": 0.741,
+          "devices": "不限同时在线设备数，所有设备共用同一份流量",
+          "notes": [
+            "不适用优惠码 weifeng90"
+          ]
+        },
+        {
+          "plan": "长风·不限时",
+          "trafficGb": 570,
+          "price": 370,
+          "discountedPrice": null,
+          "pricePerGb": 0.649,
+          "devices": "不限同时在线设备数，所有设备共用同一份流量",
+          "notes": [
+            "不适用优惠码 weifeng90"
+          ]
+        }
+      ],
+      "custom": [],
+      "notes": [
+        "周期套餐从购买日起按月重置，未用完不结转；所有套餐不限速",
+        "优惠码 weifeng90 9 折，适用于乘风、破风、御风"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "微风网络支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，微风网络标明支持平台包括：Windows 10 及以上、macOS 10.15 及以上、Android 5.0 及以上、iOS 15 及以上（通过 Nextin 登录）。其中 iOS 端资料提及通过 Nextin 登录使用。"
+      },
+      {
+        "q": "微风网络是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响；不支持导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "微风网络允许多少台设备同时在线？",
+        "a": "不限同时在线设备数，所有设备共用同一份流量。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "微风网络的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，微风网络最低起步金额为 ¥22.5。常规月付原价 ¥25/月起（记录优惠码 weifeng90 折后首期 ¥22.5）；年付方案 ¥99/年起（整期一次支付，折算月均约 ¥8.25/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "微风网络有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「weifeng90」（9 折）。适用范围：乘风、破风、御风。排除范围：清风、微风·不限时、信风·不限时、长风·不限时。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "微风网络的流量重置规则与节点倍率如何计算？",
+        "a": "周期套餐从购买日起按月重置，未用完的流量不结转到下月；不限时流量永不过期，用完为止；所有套餐不限速。"
+      },
+      {
+        "q": "微风网络的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude、Gemini；列明适配流媒体包括 Netflix、Disney+、HBO Max、TikTok。资料称全节点使用住宅 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "微风网络的客服渠道、试用及退款政策是什么？",
+        "a": "响应说明：7×24 小时在线，夜间由 AI 客服值守。试用规则：无免费试用。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 微风网络 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 4,
+    "displayOrder": 4,
+    "id": "feimaoyun",
+    "slug": "feimaoyun",
+    "corpusId": "feimaoyun",
+    "badge": "编辑精选 04",
+    "highlight": "15 地区 63 节点 · 支持官方客户端与 Clash/小火箭",
+    "name": "飞猫云",
+    "nameEn": "FlyCat Cloud",
+    "aliases": [
+      "FlyCat",
+      "飞猫"
+    ],
+    "tagline": "资料显示：全 IPLC 专线，周期套餐每月 150–1000 GB，另有学生年付版；资料称支持导入 Clash",
+    "summary": "飞猫云（FlyCat）的资料显示其为全 IPLC 专线，63 个节点中香港 20、台湾 10、日本 10、新加坡 10、美国 10、韩国 3，并称覆盖马来西亚、越南、菲律宾、泰国、印度、英国、法国、德国、阿根廷等地区。四档周期套餐从 150 GB / 月起，另有 ¥84 / 年的学生版、1000 GB 不限时套餐与定制线路；资料称支持导入 Clash、小火箭等第三方客户端。",
+    "audiences": [
+      "学生群体与低预算用户",
+      "机场新手与日常浏览用户",
+      "AI 轻度用户、开发者与学习用户",
+      "轻度流媒体用户与低频使用用户"
+    ],
+    "affiliateUrl": "https://flycat1.flycatvipaff.cc/#/?code=Gja6RpJ8",
+    "officialUrl": null,
+    "coupon": {
+      "code": "flycat888",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "季付及以上的周期套餐"
+      ],
+      "excludes": [
+        "月付"
+      ],
+      "limits": "新用户专享",
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": null
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "马来西亚",
+      "越南",
+      "菲律宾",
+      "泰国",
+      "印度",
+      "英国",
+      "法国",
+      "德国",
+      "阿根廷"
+    ],
+    "nodeCount": 63,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "台湾": 10,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10,
+      "韩国": 3
+    },
+    "lineTypes": [
+      "全 IPLC 专线"
+    ],
+    "lineTypeSummary": "全 IPLC 专线",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks",
+      "Trojan"
+    ],
+    "ratio": "全节点 1x 倍率",
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": null,
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤",
+      "资料称支持导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "supported",
+      "thirdPartyLabel": "支持订阅/第三方客户端",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "TikTok"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "streamingNote": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "季付及以上从购买日起每 30 天刷新流量，未用完的流量不结转",
+      "月付套餐的重置规则资料未写"
+    ],
+    "cycleDiscounts": "年付 8 折、两年付 7 折、三年付 6 折（资料原文，两年付、三年付未列价格）；宇宙版年付 ¥1360 不符合 8 折（应为 ¥1440），具体以结算页及官方最新说明为准",
+    "support": {
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入飞猫云官网，注册账号（可通过推广链接进入）",
+      "首次购买可先选季付试用",
+      "在结算页填写优惠码 flycat888，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "支持系统、客服渠道与时间、试用政策资料未写。",
+      "两年付 7 折、三年付 6 折只有比例，无具体价格。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 19,
+    "evidenceType": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSource": "https://jichangyouxuan.blog/airports/feimaoyun/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/飞猫云.txt",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 25,
+    "minYearlyPrice": 84,
+    "minFirstPurchase": 25,
+    "minEffectiveMonthlyAvg": 7,
+    "minDataPackPrice": 680,
+    "totalPlanCount": 19,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "星耀版",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 25,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 67,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 67,
+              "monthlyEquivalent": 22.33,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 127,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 127,
+              "monthlyEquivalent": 21.17,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 240,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 240,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "星环版",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 45,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 45,
+              "monthlyEquivalent": 45,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 121,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 121,
+              "monthlyEquivalent": 40.33,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 229,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 229,
+              "monthlyEquivalent": 38.17,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 432,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 432,
+              "monthlyEquivalent": 36,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "银河版",
+          "trafficGb": 600,
+          "prices": {
+            "monthly": {
+              "original": 85,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 85,
+              "monthlyEquivalent": 85,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 229,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 229,
+              "monthlyEquivalent": 76.33,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 433,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 433,
+              "monthlyEquivalent": 72.17,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 816,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 816,
+              "monthlyEquivalent": 68,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "宇宙版",
+          "trafficGb": 1000,
+          "prices": {
+            "monthly": {
+              "original": 150,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 150,
+              "monthlyEquivalent": 150,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 400,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 400,
+              "monthlyEquivalent": 133.33,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 750,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 750,
+              "monthlyEquivalent": 125,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1360,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1360,
+              "monthlyEquivalent": 113.33,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "学生版",
+          "trafficGb": 50,
+          "price": 84,
+          "discountedPrice": null,
+          "monthlyEquivalent": 7,
+          "notes": [
+            "每月自动刷新"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "不限时套餐",
+          "trafficGb": 1000,
+          "price": 680,
+          "discountedPrice": null,
+          "pricePerGb": 0.68,
+          "devices": "不限同时在线设备数",
+          "notes": [
+            "用完可付费重置，¥612"
+          ]
+        }
+      ],
+      "custom": [
+        {
+          "plan": "定制套餐",
+          "trafficGb": 500,
+          "price": 550,
+          "cycle": "monthly",
+          "notes": [
+            "独享原生 IP、可选地区、独立带宽，细节以客服报价为准"
+          ]
+        }
+      ],
+      "notes": [
+        "季付及以上从购买日起每 30 天刷新流量，未用完不结转；月付重置规则资料未写",
+        "优惠码 flycat888 8 折：季付及以上周期套餐，新用户专享，不适用月付"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "飞猫云是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤；资料称支持导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "飞猫云允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "飞猫云的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，飞猫云最低起步金额为 ¥25。常规月付原价 ¥25/月起；年付方案 ¥84/年起（整期一次支付，折算月均约 ¥7/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "飞猫云有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「flycat888」（8 折）。适用范围：季付及以上的周期套餐。排除范围：月付。限制：新用户专享。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "飞猫云的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x 倍率。季付及以上从购买日起每 30 天刷新流量，未用完的流量不结转；月付套餐的重置规则资料未写。"
+      },
+      {
+        "q": "飞猫云的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude；列明适配流媒体包括 Netflix、Disney+、TikTok。资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "飞猫云的客服渠道、试用及退款政策是什么？",
+        "a": "退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 飞猫云 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 5,
+    "displayOrder": 5,
+    "id": "flyv",
+    "slug": "flyv",
+    "corpusId": "flyv",
+    "badge": "编辑精选 05",
+    "highlight": "内置分流规则官方客户端 · 覆盖 Windows/macOS/iOS/Android",
+    "name": "FLYV",
+    "nameEn": "FlyV",
+    "aliases": [
+      "FLYV",
+      "飞V机场"
+    ],
+    "tagline": "资料显示：以专线线路和官方客户端为主，登录即用，不对外发放订阅链接",
+    "summary": "飞V 的资料显示其以专线线路与官方客户端为主：用户登录账号即可连接，分流规则内置，品牌明确不对外发放订阅链接、不支持导入第三方客户端。节点覆盖香港、台湾、日本、新加坡、美国共 60 个，入门方案为 150 GB / 月。",
+    "audiences": [
+      "不想接触订阅与规则配置、只想登录即用的用户",
+      "对账号隐私与线路稳定性要求较高的用户",
+      "需要多设备共享一份流量的家庭用户"
+    ],
+    "affiliateUrl": "https://varnexa.flyvaff.com/#/?code=PphqCqzD",
+    "officialUrl": "https://flyv.site",
+    "coupon": {
+      "code": "fly20",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "入门方案",
+        "进阶方案",
+        "高端方案",
+        "商业方案"
+      ],
+      "excludes": [
+        "年付标准轻量版",
+        "不限时流量包",
+        "独享黄金专线"
+      ],
+      "limits": "新用户首单专享，每个账号限用一次",
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "资料写明四档周期套餐均含长周期"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": 60,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "台湾": 10,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10
+    },
+    "lineTypes": [
+      "香港、台湾：IEPL 专线",
+      "日本、新加坡：IPLC / IEPL 专线",
+      "美国：BGP 直连优化"
+    ],
+    "lineTypeSummary": "IEPL / IPLC 专线（美国为 BGP 直连优化）",
+    "protocols": [],
+    "ratio": "常规会员套餐全节点统一 1x 倍率",
+    "deviceLimit": "常规周期套餐不限同时在线设备数，所有设备共享同一套餐流量",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "clientPolicy": [
+      "官方客户端，用飞V 账号登录即可连接，分流规则已内置",
+      "不对外发放订阅链接（资料称为防止订阅外泄被盗用导致节点拥挤）",
+      "不支持导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网用户中心；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "YouTube Premium",
+      "Prime Video",
+      "Abema",
+      "TVer"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude",
+      "Midjourney",
+      "GitHub Copilot"
+    ],
+    "streamingNote": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "周期套餐流量每月重置，未用完的流量不结转到下月",
+      "月内流量用完，可购买同档重置包，价格等于该套餐月付价"
+    ],
+    "cycleDiscounts": "季付约为月付总价的 95%、半年付约 90%、年付约 85%，两年付、三年付资料未列价格",
+    "support": {
+      "channels": [
+        "官网用户中心工单"
+      ],
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "资料原文：宣称 ¥9.9/月、1 折码、全场免费的都不是官方；官方入门价为 ¥25/月，正规优惠码只有 fly20"
+    },
+    "purchaseSteps": [
+      "进入飞V 官网，注册账号",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 fly20，确认折扣生效后付款",
+      "在用户中心下载客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "季付、半年付、年付只有折扣比例（约 95% / 90% / 85%），无具体价格；两年付、三年付无价格。",
+      "试用政策资料未写。",
+      "电视盒子、软路由等设备资料建议先咨询客服。"
+    ],
+    "materialDate": "2026-11-09",
+    "historyPriceDate": "2026-10-31",
+    "historyRecordCount": 21,
+    "evidenceType": "品牌公开说明",
+    "priceSource": "https://jichangyouxuan.blog/airports/flyv/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/FLYV.txt",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 20,
+    "minYearlyPrice": 99,
+    "minFirstPurchase": 20,
+    "minEffectiveMonthlyAvg": 8.25,
+    "minDataPackPrice": 189,
+    "totalPlanCount": 9,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "入门方案",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": 20,
+              "savingsAmount": 5,
+              "effectivePayable": 20,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": 20
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "进阶方案",
+          "trafficGb": 380,
+          "prices": {
+            "monthly": {
+              "original": 50,
+              "discounted": 40,
+              "savingsAmount": 10,
+              "effectivePayable": 40,
+              "monthlyEquivalent": 50,
+              "discountedMonthlyEquivalent": 40
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "高端方案",
+          "trafficGb": 800,
+          "prices": {
+            "monthly": {
+              "original": 110,
+              "discounted": 88,
+              "savingsAmount": 22,
+              "effectivePayable": 88,
+              "monthlyEquivalent": 110,
+              "discountedMonthlyEquivalent": 88
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "商业方案",
+          "trafficGb": 1800,
+          "prices": {
+            "monthly": {
+              "original": 190,
+              "discounted": 152,
+              "savingsAmount": 38,
+              "effectivePayable": 152,
+              "monthlyEquivalent": 190,
+              "discountedMonthlyEquivalent": 152
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "年付标准轻量版",
+          "trafficGb": 65,
+          "price": 99,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8.25,
+          "notes": [
+            "不适用优惠码 fly20"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "单次轻量版 · 小流量包",
+          "trafficGb": 130,
+          "price": 189,
+          "discountedPrice": null,
+          "pricePerGb": 1.454,
+          "devices": "常规周期套餐不限同时在线设备数",
+          "notes": [
+            "不适用优惠码 fly20"
+          ]
+        },
+        {
+          "plan": "单次轻量版 · 标准流量包",
+          "trafficGb": 380,
+          "price": 479,
+          "discountedPrice": null,
+          "pricePerGb": 1.261,
+          "devices": "常规周期套餐不限同时在线设备数",
+          "notes": [
+            "不适用优惠码 fly20"
+          ]
+        },
+        {
+          "plan": "单次轻量版 · 精英流量包",
+          "trafficGb": 600,
+          "price": 799,
+          "discountedPrice": null,
+          "pricePerGb": 1.332,
+          "devices": "常规周期套餐不限同时在线设备数",
+          "notes": [
+            "不适用优惠码 fly20"
+          ]
+        }
+      ],
+      "custom": [
+        {
+          "plan": "原生 IP · 独享黄金专线",
+          "trafficGb": 500,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": [
+            "资料称适合 TikTok、跨境电商",
+            "不适用优惠码 fly20"
+          ]
+        }
+      ],
+      "notes": [
+        "周期套餐流量每月重置，未用完不结转；月内用完可购买同档重置包（价格等于月付价）",
+        "优惠码 fly20 8 折：新用户首单专享，每个账号限用一次"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "FLYV支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，FLYV标明支持平台包括：Windows、macOS、Android、iOS。"
+      },
+      {
+        "q": "FLYV是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，用飞V 账号登录即可连接，分流规则已内置；不对外发放订阅链接（资料称为防止订阅外泄被盗用导致节点拥挤）；不支持导入 Clash、小火箭等第三方客户端；下载渠道仅限官网用户中心；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "FLYV允许多少台设备同时在线？",
+        "a": "常规周期套餐不限同时在线设备数，所有设备共享同一套餐流量。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "FLYV的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-31）公开价目中，FLYV最低起步金额为 ¥20。常规月付原价 ¥25/月起（记录优惠码 fly20 折后首期 ¥20）；年付方案 ¥99/年起（整期一次支付，折算月均约 ¥8.25/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "FLYV有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「fly20」（8 折）。适用范围：入门方案、进阶方案、高端方案、商业方案。排除范围：年付标准轻量版、不限时流量包、独享黄金专线。限制：新用户首单专享，每个账号限用一次。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "FLYV的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：常规会员套餐全节点统一 1x 倍率。周期套餐流量每月重置，未用完的流量不结转到下月；月内流量用完，可购买同档重置包，价格等于该套餐月付价。"
+      },
+      {
+        "q": "FLYV的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude、Midjourney、GitHub Copilot；列明适配流媒体包括 Netflix、Disney+、YouTube Premium、Prime Video、Abema、TVer。资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "FLYV的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：官网用户中心工单。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 FLYV 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 6,
+    "displayOrder": 6,
+    "id": "wavenet",
+    "slug": "wavenet",
+    "corpusId": "langwang",
+    "badge": "编辑精选 06",
+    "highlight": "纯专线架构 · Windows/macOS/Android/iOS/iPadOS",
+    "name": "浪网",
+    "nameEn": "WaveNet",
+    "aliases": [],
+    "tagline": "资料显示：企业级 IEPL 专线、60+ 节点，周期套餐每月 150–2000 GB，目前只能使用官方客户端",
+    "summary": "浪网（WaveNet）的资料强调 VLESS 协议、企业级 IEPL 专线、三网优化与智能负载均衡，称有 60 个以上节点覆盖香港、台湾、日本、新加坡、美国等地区。四档周期套餐从 150 GB / 月起（最高 2 TB），另有年付标准套餐、三档不限时流量包与仅支持月付的定制线路包；支持 Windows、macOS、Android、iOS / iPadOS，目前只能使用官方客户端，暂不支持订阅。",
+    "audiences": [
+      "日常跨境网络使用者",
+      "远程办公与在线学习用户",
+      "Netflix、YouTube 等流媒体用户",
+      "ChatGPT、Gemini 等 AI 工具用户",
+      "需要高流量套餐的用户",
+      "有专属线路需求的企业及个人用户"
+    ],
+    "affiliateUrl": "https://varnexa.wavenetaff.com/#/?code=8lvPHncJ",
+    "officialUrl": null,
+    "coupon": {
+      "code": "lw888",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "符合条件的常规周期套餐"
+      ],
+      "excludes": [
+        "年付标准"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "资料对“符合条件”的范围未进一步说明"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "企业级 IEPL 专线",
+      "三网优化、智能负载均衡"
+    ],
+    "lineTypeSummary": "企业级 IEPL 专线 + 三网优化",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "ratio": null,
+    "deviceLimit": "无限",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS / iPadOS"
+    ],
+    "clientPolicy": [
+      "通过官网主页下载客户端，按页面指引一键登录即可使用",
+      "目前暂不支持订阅链接",
+      "资料说明：优先指导用户使用官方客户端，不宣传第三方订阅导入"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "HBO",
+      "YouTube"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "streamingNote": "资料列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "入口、进阶、高端、商业及年付标准套餐按每月流量额度展示",
+      "不限时流量包按总流量计算，用完为止",
+      "每月流量重置日期：购买当日算起为期一个月",
+      "未使用流量不结转",
+      "流量耗尽后可复购；支持流量包叠加"
+    ],
+    "cycleDiscounts": "资料未写比例；按价格计算约为季付 95 折、半年付 9 折、年付 85 折",
+    "support": {
+      "channels": [
+        "Telegram 客服（资料提供了个人账号，本站不公开展示）"
+      ],
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "trial": "",
+      "payment": "支付宝、微信、USDT"
+    },
+    "purchaseSteps": [
+      "点击指定入口进入主页，根据提示注册或登录账号",
+      "查看当前在售套餐及价格，选择周期与流量额度",
+      "符合条件的常规周期套餐可输入优惠码 lw888，确认优惠后的实付金额并完成付款",
+      "返回主页下载对应设备的客户端，按指引一键登录",
+      "如遇连接或账户问题，联系主页正式客服"
+    ],
+    "caveats": [
+      "各地区节点数、倍率资料未写（总数为“60+”）。",
+      "限速说明资料未写；正式客服渠道（工单 / 在线客服）待补充。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 5,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/wavenet/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/浪网.txt",
+    "minMonthlyPrice": 30,
+    "minMonthlyEffectivePrice": 30,
+    "minYearlyPrice": 119,
+    "minFirstPurchase": 30,
+    "minEffectiveMonthlyAvg": 9.92,
+    "minDataPackPrice": 239,
+    "totalPlanCount": 21,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "入口",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 30,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 30,
+              "monthlyEquivalent": 30,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 85.5,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 85.5,
+              "monthlyEquivalent": 28.5,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 162,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 162,
+              "monthlyEquivalent": 27,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 306,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 306,
+              "monthlyEquivalent": 25.5,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "进阶",
+          "trafficGb": 400,
+          "prices": {
+            "monthly": {
+              "original": 70,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 70,
+              "monthlyEquivalent": 70,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 199.5,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 199.5,
+              "monthlyEquivalent": 66.5,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 378,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 378,
+              "monthlyEquivalent": 63,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 714,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 714,
+              "monthlyEquivalent": 59.5,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "高端",
+          "trafficGb": 800,
+          "prices": {
+            "monthly": {
+              "original": 120,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 120,
+              "monthlyEquivalent": 120,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 342,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 342,
+              "monthlyEquivalent": 114,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 648,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 648,
+              "monthlyEquivalent": 108,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1224,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1224,
+              "monthlyEquivalent": 102,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "商业",
+          "trafficGb": 2000,
+          "prices": {
+            "monthly": {
+              "original": 200,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 200,
+              "monthlyEquivalent": 200,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 570,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 570,
+              "monthlyEquivalent": 190,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 1080,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1080,
+              "monthlyEquivalent": 180,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 2040,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 2040,
+              "monthlyEquivalent": 170,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": [
+            "资料写 2 TB / 月"
+          ]
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "年付标准",
+          "trafficGb": 80,
+          "price": 119,
+          "discountedPrice": null,
+          "monthlyEquivalent": 9.92,
+          "notes": [
+            "不适用优惠码 lw888"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "不限时流量包 180 GB",
+          "trafficGb": 180,
+          "price": 239,
+          "discountedPrice": null,
+          "pricePerGb": 1.328,
+          "devices": "无限",
+          "notes": []
+        },
+        {
+          "plan": "不限时流量包 450 GB",
+          "trafficGb": 450,
+          "price": 569,
+          "discountedPrice": null,
+          "pricePerGb": 1.264,
+          "devices": "无限",
+          "notes": []
+        },
+        {
+          "plan": "不限时流量包 900 GB",
+          "trafficGb": 900,
+          "price": 1099,
+          "discountedPrice": null,
+          "pricePerGb": 1.221,
+          "devices": "无限",
+          "notes": []
+        }
+      ],
+      "custom": [
+        {
+          "plan": "定制线路包",
+          "trafficGb": 500,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": [
+            "仅支持月付"
+          ]
+        }
+      ],
+      "notes": [
+        "每月流量重置日期为购买当日起一个月；未使用流量不结转；流量耗尽可复购；支持流量包叠加",
+        "优惠码 lw888 8 折，适用于符合条件的常规周期套餐"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "浪网支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，浪网标明支持平台包括：Windows、macOS、Android、iOS / iPadOS。"
+      },
+      {
+        "q": "浪网是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "通过官网主页下载客户端，按页面指引一键登录即可使用；目前暂不支持订阅链接；资料说明：优先指导用户使用官方客户端，不宣传第三方订阅导入。"
+      },
+      {
+        "q": "浪网允许多少台设备同时在线？",
+        "a": "无限。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "浪网的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，浪网最低起步金额为 ¥30。常规月付原价 ¥30/月起；年付方案 ¥119/年起（整期一次支付，折算月均约 ¥9.92/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "浪网有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「lw888」（8 折）。适用范围：符合条件的常规周期套餐。排除范围：年付标准。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "浪网的流量重置规则与节点倍率如何计算？",
+        "a": "入口、进阶、高端、商业及年付标准套餐按每月流量额度展示；不限时流量包按总流量计算，用完为止；每月流量重置日期：购买当日算起为期一个月；未使用流量不结转；流量耗尽后可复购；支持流量包叠加。"
+      },
+      {
+        "q": "浪网的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Gemini；列明适配流媒体包括 Netflix、Disney+、HBO、YouTube。资料列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "浪网的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：Telegram 客服（资料提供了个人账号，本站不公开展示）。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 浪网 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 7,
+    "displayOrder": 7,
+    "id": "yinxingren",
+    "slug": "yinxingren",
+    "corpusId": "yinxingren",
+    "badge": "编辑精选 07",
+    "highlight": "Windows/macOS/Linux/iOS/Android 官方客户端 · 60 节点",
+    "name": "隐形人",
+    "nameEn": "Invisible Network",
+    "aliases": [
+      "隐形人机场"
+    ],
+    "tagline": "资料显示：IEPL 专线加 BGP 优化，周期套餐每月 144–1600 GB，只能使用官方客户端",
+    "summary": "隐形人的资料显示其采用 IEPL 专线并以 BGP 智能优化，提供香港、台湾、日本、新加坡、美国共 60 个节点（另称有马来西亚节点，数量以官方最新说明为准），四档周期套餐从 144 GB / 月起，另有年付小包、三档限设备数的不限时流量包与独享定制线路。",
+    "audiences": [
+      "流量用得多的人",
+      "需要多个出口地区的人",
+      "需要独享带宽的人"
+    ],
+    "affiliateUrl": "https://varnexa.invisibleaff.com/#/?code=TNqBqWEw",
+    "officialUrl": null,
+    "coupon": {
+      "code": "yxr888",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [],
+      "excludes": [],
+      "limits": "一次性使用",
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "适用套餐范围资料未写（折扣与使用限制为站长 2026-11-13 补充）"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "马来西亚",
+      "美国"
+    ],
+    "nodeCount": 60,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "台湾": 10,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10
+    },
+    "lineTypes": [
+      "IEPL 专线 + BGP 智能优化（资料另一处写“IEPL 覆盖所有节点”）"
+    ],
+    "lineTypeSummary": "IEPL 专线 + BGP 智能优化",
+    "protocols": [],
+    "ratio": "全节点 1x 倍率",
+    "deviceLimit": "周期套餐不限设备；一次性流量包限 1 / 2 / 3 台",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接；只推荐下载官网客户端使用",
+      "不提供订阅链接，不支持第三方客户端（站长 2026-11-13 补充，取代原稿中“支持主流第三方客户端”的表述）",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": false,
+      "supportsLinux": true,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "Prime Video",
+      "BBC",
+      "Abema",
+      "TVer"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "GitHub Copilot",
+      "Hugging Face"
+    ],
+    "streamingNote": "资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准；列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "周期套餐流量每月重置，未用完的流量不结转到下月",
+      "所有套餐不限速"
+    ],
+    "cycleDiscounts": "季付 95 折、半年付 9 折、年付 85 折（资料原文）",
+    "support": {
+      "refund": "支持不满意退款，适用范围以条款为准",
+      "trial": "无免费试用",
+      "payment": "支付宝、微信、USDT",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入隐形人官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 yxr888，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "优惠码 yxr888 的适用套餐范围资料未写。",
+      "客服渠道与时间、重置包价格资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 14,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/yinxingren/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/隐形人.txt",
+    "minMonthlyPrice": 24,
+    "minMonthlyEffectivePrice": 19.2,
+    "minYearlyPrice": 109,
+    "minFirstPurchase": 19.2,
+    "minEffectiveMonthlyAvg": 9.08,
+    "minDataPackPrice": 229,
+    "totalPlanCount": 21,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "白银纪元",
+          "trafficGb": 144,
+          "prices": {
+            "monthly": {
+              "original": 24,
+              "discounted": 19.2,
+              "savingsAmount": 4.8,
+              "effectivePayable": 19.2,
+              "monthlyEquivalent": 24,
+              "discountedMonthlyEquivalent": 19.2
+            },
+            "quarterly": {
+              "original": 68.4,
+              "discounted": 54.72,
+              "savingsAmount": 13.68,
+              "effectivePayable": 54.72,
+              "monthlyEquivalent": 22.8,
+              "discountedMonthlyEquivalent": 18.24
+            },
+            "half-year": {
+              "original": 129.6,
+              "discounted": 103.68,
+              "savingsAmount": 25.92,
+              "effectivePayable": 103.68,
+              "monthlyEquivalent": 21.6,
+              "discountedMonthlyEquivalent": 17.28
+            },
+            "yearly": {
+              "original": 244.8,
+              "discounted": 195.84,
+              "savingsAmount": 48.96,
+              "effectivePayable": 195.84,
+              "monthlyEquivalent": 20.4,
+              "discountedMonthlyEquivalent": 16.32
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "黄金序列",
+          "trafficGb": 360,
+          "prices": {
+            "monthly": {
+              "original": 48,
+              "discounted": 38.4,
+              "savingsAmount": 9.6,
+              "effectivePayable": 38.4,
+              "monthlyEquivalent": 48,
+              "discountedMonthlyEquivalent": 38.4
+            },
+            "quarterly": {
+              "original": 136.8,
+              "discounted": 109.44,
+              "savingsAmount": 27.36,
+              "effectivePayable": 109.44,
+              "monthlyEquivalent": 45.6,
+              "discountedMonthlyEquivalent": 36.48
+            },
+            "half-year": {
+              "original": 259.2,
+              "discounted": 207.36,
+              "savingsAmount": 51.84,
+              "effectivePayable": 207.36,
+              "monthlyEquivalent": 43.2,
+              "discountedMonthlyEquivalent": 34.56
+            },
+            "yearly": {
+              "original": 489.6,
+              "discounted": 391.68,
+              "savingsAmount": 97.92,
+              "effectivePayable": 391.68,
+              "monthlyEquivalent": 40.8,
+              "discountedMonthlyEquivalent": 32.64
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "铂金至臻",
+          "trafficGb": 750,
+          "prices": {
+            "monthly": {
+              "original": 105,
+              "discounted": 84,
+              "savingsAmount": 21,
+              "effectivePayable": 84,
+              "monthlyEquivalent": 105,
+              "discountedMonthlyEquivalent": 84
+            },
+            "quarterly": {
+              "original": 299.25,
+              "discounted": 239.4,
+              "savingsAmount": 59.85,
+              "effectivePayable": 239.4,
+              "monthlyEquivalent": 99.75,
+              "discountedMonthlyEquivalent": 79.8
+            },
+            "half-year": {
+              "original": 567,
+              "discounted": 453.6,
+              "savingsAmount": 113.4,
+              "effectivePayable": 453.6,
+              "monthlyEquivalent": 94.5,
+              "discountedMonthlyEquivalent": 75.6
+            },
+            "yearly": {
+              "original": 1071,
+              "discounted": 856.8,
+              "savingsAmount": 214.2,
+              "effectivePayable": 856.8,
+              "monthlyEquivalent": 89.25,
+              "discountedMonthlyEquivalent": 71.4
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "钻石穹顶",
+          "trafficGb": 1600,
+          "prices": {
+            "monthly": {
+              "original": 185,
+              "discounted": 148,
+              "savingsAmount": 37,
+              "effectivePayable": 148,
+              "monthlyEquivalent": 185,
+              "discountedMonthlyEquivalent": 148
+            },
+            "quarterly": {
+              "original": 527.25,
+              "discounted": 421.8,
+              "savingsAmount": 105.45,
+              "effectivePayable": 421.8,
+              "monthlyEquivalent": 175.75,
+              "discountedMonthlyEquivalent": 140.6
+            },
+            "half-year": {
+              "original": 999,
+              "discounted": 799.2,
+              "savingsAmount": 199.8,
+              "effectivePayable": 799.2,
+              "monthlyEquivalent": 166.5,
+              "discountedMonthlyEquivalent": 133.2
+            },
+            "yearly": {
+              "original": 1887,
+              "discounted": 1509.6,
+              "savingsAmount": 377.4,
+              "effectivePayable": 1509.6,
+              "monthlyEquivalent": 157.25,
+              "discountedMonthlyEquivalent": 125.8
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "星耀风暴",
+          "trafficGb": 80,
+          "price": 109,
+          "discountedPrice": null,
+          "monthlyEquivalent": 9.08,
+          "notes": [
+            "每 30 天刷新"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "小流量包",
+          "trafficGb": 160,
+          "price": 229,
+          "discountedPrice": null,
+          "pricePerGb": 1.431,
+          "devices": "限 1 台设备",
+          "notes": []
+        },
+        {
+          "plan": "标准流量包",
+          "trafficGb": 420,
+          "price": 549,
+          "discountedPrice": null,
+          "pricePerGb": 1.307,
+          "devices": "限 2 台设备",
+          "notes": []
+        },
+        {
+          "plan": "精英流量包",
+          "trafficGb": 1000,
+          "price": 1199,
+          "discountedPrice": null,
+          "pricePerGb": 1.199,
+          "devices": "限 3 台设备",
+          "notes": []
+        }
+      ],
+      "custom": [
+        {
+          "plan": "王者定制版（独享带宽）",
+          "trafficGb": 500,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": []
+        }
+      ],
+      "notes": [
+        "周期套餐流量每月重置，未用完不结转；所有套餐不限速",
+        "优惠码 yxr888 8 折，一次性使用（站长 2026-11-13 补充）；适用套餐范围资料未写"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "隐形人支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，隐形人标明支持平台包括：Windows、macOS、Linux、iOS、Android。"
+      },
+      {
+        "q": "隐形人是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；只推荐下载官网客户端使用；不提供订阅链接，不支持第三方客户端（站长 2026-11-13 补充，取代原稿中“支持主流第三方客户端”的表述）；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "隐形人允许多少台设备同时在线？",
+        "a": "周期套餐不限设备；一次性流量包限 1 / 2 / 3 台。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "隐形人的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，隐形人最低起步金额为 ¥19.2。常规月付原价 ¥24/月起（记录优惠码 yxr888 折后首期 ¥19.2）；年付方案 ¥109/年起（整期一次支付，折算月均约 ¥9.08/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "隐形人有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「yxr888」（8 折）。限制：一次性使用。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "隐形人的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x 倍率。周期套餐流量每月重置，未用完的流量不结转到下月；所有套餐不限速。"
+      },
+      {
+        "q": "隐形人的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、GitHub Copilot、Hugging Face；列明适配流媒体包括 Netflix、Disney+、Prime Video、BBC、Abema、TVer。资料注明：速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准；列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "隐形人的客服渠道、试用及退款政策是什么？",
+        "a": "试用规则：无免费试用。退款与升级：支持不满意退款，适用范围以条款为准。"
+      },
+      {
+        "q": "如何辨别 隐形人 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 8,
+    "displayOrder": 8,
+    "id": "wuyou",
+    "slug": "wuyou",
+    "corpusId": "wuyou",
+    "badge": "编辑精选 08",
+    "highlight": "多地区专线 · 四大系统官方端及 Nextin 支持",
+    "name": "无忧链接",
+    "nameEn": null,
+    "aliases": [
+      "无忧"
+    ],
+    "tagline": "低门槛入门机场，月付 ¥19 起，年付 MINI 链接 ¥79，主打跨境电商与 TikTok",
+    "summary": "无忧链接（又称无忧）的资料显示其为 IPLC 专线、全线 1x 倍率，节点覆盖香港、台湾、日本、新加坡、美国，另有东南亚与欧美地区，共 50 个以上。四档周期套餐从 100 GB / 月起（无半年付），另有 ¥79 / 年的 MINI 链接与两档不限时流量包（流量不过期）；2026 年 10 月起新订单只能使用官方客户端。",
+    "audiences": [
+      "预算有限、想先试一个月的人",
+      "跨境电商与 TikTok 用户",
+      "需要备用机场的人"
+    ],
+    "affiliateUrl": "https://wep01.worryfreeaff.com/#/?code=wRKHiDZB",
+    "officialUrl": null,
+    "coupon": {
+      "code": "wuyou666",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "舒心链接",
+        "省心链接",
+        "随心链接",
+        "忘忧链接"
+      ],
+      "excludes": [
+        "MINI 链接"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "第三方 2026-11-09 后台调查记载活动至 11 月 30 日，有效期待结算核实"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "东南亚",
+      "欧美"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "IPLC 专线（第三方资料另写 IPLC / IEPL）"
+    ],
+    "lineTypeSummary": "IPLC 专线",
+    "protocols": [
+      "VLESS",
+      "VMess",
+      "Shadowsocks",
+      "Trojan",
+      "Hysteria2"
+    ],
+    "ratio": "全线节点 1x，无倍率",
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "原稿称不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响",
+      "原稿称不支持导入 Clash、小火箭等第三方客户端；2026-11-09 第三方后台调查提到 iOS Nextin（识别码 wylj）与可向客服申请定制订阅，以官网与客服当前说明为准",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "conditional",
+      "thirdPartyLabel": "需核对客服/指定套餐政策",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": true
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "YouTube",
+      "TikTok"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "streamingNote": "资料列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "周期套餐流量每月重置，未用完的流量不结转到下月",
+      "所有套餐不限速"
+    ],
+    "cycleDiscounts": "没有半年付（资料原文）；按价格计算约为季付 9 折、年付 8 折",
+    "support": {
+      "hours": "7×24 小时在线，夜间由 AI 客服值守",
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入无忧链接官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 wuyou666，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "各地区节点数、试用条件资料未写或以结算页或官方最新公告为准。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 14,
+    "evidenceType": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSource": "https://jichangyouxuan.blog/airports/wuyou/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/10_无忧_无忧链接_更新版.md",
+    "minMonthlyPrice": 19,
+    "minMonthlyEffectivePrice": 15.2,
+    "minYearlyPrice": 79,
+    "minFirstPurchase": 15.2,
+    "minEffectiveMonthlyAvg": 6.58,
+    "minDataPackPrice": 108,
+    "totalPlanCount": 15,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "舒心链接",
+          "trafficGb": 100,
+          "prices": {
+            "monthly": {
+              "original": 19,
+              "discounted": 15.2,
+              "savingsAmount": 3.8,
+              "effectivePayable": 15.2,
+              "monthlyEquivalent": 19,
+              "discountedMonthlyEquivalent": 15.2
+            },
+            "quarterly": {
+              "original": 51,
+              "discounted": 40.8,
+              "savingsAmount": 10.2,
+              "effectivePayable": 40.8,
+              "monthlyEquivalent": 17,
+              "discountedMonthlyEquivalent": 13.6
+            },
+            "yearly": {
+              "original": 182,
+              "discounted": 145.6,
+              "savingsAmount": 36.4,
+              "effectivePayable": 145.6,
+              "monthlyEquivalent": 15.17,
+              "discountedMonthlyEquivalent": 12.13
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "省心链接",
+          "trafficGb": 200,
+          "prices": {
+            "monthly": {
+              "original": 33,
+              "discounted": 26.4,
+              "savingsAmount": 6.6,
+              "effectivePayable": 26.4,
+              "monthlyEquivalent": 33,
+              "discountedMonthlyEquivalent": 26.4
+            },
+            "quarterly": {
+              "original": 89,
+              "discounted": 71.2,
+              "savingsAmount": 17.8,
+              "effectivePayable": 71.2,
+              "monthlyEquivalent": 29.67,
+              "discountedMonthlyEquivalent": 23.73
+            },
+            "yearly": {
+              "original": 316,
+              "discounted": 252.8,
+              "savingsAmount": 63.2,
+              "effectivePayable": 252.8,
+              "monthlyEquivalent": 26.33,
+              "discountedMonthlyEquivalent": 21.07
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "随心链接",
+          "trafficGb": 500,
+          "prices": {
+            "monthly": {
+              "original": 77,
+              "discounted": 61.6,
+              "savingsAmount": 15.4,
+              "effectivePayable": 61.6,
+              "monthlyEquivalent": 77,
+              "discountedMonthlyEquivalent": 61.6
+            },
+            "quarterly": {
+              "original": 207,
+              "discounted": 165.6,
+              "savingsAmount": 41.4,
+              "effectivePayable": 165.6,
+              "monthlyEquivalent": 69,
+              "discountedMonthlyEquivalent": 55.2
+            },
+            "yearly": {
+              "original": 739,
+              "discounted": 591.2,
+              "savingsAmount": 147.8,
+              "effectivePayable": 591.2,
+              "monthlyEquivalent": 61.58,
+              "discountedMonthlyEquivalent": 49.27
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "忘忧链接",
+          "trafficGb": 1000,
+          "prices": {
+            "monthly": {
+              "original": 117,
+              "discounted": 93.6,
+              "savingsAmount": 23.4,
+              "effectivePayable": 93.6,
+              "monthlyEquivalent": 117,
+              "discountedMonthlyEquivalent": 93.6
+            },
+            "quarterly": {
+              "original": 315,
+              "discounted": 252,
+              "savingsAmount": 63,
+              "effectivePayable": 252,
+              "monthlyEquivalent": 105,
+              "discountedMonthlyEquivalent": 84
+            },
+            "yearly": {
+              "original": 1123,
+              "discounted": 898.4,
+              "savingsAmount": 224.6,
+              "effectivePayable": 898.4,
+              "monthlyEquivalent": 93.58,
+              "discountedMonthlyEquivalent": 74.87
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "MINI 链接",
+          "trafficGb": 40,
+          "price": 79,
+          "discountedPrice": null,
+          "monthlyEquivalent": 6.58,
+          "notes": [
+            "不适用优惠码 wuyou666"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "100G 永久不限时",
+          "trafficGb": 100,
+          "price": 108,
+          "discountedPrice": null,
+          "pricePerGb": 1.08,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "300G 永久不限时",
+          "trafficGb": 300,
+          "price": 298,
+          "discountedPrice": null,
+          "pricePerGb": 0.993,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        }
+      ],
+      "custom": [],
+      "notes": [
+        "周期套餐流量每月重置，未用完不结转；所有套餐不限速",
+        "优惠码 wuyou666 8 折，不适用 MINI 链接；第三方记载活动至 11 月 30 日，有效期以结算页或官方最新公告为准"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "无忧链接支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，无忧链接标明支持平台包括：Windows、macOS、iOS、Android。其中 iOS 端资料提及通过 Nextin 登录使用。"
+      },
+      {
+        "q": "无忧链接是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；原稿称不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响；原稿称不支持导入 Clash、小火箭等第三方客户端；2026-11-09 第三方后台调查提到 iOS Nextin（识别码 wylj）与可向客服申请定制订阅，以官网与客服当前说明为准；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "无忧链接允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "无忧链接的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，无忧链接最低起步金额为 ¥15.2。常规月付原价 ¥19/月起（记录优惠码 wuyou666 折后首期 ¥15.2）；年付方案 ¥79/年起（整期一次支付，折算月均约 ¥6.58/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "无忧链接有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「wuyou666」（8 折）。适用范围：舒心链接、省心链接、随心链接、忘忧链接。排除范围：MINI 链接。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "无忧链接的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全线节点 1x，无倍率。周期套餐流量每月重置，未用完的流量不结转到下月；所有套餐不限速。"
+      },
+      {
+        "q": "无忧链接的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Gemini；列明适配流媒体包括 Netflix、Disney+、YouTube、TikTok。资料列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "无忧链接的客服渠道、试用及退款政策是什么？",
+        "a": "响应说明：7×24 小时在线，夜间由 AI 客服值守。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 无忧链接 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 9,
+    "displayOrder": 9,
+    "id": "firefly",
+    "slug": "firefly",
+    "corpusId": "firefly",
+    "badge": "编辑精选 09",
+    "highlight": "Win 10+/macOS 10.15+/Android 5+/iOS 12+ 官方客户端",
+    "name": "Firefly",
+    "nameEn": "Firefly",
+    "aliases": [
+      "飞为（桌面优惠码清单中的中文写法，待确认）"
+    ],
+    "tagline": "IPLC 专线入门机场，月付 ¥25 含 150 GB",
+    "summary": "Firefly 的资料显示其为 IPLC 专线，五个地区（香港、台湾、日本、新加坡、美国）50 个以上节点，Lite / Plus / Blaze / Nova 四档周期套餐从 150 GB / 月起（无半年付），另有 ¥96 / 年小包与 100 GB 不限时套餐；2026 年 10 月起新订单只能使用自研官方客户端。",
+    "audiences": [
+      "常用 AI 办公或深夜追剧的人",
+      "多设备用户",
+      "用量不大、想年付的人"
+    ],
+    "affiliateUrl": "https://fly.fireflyxx.cfd/#/?code=WWdYMdoa",
+    "officialUrl": null,
+    "coupon": {
+      "code": "firefly",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "Lite",
+        "Plus",
+        "Blaze",
+        "Nova"
+      ],
+      "excludes": [
+        "年付版"
+      ],
+      "limits": "新用户专享",
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": null
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "IPLC 专线"
+    ],
+    "lineTypeSummary": "IPLC 专线",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks",
+      "Trojan"
+    ],
+    "ratio": null,
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": [
+      "Windows 10 及以上",
+      "macOS 10.15 及以上",
+      "Android 5.0 及以上",
+      "iOS 12.0 及以上（公开页面标注，版本可能变化）"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响",
+      "不支持导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "YouTube",
+      "Netflix",
+      "Disney+",
+      "HBO"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Gemini",
+      "Meta AI"
+    ],
+    "streamingNote": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "周期套餐流量每月重置，未用完的流量不结转到下月"
+    ],
+    "cycleDiscounts": "没有半年付（资料原文）；按价格计算约为季付 9 折、年付 8 折",
+    "support": {
+      "channels": [
+        "退款申请经合作平台工单（公开联系页）"
+      ],
+      "hours": "7×24 小时在线，夜间由 AI 客服值守",
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入 Firefly 官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 firefly，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "各地区节点数、倍率、试用、限速说明资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 14,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/firefly/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/11_Firefly_更新版.md",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 20,
+    "minYearlyPrice": 96,
+    "minFirstPurchase": 20,
+    "minEffectiveMonthlyAvg": 8,
+    "minDataPackPrice": 100,
+    "totalPlanCount": 14,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "Lite",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": 20,
+              "savingsAmount": 5,
+              "effectivePayable": 20,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": 20
+            },
+            "quarterly": {
+              "original": 67,
+              "discounted": 53.6,
+              "savingsAmount": 13.4,
+              "effectivePayable": 53.6,
+              "monthlyEquivalent": 22.33,
+              "discountedMonthlyEquivalent": 17.87
+            },
+            "yearly": {
+              "original": 240,
+              "discounted": 192,
+              "savingsAmount": 48,
+              "effectivePayable": 192,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": 16
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "Plus",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 45,
+              "discounted": 36,
+              "savingsAmount": 9,
+              "effectivePayable": 36,
+              "monthlyEquivalent": 45,
+              "discountedMonthlyEquivalent": 36
+            },
+            "quarterly": {
+              "original": 121,
+              "discounted": 96.8,
+              "savingsAmount": 24.2,
+              "effectivePayable": 96.8,
+              "monthlyEquivalent": 40.33,
+              "discountedMonthlyEquivalent": 32.27
+            },
+            "yearly": {
+              "original": 432,
+              "discounted": 345.6,
+              "savingsAmount": 86.4,
+              "effectivePayable": 345.6,
+              "monthlyEquivalent": 36,
+              "discountedMonthlyEquivalent": 28.8
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "Blaze",
+          "trafficGb": 600,
+          "prices": {
+            "monthly": {
+              "original": 85,
+              "discounted": 68,
+              "savingsAmount": 17,
+              "effectivePayable": 68,
+              "monthlyEquivalent": 85,
+              "discountedMonthlyEquivalent": 68
+            },
+            "quarterly": {
+              "original": 229,
+              "discounted": 183.2,
+              "savingsAmount": 45.8,
+              "effectivePayable": 183.2,
+              "monthlyEquivalent": 76.33,
+              "discountedMonthlyEquivalent": 61.07
+            },
+            "yearly": {
+              "original": 816,
+              "discounted": 652.8,
+              "savingsAmount": 163.2,
+              "effectivePayable": 652.8,
+              "monthlyEquivalent": 68,
+              "discountedMonthlyEquivalent": 54.4
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "Nova",
+          "trafficGb": 1000,
+          "prices": {
+            "monthly": {
+              "original": 150,
+              "discounted": 120,
+              "savingsAmount": 30,
+              "effectivePayable": 120,
+              "monthlyEquivalent": 150,
+              "discountedMonthlyEquivalent": 120
+            },
+            "quarterly": {
+              "original": 400,
+              "discounted": 320,
+              "savingsAmount": 80,
+              "effectivePayable": 320,
+              "monthlyEquivalent": 133.33,
+              "discountedMonthlyEquivalent": 106.67
+            },
+            "yearly": {
+              "original": 1360,
+              "discounted": 1088,
+              "savingsAmount": 272,
+              "effectivePayable": 1088,
+              "monthlyEquivalent": 113.33,
+              "discountedMonthlyEquivalent": 90.67
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "年付版",
+          "trafficGb": 60,
+          "price": 96,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8,
+          "notes": [
+            "不适用优惠码 firefly"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "不限时套餐",
+          "trafficGb": 100,
+          "price": 100,
+          "discountedPrice": null,
+          "pricePerGb": 1,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        }
+      ],
+      "custom": [],
+      "notes": [
+        "周期套餐流量每月重置，未用完不结转；限速规则资料未写",
+        "优惠码 firefly 8 折，适用于 Lite、Plus、Blaze、Nova，新用户专享"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Firefly支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，Firefly标明支持平台包括：Windows 10 及以上、macOS 10.15 及以上、Android 5.0 及以上、iOS 12.0 及以上（公开页面标注，版本可能变化）。"
+      },
+      {
+        "q": "Firefly是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响；不支持导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "Firefly允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "Firefly的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，Firefly最低起步金额为 ¥20。常规月付原价 ¥25/月起（记录优惠码 firefly 折后首期 ¥20）；年付方案 ¥96/年起（整期一次支付，折算月均约 ¥8/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "Firefly有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「firefly」（8 折）。适用范围：Lite、Plus、Blaze、Nova。排除范围：年付版。限制：新用户专享。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "Firefly的流量重置规则与节点倍率如何计算？",
+        "a": "周期套餐流量每月重置，未用完的流量不结转到下月。"
+      },
+      {
+        "q": "Firefly的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Gemini、Meta AI；列明适配流媒体包括 YouTube、Netflix、Disney+、HBO。资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "Firefly的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：退款申请经合作平台工单（公开联系页）。响应说明：7×24 小时在线，夜间由 AI 客服值守。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 Firefly 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 10,
+    "displayOrder": 10,
+    "id": "quanqiuyun",
+    "slug": "quanqiuyun",
+    "corpusId": "quanqiuyun",
+    "badge": "编辑精选 10",
+    "highlight": "9 大地区节点 · 支持电脑/手机/路由器多端",
+    "name": "全球云",
+    "nameEn": null,
+    "aliases": [],
+    "tagline": "节点规模大的大流量机场，入门月付 ¥20 含 120 GB，顶档每月 1500 GB",
+    "summary": "全球云的资料显示其线路为 BGP 智能优化加专线出口（轻量版为全 IPLC 专线），香港、台湾、日本、新加坡、美国合计 60 个节点，并称覆盖马来西亚、德国、土耳其、巴西等地区。四档周期套餐从 120 GB / 月起，长周期最低三年付 6 折，另有轻量版年付小包、三档不限时流量包与独享私人专线节点。设备数在原稿与第三方资料中有冲突。",
+    "audiences": [
+      "流量需求大的人",
+      "需要独享 IP 的人",
+      "多设备用户"
+    ],
+    "affiliateUrl": "https://n3oplhjnm.quanqiugttt1.club/#/?code=RZW9Z7OZ",
+    "officialUrl": null,
+    "coupon": {
+      "code": "qq88",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "周期套餐、轻量版与不限时流量包（资料只写不适用项）"
+      ],
+      "excludes": [
+        "独享私人专线节点"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": null
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "马来西亚",
+      "德国",
+      "土耳其",
+      "巴西"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "台湾": 10,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10
+    },
+    "lineTypes": [
+      "BGP 智能优化 + 专线出口",
+      "轻量版为全 IPLC 专线"
+    ],
+    "lineTypeSummary": "BGP 智能优化 + 专线出口（轻量版为全 IPLC 专线）",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "ratio": "全节点 1x 倍率",
+    "deviceLimit": "常规套餐不限同时在线设备数",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "路由器"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤",
+      "资料称不推荐导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": true,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "DAZN"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "streamingNote": "资料列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "未用完的流量不结转到下月",
+      "所有套餐不限速",
+      "重置日资料未写"
+    ],
+    "cycleDiscounts": "季付 9 折、半年付 85 折、年付 8 折、两年付 7 折、三年付 6 折（资料原文；两年付、三年付未列价格）",
+    "support": {
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入全球云官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 qq88，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "客服渠道与时间、试用、重置日资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 21,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/quanqiuyun/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/14_全球云_更新版.md",
+    "minMonthlyPrice": 20,
+    "minMonthlyEffectivePrice": 20,
+    "minYearlyPrice": 99,
+    "minFirstPurchase": 20,
+    "minEffectiveMonthlyAvg": 8.25,
+    "minDataPackPrice": 100,
+    "totalPlanCount": 21,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "入门方案",
+          "trafficGb": 120,
+          "prices": {
+            "monthly": {
+              "original": 20,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 20,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 54,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 54,
+              "monthlyEquivalent": 18,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 102,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 102,
+              "monthlyEquivalent": 17,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 192,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 192,
+              "monthlyEquivalent": 16,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "进阶方案",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 40,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 40,
+              "monthlyEquivalent": 40,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 108,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 108,
+              "monthlyEquivalent": 36,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 204,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 204,
+              "monthlyEquivalent": 34,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 384,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 384,
+              "monthlyEquivalent": 32,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "高端方案",
+          "trafficGb": 700,
+          "prices": {
+            "monthly": {
+              "original": 100,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 100,
+              "monthlyEquivalent": 100,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 270,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 270,
+              "monthlyEquivalent": 90,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 510,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 510,
+              "monthlyEquivalent": 85,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 960,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 960,
+              "monthlyEquivalent": 80,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "商业方案",
+          "trafficGb": 1500,
+          "prices": {
+            "monthly": {
+              "original": 180,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 180,
+              "monthlyEquivalent": 180,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 486,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 486,
+              "monthlyEquivalent": 162,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 918,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 918,
+              "monthlyEquivalent": 153,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1728,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1728,
+              "monthlyEquivalent": 144,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "轻量版（全 IPLC 专线）",
+          "trafficGb": 59,
+          "price": 99,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8.25,
+          "notes": []
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "不限时轻量包",
+          "trafficGb": 100,
+          "price": 100,
+          "discountedPrice": null,
+          "pricePerGb": 1,
+          "devices": "常规套餐不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "不限时标准包",
+          "trafficGb": 400,
+          "price": 360,
+          "discountedPrice": null,
+          "pricePerGb": 0.9,
+          "devices": "常规套餐不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "不限时大容量包",
+          "trafficGb": 800,
+          "price": 700,
+          "discountedPrice": null,
+          "pricePerGb": 0.875,
+          "devices": "常规套餐不限同时在线设备数",
+          "notes": []
+        }
+      ],
+      "custom": [
+        {
+          "plan": "独享私人专线节点",
+          "trafficGb": 500,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": [
+            "独立带宽、独立公网 IP，约 2–3 个工作日交付",
+            "不适用优惠码 qq88"
+          ]
+        }
+      ],
+      "notes": [
+        "未用完的流量不结转；所有套餐不限速；重置日资料未写",
+        "优惠码 qq88 8 折，不适用独享私人专线节点"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "全球云支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，全球云标明支持平台包括：Windows、macOS、iOS、Android、路由器。"
+      },
+      {
+        "q": "全球云是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤；资料称不推荐导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "全球云允许多少台设备同时在线？",
+        "a": "常规套餐不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "全球云的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，全球云最低起步金额为 ¥20。常规月付原价 ¥20/月起；年付方案 ¥99/年起（整期一次支付，折算月均约 ¥8.25/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "全球云有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「qq88」（8 折）。适用范围：周期套餐、轻量版与不限时流量包（资料只写不适用项）。排除范围：独享私人专线节点。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "全球云的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x 倍率。未用完的流量不结转到下月；所有套餐不限速；重置日资料未写。"
+      },
+      {
+        "q": "全球云的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude；列明适配流媒体包括 Netflix、Hulu、HBO、Disney+、DAZN。资料列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "全球云的客服渠道、试用及退款政策是什么？",
+        "a": "退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 全球云 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 11,
+    "displayOrder": 11,
+    "id": "v2yun",
+    "slug": "v2yun",
+    "corpusId": "weituyun",
+    "badge": "编辑精选 11",
+    "highlight": "12 地区多线接入 · 多档周期与不限时流量包",
+    "name": "唯兔云",
+    "nameEn": "OnlyRabbit",
+    "aliases": [
+      "V2云"
+    ],
+    "tagline": "低价入门、多地区节点的专线机场，月付 ¥19.9 起含 150 GB",
+    "summary": "唯兔云（OnlyRabbit，又称 V2 云）的资料显示其为全 IPLC 专线（年付加强专线为 IEPL，另有备用直连节点），节点覆盖香港、台湾、日本、新加坡、美国、马来西亚、英国、德国、法国等地区。四档周期套餐从 150 GB / 月起，另有节假日限时档、两种年付小包与三档不限时流量包（流量不过期）。客户端政策与节点数量在不同资料中有明显差异。",
+    "audiences": [
+      "看重每 GB 单价的人",
+      "预算有限的人",
+      "个人、家庭或小团队"
+    ],
+    "affiliateUrl": "https://fast.v2yunvipaff.com/#/?code=Q03xl6H9",
+    "officialUrl": null,
+    "coupon": {
+      "code": "rabbit",
+      "discount": "9 折",
+      "rate": 0.9,
+      "appliesTo": [
+        "普通版",
+        "进阶版",
+        "专业版",
+        "至尊版"
+      ],
+      "excludes": [
+        "年付版限量款",
+        "年付加强专线"
+      ],
+      "limits": "新用户专享",
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": null
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "马来西亚",
+      "美国",
+      "英国",
+      "德国",
+      "法国",
+      "泰国",
+      "菲律宾",
+      "印度"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "台湾": 10,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10,
+      "马来西亚": 2,
+      "英国": 1,
+      "德国": 1,
+      "法国": 1
+    },
+    "lineTypes": [
+      "全 IPLC 专线",
+      "年付加强专线为 IEPL",
+      "另有备用直连节点"
+    ],
+    "lineTypeSummary": "全 IPLC 专线（年付加强专线为 IEPL）",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "ratio": "全节点 1x 倍率",
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": null,
+    "clientPolicy": [
+      "原稿：官方客户端，账号登录即可连接",
+      "原稿称不推荐使用订阅链接、不推荐导入 Clash、小火箭等；第三方专题却称只支持通用订阅、没有自研客户端，以官网与客服当前说明为准",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "conditional",
+      "thirdPartyLabel": "需核对客服/指定套餐政策",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "HUGO"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "streamingNote": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "周期套餐流量每月重置，未用完的流量不结转到下月",
+      "所有套餐不限速"
+    ],
+    "cycleDiscounts": "年付 8 折、两年付 7 折、三年付 6 折（资料原文；与各档年价未必一一对应，结算时逐档核对）",
+    "support": {
+      "hours": "全天在线",
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入唯兔云官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 rabbit，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "支持系统、试用、客服渠道资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 25,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/v2yun/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/12_唯兔云_OnlyRabbit_V2_云_更新版.md",
+    "minMonthlyPrice": 14.9,
+    "minMonthlyEffectivePrice": 14.9,
+    "minYearlyPrice": 79.9,
+    "minFirstPurchase": 14.9,
+    "minEffectiveMonthlyAvg": 6.66,
+    "minDataPackPrice": 100,
+    "totalPlanCount": 25,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "普通版",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 19.9,
+              "discounted": 17.91,
+              "savingsAmount": 1.99,
+              "effectivePayable": 17.91,
+              "monthlyEquivalent": 19.9,
+              "discountedMonthlyEquivalent": 17.91
+            },
+            "quarterly": {
+              "original": 53.9,
+              "discounted": 48.51,
+              "savingsAmount": 5.39,
+              "effectivePayable": 48.51,
+              "monthlyEquivalent": 17.97,
+              "discountedMonthlyEquivalent": 16.17
+            },
+            "half-year": {
+              "original": 101.9,
+              "discounted": 91.71,
+              "savingsAmount": 10.19,
+              "effectivePayable": 91.71,
+              "monthlyEquivalent": 16.98,
+              "discountedMonthlyEquivalent": 15.28
+            },
+            "yearly": {
+              "original": 191.9,
+              "discounted": 172.71,
+              "savingsAmount": 19.19,
+              "effectivePayable": 172.71,
+              "monthlyEquivalent": 15.99,
+              "discountedMonthlyEquivalent": 14.39
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "进阶版",
+          "trafficGb": 200,
+          "prices": {
+            "monthly": {
+              "original": 29.9,
+              "discounted": 26.91,
+              "savingsAmount": 2.99,
+              "effectivePayable": 26.91,
+              "monthlyEquivalent": 29.9,
+              "discountedMonthlyEquivalent": 26.91
+            },
+            "quarterly": {
+              "original": 80.9,
+              "discounted": 72.81,
+              "savingsAmount": 8.09,
+              "effectivePayable": 72.81,
+              "monthlyEquivalent": 26.97,
+              "discountedMonthlyEquivalent": 24.27
+            },
+            "half-year": {
+              "original": 152.9,
+              "discounted": 137.61,
+              "savingsAmount": 15.29,
+              "effectivePayable": 137.61,
+              "monthlyEquivalent": 25.48,
+              "discountedMonthlyEquivalent": 22.94
+            },
+            "yearly": {
+              "original": 286.9,
+              "discounted": 258.21,
+              "savingsAmount": 28.69,
+              "effectivePayable": 258.21,
+              "monthlyEquivalent": 23.91,
+              "discountedMonthlyEquivalent": 21.52
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "专业版",
+          "trafficGb": 500,
+          "prices": {
+            "monthly": {
+              "original": 59.9,
+              "discounted": 53.91,
+              "savingsAmount": 5.99,
+              "effectivePayable": 53.91,
+              "monthlyEquivalent": 59.9,
+              "discountedMonthlyEquivalent": 53.91
+            },
+            "quarterly": {
+              "original": 161.9,
+              "discounted": 145.71,
+              "savingsAmount": 16.19,
+              "effectivePayable": 145.71,
+              "monthlyEquivalent": 53.97,
+              "discountedMonthlyEquivalent": 48.57
+            },
+            "half-year": {
+              "original": 305.9,
+              "discounted": 275.31,
+              "savingsAmount": 30.59,
+              "effectivePayable": 275.31,
+              "monthlyEquivalent": 50.98,
+              "discountedMonthlyEquivalent": 45.89
+            },
+            "yearly": {
+              "original": 547.9,
+              "discounted": 493.11,
+              "savingsAmount": 54.79,
+              "effectivePayable": 493.11,
+              "monthlyEquivalent": 45.66,
+              "discountedMonthlyEquivalent": 41.09
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "至尊版",
+          "trafficGb": 1000,
+          "prices": {
+            "monthly": {
+              "original": 119.9,
+              "discounted": 107.91,
+              "savingsAmount": 11.99,
+              "effectivePayable": 107.91,
+              "monthlyEquivalent": 119.9,
+              "discountedMonthlyEquivalent": 107.91
+            },
+            "quarterly": {
+              "original": 323.9,
+              "discounted": 291.51,
+              "savingsAmount": 32.39,
+              "effectivePayable": 291.51,
+              "monthlyEquivalent": 107.97,
+              "discountedMonthlyEquivalent": 97.17
+            },
+            "half-year": {
+              "original": 611.9,
+              "discounted": 550.71,
+              "savingsAmount": 61.19,
+              "effectivePayable": 550.71,
+              "monthlyEquivalent": 101.98,
+              "discountedMonthlyEquivalent": 91.79
+            },
+            "yearly": {
+              "original": 1150.9,
+              "discounted": 1035.81,
+              "savingsAmount": 115.09,
+              "effectivePayable": 1035.81,
+              "monthlyEquivalent": 95.91,
+              "discountedMonthlyEquivalent": 86.32
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "节假日限时",
+          "trafficGb": 100,
+          "prices": {
+            "monthly": {
+              "original": 14.9,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 14.9,
+              "monthlyEquivalent": 14.9,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 40.9,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 40.9,
+              "monthlyEquivalent": 13.63,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 75.9,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 75.9,
+              "monthlyEquivalent": 12.65,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 149.9,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 149.9,
+              "monthlyEquivalent": 12.49,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": [
+            "限时开放"
+          ]
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "年付版限量款（全 IPLC 专线）",
+          "trafficGb": 45,
+          "price": 79.9,
+          "discountedPrice": null,
+          "monthlyEquivalent": 6.66,
+          "notes": [
+            "不适用优惠码 rabbit"
+          ]
+        },
+        {
+          "plan": "年付加强专线（IEPL）",
+          "trafficGb": 75,
+          "price": 120,
+          "discountedPrice": null,
+          "monthlyEquivalent": 10,
+          "notes": [
+            "不适用优惠码 rabbit"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "永久不限时 100 GB",
+          "trafficGb": 100,
+          "price": 100,
+          "discountedPrice": null,
+          "pricePerGb": 1,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "永久不限时 200 GB",
+          "trafficGb": 200,
+          "price": 160,
+          "discountedPrice": null,
+          "pricePerGb": 0.8,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "永久不限时 500 GB",
+          "trafficGb": 500,
+          "price": 340,
+          "discountedPrice": null,
+          "pricePerGb": 0.68,
+          "devices": "不限同时在线设备数",
+          "notes": [
+            "续费重置 9 折"
+          ]
+        }
+      ],
+      "custom": [],
+      "notes": [
+        "周期套餐流量每月重置，未用完不结转；所有套餐不限速",
+        "优惠码 rabbit 9 折，适用于普通版、进阶版、专业版、至尊版，新用户专享"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "唯兔云是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "原稿：官方客户端，账号登录即可连接；原稿称不推荐使用订阅链接、不推荐导入 Clash、小火箭等；第三方专题却称只支持通用订阅、没有自研客户端，以官网与客服当前说明为准；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "唯兔云允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "唯兔云的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，唯兔云最低起步金额为 ¥14.9。常规月付原价 ¥14.9/月起；年付方案 ¥79.9/年起（整期一次支付，折算月均约 ¥6.66/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "唯兔云有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「rabbit」（9 折）。适用范围：普通版、进阶版、专业版、至尊版。排除范围：年付版限量款、年付加强专线。限制：新用户专享。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "唯兔云的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x 倍率。周期套餐流量每月重置，未用完的流量不结转到下月；所有套餐不限速。"
+      },
+      {
+        "q": "唯兔云的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Gemini；列明适配流媒体包括 Netflix、Hulu、HBO、Disney+、HUGO。资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "唯兔云的客服渠道、试用及退款政策是什么？",
+        "a": "响应说明：全天在线。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 唯兔云 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 12,
+    "displayOrder": 12,
+    "id": "lingmao",
+    "slug": "lingmao",
+    "corpusId": "lingmao",
+    "badge": "编辑精选 12",
+    "highlight": "港台日新美节点 · 账号登录官方客户端模式",
+    "name": "灵猫",
+    "nameEn": "CivetNet",
+    "aliases": [
+      "灵猫网络"
+    ],
+    "tagline": "全 IPLC 专线、不限设备，面向年付与多设备用户",
+    "summary": "灵猫（灵猫网络）的资料显示其为全 IPLC 专线、全节点 1x 倍率，五个地区 50 个以上节点。周期套餐只有 Small（150 GB / 月）与 Big（300 GB / 月）两档（无半年付），另有 ¥85 / 年小包与面向直播电商的定制线路；2026 年 10 月起新订单只能使用官方客户端。成立年份、订阅政策、退款与优惠码在公开资料中差异较大。",
+    "audiences": [
+      "愿意年付的长期用户",
+      "多设备用户",
+      "需要直播电商定制线路的人"
+    ],
+    "affiliateUrl": "https://vip02.civetaff.com/#/?code=DpcJTfcr",
+    "officialUrl": null,
+    "coupon": {
+      "code": "lingmao",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "Small",
+        "Big"
+      ],
+      "excludes": [
+        "年付小包"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "另有渠道资料列 lmao888（9 折），哪一个有效待结算确认"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "全 IPLC 专线"
+    ],
+    "lineTypeSummary": "全 IPLC 专线",
+    "protocols": [
+      "VLESS"
+    ],
+    "ratio": "全节点 1x 倍率",
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": null,
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "原稿称不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响；不同测评对能否提供通用订阅说法不同，以官网与客服当前说明为准",
+      "原稿称不支持导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "conditional",
+      "thirdPartyLabel": "需核对客服/指定套餐政策",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "HUGO"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "streamingNote": "资料列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "按订单日每月自动重置流量",
+      "流量用完可购买加油包补充（价格资料未写）",
+      "资料称不限速，最大带宽 1000 Mbps"
+    ],
+    "cycleDiscounts": "没有半年付（资料原文）；按价格计算约为季付 87–93 折、年付 55–65 折",
+    "support": {
+      "channels": [
+        "增加节点需提交工单"
+      ],
+      "hours": "全天在线",
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入灵猫官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 lingmao，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "支持系统、各地区节点数、加油包价格、定制套餐流量、试用资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 7,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/lingmao/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/13_灵猫_灵猫网络_CivetNet_更新版.md",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 20,
+    "minYearlyPrice": 85,
+    "minFirstPurchase": 20,
+    "minEffectiveMonthlyAvg": 7.08,
+    "minDataPackPrice": null,
+    "totalPlanCount": 8,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "Small",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": 20,
+              "savingsAmount": 5,
+              "effectivePayable": 20,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": 20
+            },
+            "quarterly": {
+              "original": 65,
+              "discounted": 52,
+              "savingsAmount": 13,
+              "effectivePayable": 52,
+              "monthlyEquivalent": 21.67,
+              "discountedMonthlyEquivalent": 17.33
+            },
+            "yearly": {
+              "original": 195,
+              "discounted": 156,
+              "savingsAmount": 39,
+              "effectivePayable": 156,
+              "monthlyEquivalent": 16.25,
+              "discountedMonthlyEquivalent": 13
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "Big",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 45,
+              "discounted": 36,
+              "savingsAmount": 9,
+              "effectivePayable": 36,
+              "monthlyEquivalent": 45,
+              "discountedMonthlyEquivalent": 36
+            },
+            "quarterly": {
+              "original": 125,
+              "discounted": 100,
+              "savingsAmount": 25,
+              "effectivePayable": 100,
+              "monthlyEquivalent": 41.67,
+              "discountedMonthlyEquivalent": 33.33
+            },
+            "yearly": {
+              "original": 295,
+              "discounted": 236,
+              "savingsAmount": 59,
+              "effectivePayable": 236,
+              "monthlyEquivalent": 24.58,
+              "discountedMonthlyEquivalent": 19.67
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "年付小包",
+          "trafficGb": 45,
+          "price": 85,
+          "discountedPrice": null,
+          "monthlyEquivalent": 7.08,
+          "notes": [
+            "不适用优惠码 lingmao"
+          ]
+        }
+      ],
+      "dataPacks": [],
+      "custom": [
+        {
+          "plan": "大流量定制（直播、电商专线）",
+          "trafficGb": null,
+          "price": 999,
+          "cycle": "monthly",
+          "notes": [
+            "流量资料未写，细节以客服报价为准"
+          ]
+        }
+      ],
+      "notes": [
+        "按订单日每月自动重置流量；流量用完可购买加油包（价格资料未写）；资料称不限速",
+        "优惠码 lingmao 8 折，适用于 Small、Big；另有渠道资料列 lmao888 9 折，待结算确认"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "灵猫是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；原稿称不提供订阅链接：2026 年 10 月起新订单只能使用官方客户端，老用户原有订阅不受影响；不同测评对能否提供通用订阅说法不同，以官网与客服当前说明为准；原稿称不支持导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "灵猫允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "灵猫的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，灵猫最低起步金额为 ¥20。常规月付原价 ¥25/月起（记录优惠码 lingmao 折后首期 ¥20）；年付方案 ¥85/年起（整期一次支付，折算月均约 ¥7.08/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "灵猫有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「lingmao」（8 折）。适用范围：Small、Big。排除范围：年付小包。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "灵猫的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x 倍率。按订单日每月自动重置流量；流量用完可购买加油包补充（价格资料未写）；资料称不限速，最大带宽 1000 Mbps。"
+      },
+      {
+        "q": "灵猫的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Gemini；列明适配流媒体包括 Netflix、Hulu、HBO、Disney+、HUGO。资料列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "灵猫的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：增加节点需提交工单。响应说明：全天在线。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 灵猫 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 13,
+    "displayOrder": 13,
+    "id": "flashleap",
+    "slug": "flashleap",
+    "corpusId": "shanyue",
+    "badge": "编辑精选 13",
+    "highlight": "Win/Mac/Linux/iOS/Android 覆盖 · 不限设备",
+    "name": "闪跃",
+    "nameEn": "FlashLeap",
+    "aliases": [],
+    "tagline": "纯 IPLC 专线机场，入门档 150 GB 月付 ¥24",
+    "summary": "闪跃（FlashLeap）的资料显示其为全 IPLC 专线、全节点标称 1x 倍率、不限设备，五个地区 50 个以上节点（2026 年 7 月的一份订阅快照记录 50 个 VLESS 节点）。四档周期套餐从 150 GB / 月起（月付、季付、年付），按月重置、标称不限速，另有 ¥96 / 年小包；没有流量包与定制线路。流量是否结转、重置日期与加油包政策以官方最新说明为准。",
+    "audiences": [
+      "长期高频使用 AI 或追剧的人",
+      "在意 IPLC 线路的人",
+      "想一年付一次的人"
+    ],
+    "affiliateUrl": "https://vip02.flashleapaff.com/#/?code=Mn2H0udG",
+    "officialUrl": null,
+    "coupon": {
+      "code": "shanyue",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "闪动 Flicker",
+        "飞跃 Leap",
+        "瞬移 Teleport",
+        "跃迁 Warp"
+      ],
+      "excludes": [
+        "闪跃年付版"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": null
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "全 IPLC 专线"
+    ],
+    "lineTypeSummary": "全 IPLC 专线",
+    "protocols": [
+      "VLESS"
+    ],
+    "ratio": "全节点标称 1x 倍率（公开资料标称）",
+    "deviceLimit": "不限设备",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "Linux"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "原稿称不推荐使用订阅链接、不推荐导入 Clash、小火箭等；公开展示称支持通用订阅，较新调查称 Clash 链接需向客服领取，三种说法并存，以客服当前说明为准",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "conditional",
+      "thirdPartyLabel": "需核对客服/指定套餐政策",
+      "supportsRouter": false,
+      "supportsLinux": true,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "HBO"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude",
+      "Gemini"
+    ],
+    "streamingNote": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "周期套餐按月重置",
+      "公开资料标称全节点 1x 倍率、不限速",
+      "未用完流量是否结转：以官方最新说明为准",
+      "重置日期为自然月还是购买日：以官方最新说明为准",
+      "流量用完是否支持加油包及提前重置：以官方最新说明为准"
+    ],
+    "cycleDiscounts": "资料未写比例；按价格计算约为季付 89–90 折、年付 80–82 折",
+    "support": {
+      "refund": "退款必须联系客服渠道申请（站长补充）",
+      "payment": "支付宝、微信、USDT",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入闪跃官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 shanyue，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "客服渠道与时间、试用政策资料未写；退款需联系客服申请，具体条件未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 13,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/flashleap/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/16_闪跃_FlashLeap_更新版.md",
+    "minMonthlyPrice": 24,
+    "minMonthlyEffectivePrice": 19.2,
+    "minYearlyPrice": 96,
+    "minFirstPurchase": 19.2,
+    "minEffectiveMonthlyAvg": 8,
+    "minDataPackPrice": null,
+    "totalPlanCount": 13,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "闪动 Flicker",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 24,
+              "discounted": 19.2,
+              "savingsAmount": 4.8,
+              "effectivePayable": 19.2,
+              "monthlyEquivalent": 24,
+              "discountedMonthlyEquivalent": 19.2
+            },
+            "quarterly": {
+              "original": 64,
+              "discounted": 51.2,
+              "savingsAmount": 12.8,
+              "effectivePayable": 51.2,
+              "monthlyEquivalent": 21.33,
+              "discountedMonthlyEquivalent": 17.07
+            },
+            "yearly": {
+              "original": 230,
+              "discounted": 184,
+              "savingsAmount": 46,
+              "effectivePayable": 184,
+              "monthlyEquivalent": 19.17,
+              "discountedMonthlyEquivalent": 15.33
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "飞跃 Leap",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 44,
+              "discounted": 35.2,
+              "savingsAmount": 8.8,
+              "effectivePayable": 35.2,
+              "monthlyEquivalent": 44,
+              "discountedMonthlyEquivalent": 35.2
+            },
+            "quarterly": {
+              "original": 118,
+              "discounted": 94.4,
+              "savingsAmount": 23.6,
+              "effectivePayable": 94.4,
+              "monthlyEquivalent": 39.33,
+              "discountedMonthlyEquivalent": 31.47
+            },
+            "yearly": {
+              "original": 422,
+              "discounted": 337.6,
+              "savingsAmount": 84.4,
+              "effectivePayable": 337.6,
+              "monthlyEquivalent": 35.17,
+              "discountedMonthlyEquivalent": 28.13
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "瞬移 Teleport",
+          "trafficGb": 600,
+          "prices": {
+            "monthly": {
+              "original": 84,
+              "discounted": 67.2,
+              "savingsAmount": 16.8,
+              "effectivePayable": 67.2,
+              "monthlyEquivalent": 84,
+              "discountedMonthlyEquivalent": 67.2
+            },
+            "quarterly": {
+              "original": 226,
+              "discounted": 180.8,
+              "savingsAmount": 45.2,
+              "effectivePayable": 180.8,
+              "monthlyEquivalent": 75.33,
+              "discountedMonthlyEquivalent": 60.27
+            },
+            "yearly": {
+              "original": 806,
+              "discounted": 644.8,
+              "savingsAmount": 161.2,
+              "effectivePayable": 644.8,
+              "monthlyEquivalent": 67.17,
+              "discountedMonthlyEquivalent": 53.73
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "跃迁 Warp",
+          "trafficGb": 1000,
+          "prices": {
+            "monthly": {
+              "original": 134,
+              "discounted": 107.2,
+              "savingsAmount": 26.8,
+              "effectivePayable": 107.2,
+              "monthlyEquivalent": 134,
+              "discountedMonthlyEquivalent": 107.2
+            },
+            "quarterly": {
+              "original": 369,
+              "discounted": 295.2,
+              "savingsAmount": 73.8,
+              "effectivePayable": 295.2,
+              "monthlyEquivalent": 123,
+              "discountedMonthlyEquivalent": 98.4
+            },
+            "yearly": {
+              "original": 1315,
+              "discounted": 1052,
+              "savingsAmount": 263,
+              "effectivePayable": 1052,
+              "monthlyEquivalent": 109.58,
+              "discountedMonthlyEquivalent": 87.67
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "闪跃年付版",
+          "trafficGb": 60,
+          "price": 96,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8,
+          "notes": [
+            "不适用优惠码 shanyue"
+          ]
+        }
+      ],
+      "dataPacks": [],
+      "custom": [],
+      "notes": [
+        "周期套餐按月重置；公开资料标称全节点 1x、不限速；是否结转、重置日期、加油包与提前重置以官方最新说明为准（站长 2026-11-13 补充）",
+        "优惠码 shanyue 8 折，适用于闪动、飞跃、瞬移、跃迁"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "闪跃支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，闪跃标明支持平台包括：Windows、macOS、iOS、Android、Linux。"
+      },
+      {
+        "q": "闪跃是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；原稿称不推荐使用订阅链接、不推荐导入 Clash、小火箭等；公开展示称支持通用订阅，较新调查称 Clash 链接需向客服领取，三种说法并存，以客服当前说明为准；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "闪跃允许多少台设备同时在线？",
+        "a": "不限设备。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "闪跃的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，闪跃最低起步金额为 ¥19.2。常规月付原价 ¥24/月起（记录优惠码 shanyue 折后首期 ¥19.2）；年付方案 ¥96/年起（整期一次支付，折算月均约 ¥8/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "闪跃有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「shanyue」（8 折）。适用范围：闪动 Flicker、飞跃 Leap、瞬移 Teleport、跃迁 Warp。排除范围：闪跃年付版。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "闪跃的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点标称 1x 倍率（公开资料标称）。周期套餐按月重置；公开资料标称全节点 1x 倍率、不限速；未用完流量是否结转：以官方最新说明为准；重置日期为自然月还是购买日：以官方最新说明为准；流量用完是否支持加油包及提前重置：以官方最新说明为准。"
+      },
+      {
+        "q": "闪跃的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude、Gemini；列明适配流媒体包括 Netflix、Disney+、HBO。资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "闪跃的客服渠道、试用及退款政策是什么？",
+        "a": "退款与升级：退款必须联系客服渠道申请（站长补充）。"
+      },
+      {
+        "q": "如何辨别 闪跃 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 14,
+    "displayOrder": 14,
+    "id": "laddercloud",
+    "slug": "laddercloud",
+    "corpusId": "tiziyun",
+    "badge": "编辑展示 14",
+    "highlight": "分级中转与 IEPL/企业专线 · 多档流量梯度",
+    "name": "梯子云",
+    "nameEn": "LadderCloud",
+    "aliases": [
+      "梯子云机场",
+      "Ladder Cloud"
+    ],
+    "tagline": "资料显示：四档周期套餐每月 125–1600 GB，线路从基础中转、BGP 中转到 IEPL 专线与企业级专线分档",
+    "summary": "梯子云（LadderCloud）的资料把周期订阅分为初阶、中阶、高阶与顶阶商业四档（每月 125–1600 GB），线路依次为基础中转、BGP 中转、IEPL 专线与企业级专线集群；另有每月 60 GB 的年付保活套餐、三档永不限时流量包，以及 ¥680 / 月起的独享定制专线。资料标注不限设备数量；公开资料覆盖香港、日本、新加坡、美国等地区，节点总数与完整地区列表未写。",
+    "audiences": [
+      "希望按需选择每月 125–1600 GB 流量的用户",
+      "看重高阶 IEPL 专线的用户",
+      "需要永不限时流量包的用户"
+    ],
+    "affiliateUrl": "https://varnexa.ladderaff.com/#/?code=kCHBqwtn",
+    "officialUrl": null,
+    "coupon": {
+      "code": "tzy888",
+      "discount": null,
+      "rate": null,
+      "appliesTo": [],
+      "excludes": [],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，具体折扣比例以结算页实时显示为准",
+      "note": "来自品牌总索引记录的注册优惠码"
+    },
+    "regions": [
+      "香港",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "初阶：基础中转",
+      "中阶：BGP 中转",
+      "高阶：IEPL 专线",
+      "顶阶：企业级专线集群"
+    ],
+    "lineTypeSummary": "初阶基础中转、中阶 BGP 中转、高阶 IEPL 专线、顶阶企业级专线",
+    "protocols": [],
+    "ratio": null,
+    "deviceLimit": "不限设备数量（资料标注）",
+    "supportedPlatforms": null,
+    "clientPolicy": [
+      "客户端以账号后台“客户端下载”或“知识库”提供的为准；资料没有列出可直接引用的 Windows、macOS 安装包，Android、iOS 也要在用户中心确认",
+      "是否开放第三方客户端订阅未确认：资料称 2026 年 10 月的客户端评估未确认官方全面开放 Clash 订阅",
+      "资料未找到 Linux 专用安装包与官方路由器固件；要品牌实际开放订阅且协议兼容，才可能在 Linux 或 OpenWrt / OpenClash 上使用"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "supported",
+      "thirdPartyLabel": "支持订阅/第三方客户端",
+      "supportsRouter": true,
+      "supportsLinux": true,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "YouTube"
+    ],
+    "aiTools": [
+      "ChatGPT"
+    ],
+    "streamingNote": "资料称针对高清视频与流媒体用户分档配置、可用于 AI 工具访问，但 Netflix、Disney+ 解锁未逐一验证，也没有保证 AI 账号可用；基于公开品牌资料整理",
+    "trafficRules": [
+      "四档周期套餐与年付保活按每月流量额度计算",
+      "永不限时流量包按总流量计算，不能与月流量混算",
+      "年付价格需一次付清",
+      "另有重置包，价格资料未写",
+      "品牌宣传不限速，不代表实际吞吐量保证"
+    ],
+    "cycleDiscounts": "资料未写比例；按价格计算，四档均为季付 95 折、半年付 9 折、年付 85 折、两年付 8 折、三年付 75 折",
+    "support": {
+      "channels": [
+        "用户中心客服（套餐变更、独享定制与客户端问题）",
+        "账号后台、知识库与工单（连接失败、客户端版本、线路切换、流量与订阅故障）"
+      ],
+      "refund": "资料没有列出可执行的退款条件",
+      "trial": "资料未发现公开免费试用套餐"
+    },
+    "purchaseSteps": [
+      "通过注册入口进入梯子云用户中心，注册或登录账号",
+      "在用户中心查看当前在售套餐与价格，选择档位与周期（年付需一次付清）",
+      "付款后在账号后台的“客户端下载”或“知识库”查看客户端与使用说明",
+      "连接失败时先检查流量、订阅有效期与客户端版本并尝试换节点，仍无法解决再通过工单联系客服"
+    ],
+    "caveats": [
+      "初阶与中阶不是 IEPL 专线（分别为基础中转与 BGP 中转），宣传中的“专线机场”不适用于每个套餐。",
+      "节点总数、完整地区列表、协议、支持系统、付款方式与退款条件资料未写。",
+      "重置包价格资料未写；独享定制专线的月度流量额度由客服确认。"
+    ],
+    "materialDate": "2026-11-23",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 14,
+    "evidenceType": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSource": "https://jichangyouxuan.blog/airports/laddercloud/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/梯子云_2026-11-23.md",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 25,
+    "minYearlyPrice": 89,
+    "minFirstPurchase": 25,
+    "minEffectiveMonthlyAvg": 7.42,
+    "minDataPackPrice": 169,
+    "totalPlanCount": 29,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "初阶网络·基础视界",
+          "trafficGb": 125,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 25,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 71.25,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 71.25,
+              "monthlyEquivalent": 23.75,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 135,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 135,
+              "monthlyEquivalent": 22.5,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 255,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 255,
+              "monthlyEquivalent": 21.25,
+              "discountedMonthlyEquivalent": null
+            },
+            "two-year": {
+              "original": 480,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 480,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": null
+            },
+            "three-year": {
+              "original": 675,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 675,
+              "monthlyEquivalent": 18.75,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": [
+            "基础中转"
+          ]
+        },
+        {
+          "plan": "中阶加速·极清多线",
+          "trafficGb": 350,
+          "prices": {
+            "monthly": {
+              "original": 60,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 60,
+              "monthlyEquivalent": 60,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 171,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 171,
+              "monthlyEquivalent": 57,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 324,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 324,
+              "monthlyEquivalent": 54,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 612,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 612,
+              "monthlyEquivalent": 51,
+              "discountedMonthlyEquivalent": null
+            },
+            "two-year": {
+              "original": 1152,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1152,
+              "monthlyEquivalent": 48,
+              "discountedMonthlyEquivalent": null
+            },
+            "three-year": {
+              "original": 1620,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1620,
+              "monthlyEquivalent": 45,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": [
+            "BGP 中转"
+          ]
+        },
+        {
+          "plan": "高阶专线·全球智联",
+          "trafficGb": 750,
+          "prices": {
+            "monthly": {
+              "original": 110,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 110,
+              "monthlyEquivalent": 110,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 313.5,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 313.5,
+              "monthlyEquivalent": 104.5,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 594,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 594,
+              "monthlyEquivalent": 99,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1122,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1122,
+              "monthlyEquivalent": 93.5,
+              "discountedMonthlyEquivalent": null
+            },
+            "two-year": {
+              "original": 2112,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 2112,
+              "monthlyEquivalent": 88,
+              "discountedMonthlyEquivalent": null
+            },
+            "three-year": {
+              "original": 2970,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 2970,
+              "monthlyEquivalent": 82.5,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": [
+            "IEPL 专线"
+          ]
+        },
+        {
+          "plan": "顶阶商业·全球骨干",
+          "trafficGb": 1600,
+          "prices": {
+            "monthly": {
+              "original": 190,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 190,
+              "monthlyEquivalent": 190,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 541.5,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 541.5,
+              "monthlyEquivalent": 180.5,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 1026,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1026,
+              "monthlyEquivalent": 171,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1938,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1938,
+              "monthlyEquivalent": 161.5,
+              "discountedMonthlyEquivalent": null
+            },
+            "two-year": {
+              "original": 3648,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 3648,
+              "monthlyEquivalent": 152,
+              "discountedMonthlyEquivalent": null
+            },
+            "three-year": {
+              "original": 5130,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 5130,
+              "monthlyEquivalent": 142.5,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": [
+            "企业级专线集群"
+          ]
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "天梯随行·年度保活",
+          "trafficGb": 60,
+          "price": 89,
+          "discountedPrice": null,
+          "monthlyEquivalent": 7.42,
+          "notes": [
+            "年付，一次付清"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "永不限时轻量包",
+          "trafficGb": 120,
+          "price": 169,
+          "discountedPrice": null,
+          "pricePerGb": 1.408,
+          "devices": "不限设备数量（资料标注）",
+          "notes": []
+        },
+        {
+          "plan": "永不限时标准包",
+          "trafficGb": 350,
+          "price": 449,
+          "discountedPrice": null,
+          "pricePerGb": 1.283,
+          "devices": "不限设备数量（资料标注）",
+          "notes": []
+        },
+        {
+          "plan": "永不限时精英包",
+          "trafficGb": 700,
+          "price": 849,
+          "discountedPrice": null,
+          "pricePerGb": 1.213,
+          "devices": "不限设备数量（资料标注）",
+          "notes": []
+        }
+      ],
+      "custom": [
+        {
+          "plan": "独享定制专线",
+          "trafficGb": null,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": [
+            "¥680 / 月起，月度流量额度由客服确认"
+          ]
+        }
+      ],
+      "notes": [
+        "价格为资料记载的公开标价（资料称可与 2026-10-27 的用户面板价目记录核对；资料整理日期 2026-11-23，资料称不能当作 2026-11-23 仍按此价在售的证明），不含优惠券；本站未在结算页核对",
+        "另有重置包，价格资料未写；品牌宣传不限速，不代表实际吞吐量保证"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "梯子云是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "客户端以账号后台“客户端下载”或“知识库”提供的为准；资料没有列出可直接引用的 Windows、macOS 安装包，Android、iOS 也要在用户中心确认；是否开放第三方客户端订阅未确认：资料称 2026 年 10 月的客户端评估未确认官方全面开放 Clash 订阅；资料未找到 Linux 专用安装包与官方路由器固件；要品牌实际开放订阅且协议兼容，才可能在 Linux 或 OpenWrt / OpenClash 上使用。"
+      },
+      {
+        "q": "梯子云允许多少台设备同时在线？",
+        "a": "不限设备数量（资料标注）。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "梯子云的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，梯子云最低起步金额为 ¥25。常规月付原价 ¥25/月起；年付方案 ¥89/年起（整期一次支付，折算月均约 ¥7.42/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "梯子云有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「tzy888」。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "梯子云的流量重置规则与节点倍率如何计算？",
+        "a": "四档周期套餐与年付保活按每月流量额度计算；永不限时流量包按总流量计算，不能与月流量混算；年付价格需一次付清；另有重置包，价格资料未写；品牌宣传不限速，不代表实际吞吐量保证。"
+      },
+      {
+        "q": "梯子云的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT；列明适配流媒体包括 Netflix、Disney+、YouTube。资料称针对高清视频与流媒体用户分档配置、可用于 AI 工具访问，但 Netflix、Disney+ 解锁未逐一验证，也没有保证 AI 账号可用；基于公开品牌资料整理"
+      },
+      {
+        "q": "梯子云的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：用户中心客服（套餐变更、独享定制与客户端问题）、账号后台、知识库与工单（连接失败、客户端版本、线路切换、流量与订阅故障）。试用规则：资料未发现公开免费试用套餐。退款与升级：资料没有列出可执行的退款条件。"
+      },
+      {
+        "q": "如何辨别 梯子云 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 15,
+    "displayOrder": 15,
+    "id": "lightspeed",
+    "slug": "lightspeed",
+    "corpusId": "guangsuyun",
+    "badge": "编辑展示 15",
+    "highlight": "13 地区覆盖 · Win/macOS/Linux/iOS/Android",
+    "name": "光速云",
+    "nameEn": "LightSpeed",
+    "aliases": [],
+    "tagline": "多地区覆盖的专线机场，入门档极速A版 168 GB / 月，年付 ¥179",
+    "summary": "光速云（LightSpeed）的套餐页显示其周期套餐为全 IEPL 专线、轻量B版为全 IPLC 专线，香港、日本、新加坡、美国、台湾合计 55 个节点，并称覆盖韩国、马来西亚、英国、法国、德国、土耳其、泰国、巴西等地区。四档周期套餐从 168 GB / 月的极速A版起（季付 ¥74、半年付 ¥94、年付 ¥179），另有 ¥99 / 年的轻量B版、1000 GB 不限时套餐与美国原生家宽 IP 定制套餐。",
+    "audiences": [
+      "看重每 GB 单价的人",
+      "需要多出口地区的人",
+      "需要固定 IP 的人"
+    ],
+    "affiliateUrl": "https://mdlky.gsyaff.com/#/?code=nnRRD56A",
+    "officialUrl": null,
+    "coupon": {
+      "code": "AMM",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [],
+      "excludes": [
+        "轻量B版（套餐页注明特殊套餐不支持优惠打折）"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "折扣为站长 2026-11-13 确认；适用套餐范围以结算页为准"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "马来西亚",
+      "英国",
+      "法国",
+      "德国",
+      "土耳其",
+      "泰国",
+      "巴西"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10,
+      "台湾": 5,
+      "马来西亚": 2
+    },
+    "lineTypes": [
+      "周期套餐为全 IEPL 专线",
+      "轻量B版为全 IPLC 专线"
+    ],
+    "lineTypeSummary": "周期套餐为全 IEPL 专线，轻量B版为全 IPLC 专线",
+    "protocols": [
+      "VLESS"
+    ],
+    "ratio": "全节点 1x（套餐页标称）",
+    "deviceLimit": "不限设备，多端同时在线",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "Linux"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤",
+      "资料称不推荐导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": false,
+      "supportsLinux": true,
+      "usesNextin": false
+    },
+    "streaming": [
+      "YouTube",
+      "Netflix",
+      "Disney+",
+      "Hulu",
+      "HBO",
+      "TikTok"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "streamingNote": "资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准",
+    "trafficRules": [
+      "每 30 天自动刷新流量（轻量B版从购买日起算）",
+      "套餐页标称全节点 x1、套餐资料标注全时段不降速",
+      "结转规则未写",
+      "超过 500 元的套餐一次性支付不成功时需联系人工服务（套餐页说明）",
+      "资料称单节点最高 2.5 Gbps（宣传，以官方配置为准）"
+    ],
+    "cycleDiscounts": "套餐页写年付 8 折、两年付 7 折、三年付 6 折（两年付、三年付未列价格）；量子B版卡片另写半年付 9 折、两年付 75 折、三年付 7 折，口径不一",
+    "support": {
+      "hours": "7×24 小时运维支持",
+      "refund": "特殊商品不支持退款（“特殊商品”范围资料未定义）",
+      "trial": "无免费试用",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入光速云官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 AMM，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "两年付、三年付只有折扣比例，无价格。",
+      "客服渠道、优惠码适用套餐范围资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 14,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/lightspeed/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/19_光速云_LightSpeed_更新版.md",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 20,
+    "minYearlyPrice": 99,
+    "minFirstPurchase": 20,
+    "minEffectiveMonthlyAvg": 8.25,
+    "minDataPackPrice": 680,
+    "totalPlanCount": 19,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "极速A版",
+          "trafficGb": 168,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": 20,
+              "savingsAmount": 5,
+              "effectivePayable": 20,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": 20
+            },
+            "quarterly": {
+              "original": 74,
+              "discounted": 59.2,
+              "savingsAmount": 14.8,
+              "effectivePayable": 59.2,
+              "monthlyEquivalent": 24.67,
+              "discountedMonthlyEquivalent": 19.73
+            },
+            "half-year": {
+              "original": 94,
+              "discounted": 75.2,
+              "savingsAmount": 18.8,
+              "effectivePayable": 75.2,
+              "monthlyEquivalent": 15.67,
+              "discountedMonthlyEquivalent": 12.53
+            },
+            "yearly": {
+              "original": 179,
+              "discounted": 143.2,
+              "savingsAmount": 35.8,
+              "effectivePayable": 143.2,
+              "monthlyEquivalent": 14.92,
+              "discountedMonthlyEquivalent": 11.93
+            }
+          },
+          "notes": [
+            "月付价 ¥25 取自套餐页卡片描述，站长 2026-11-13 确认（原稿写 ¥23 为旧价）"
+          ]
+        },
+        {
+          "plan": "流光C版",
+          "trafficGb": 268,
+          "prices": {
+            "monthly": {
+              "original": 34,
+              "discounted": 27.2,
+              "savingsAmount": 6.8,
+              "effectivePayable": 27.2,
+              "monthlyEquivalent": 34,
+              "discountedMonthlyEquivalent": 27.2
+            },
+            "quarterly": {
+              "original": 96,
+              "discounted": 76.8,
+              "savingsAmount": 19.2,
+              "effectivePayable": 76.8,
+              "monthlyEquivalent": 32,
+              "discountedMonthlyEquivalent": 25.6
+            },
+            "half-year": {
+              "original": 147,
+              "discounted": 117.6,
+              "savingsAmount": 29.4,
+              "effectivePayable": 117.6,
+              "monthlyEquivalent": 24.5,
+              "discountedMonthlyEquivalent": 19.6
+            },
+            "yearly": {
+              "original": 249,
+              "discounted": 199.2,
+              "savingsAmount": 49.8,
+              "effectivePayable": 199.2,
+              "monthlyEquivalent": 20.75,
+              "discountedMonthlyEquivalent": 16.6
+            }
+          },
+          "notes": [
+            "月付价取自套餐页卡片描述（¥34/月）"
+          ]
+        },
+        {
+          "plan": "量子B版",
+          "trafficGb": 568,
+          "prices": {
+            "monthly": {
+              "original": 68,
+              "discounted": 54.4,
+              "savingsAmount": 13.6,
+              "effectivePayable": 54.4,
+              "monthlyEquivalent": 68,
+              "discountedMonthlyEquivalent": 54.4
+            },
+            "quarterly": {
+              "original": 198,
+              "discounted": 158.4,
+              "savingsAmount": 39.6,
+              "effectivePayable": 158.4,
+              "monthlyEquivalent": 66,
+              "discountedMonthlyEquivalent": 52.8
+            },
+            "half-year": {
+              "original": 375,
+              "discounted": 300,
+              "savingsAmount": 75,
+              "effectivePayable": 300,
+              "monthlyEquivalent": 62.5,
+              "discountedMonthlyEquivalent": 50
+            },
+            "yearly": {
+              "original": 667,
+              "discounted": 533.6,
+              "savingsAmount": 133.4,
+              "effectivePayable": 533.6,
+              "monthlyEquivalent": 55.58,
+              "discountedMonthlyEquivalent": 44.47
+            }
+          },
+          "notes": [
+            "月付价取自套餐页卡片描述（¥68/月）"
+          ]
+        },
+        {
+          "plan": "无界A版",
+          "trafficGb": 938,
+          "prices": {
+            "monthly": {
+              "original": 138,
+              "discounted": 110.4,
+              "savingsAmount": 27.6,
+              "effectivePayable": 110.4,
+              "monthlyEquivalent": 138,
+              "discountedMonthlyEquivalent": 110.4
+            },
+            "quarterly": {
+              "original": 398,
+              "discounted": 318.4,
+              "savingsAmount": 79.6,
+              "effectivePayable": 318.4,
+              "monthlyEquivalent": 132.67,
+              "discountedMonthlyEquivalent": 106.13
+            },
+            "half-year": {
+              "original": 567,
+              "discounted": 453.6,
+              "savingsAmount": 113.4,
+              "effectivePayable": 453.6,
+              "monthlyEquivalent": 94.5,
+              "discountedMonthlyEquivalent": 75.6
+            },
+            "yearly": {
+              "original": 998,
+              "discounted": 798.4,
+              "savingsAmount": 199.6,
+              "effectivePayable": 798.4,
+              "monthlyEquivalent": 83.17,
+              "discountedMonthlyEquivalent": 66.53
+            }
+          },
+          "notes": [
+            "月付价 ¥138 取自套餐页卡片描述，站长 2026-11-13 确认（原稿写 ¥130 为旧价）"
+          ]
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "轻量B版（全 IPLC 专线）",
+          "trafficGb": 69,
+          "price": 99,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8.25,
+          "notes": [
+            "购买日起算，每 30 天自动刷新",
+            "套餐页注明特殊套餐不支持优惠打折",
+            "原稿写 59 GB，以 2026-11-13 套餐页为准"
+          ]
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "不限时套餐",
+          "trafficGb": 1000,
+          "price": 680,
+          "discountedPrice": null,
+          "pricePerGb": 0.68,
+          "devices": "不限设备，多端同时在线",
+          "notes": [
+            "来自原稿，未在 2026-11-13 套餐页截图中出现"
+          ]
+        }
+      ],
+      "custom": [
+        {
+          "plan": "定制套餐（美国原生家宽 IP，全 IPLC 专线接入）",
+          "trafficGb": 500,
+          "price": 680,
+          "cycle": "monthly",
+          "notes": [
+            "来自原稿"
+          ]
+        }
+      ],
+      "notes": [
+        "每 30 天自动刷新流量；套餐页标称全节点 x1、套餐资料标注全时段不降速；结转规则未写",
+        "季付、半年付、年付价格与档位流量按站长 2026-11-13 提供的套餐页截图录入",
+        "优惠码 AMM 8 折（站长确认）；轻量B版为特殊套餐，不支持优惠打折；其余适用范围以结算页为准"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "光速云支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，光速云标明支持平台包括：Windows、macOS、iOS、Android、Linux。"
+      },
+      {
+        "q": "光速云是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤；资料称不推荐导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "光速云允许多少台设备同时在线？",
+        "a": "不限设备，多端同时在线。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "光速云的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，光速云最低起步金额为 ¥20。常规月付原价 ¥25/月起（记录优惠码 AMM 折后首期 ¥20）；年付方案 ¥99/年起（整期一次支付，折算月均约 ¥8.25/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "光速云有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「AMM」（8 折）。排除范围：轻量B版（套餐页注明特殊套餐不支持优惠打折）。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "光速云的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x（套餐页标称）。每 30 天自动刷新流量（轻量B版从购买日起算）；套餐页标称全节点 x1、套餐资料标注全时段不降速；结转规则未写；超过 500 元的套餐一次性支付不成功时需联系人工服务（套餐页说明）；资料称单节点最高 2.5 Gbps（宣传，以官方配置为准）。"
+      },
+      {
+        "q": "光速云的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Gemini；列明适配流媒体包括 YouTube、Netflix、Disney+、Hulu、HBO、TikTok。资料称使用原生 IP；速度、稳定性及流媒体、AI 工具的可用性不作持续保证，以实际网络环境与官方说明为准"
+      },
+      {
+        "q": "光速云的客服渠道、试用及退款政策是什么？",
+        "a": "响应说明：7×24 小时运维支持。试用规则：无免费试用。退款与升级：特殊商品不支持退款（“特殊商品”范围资料未定义）。"
+      },
+      {
+        "q": "如何辨别 光速云 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 16,
+    "displayOrder": 16,
+    "id": "u1s1",
+    "slug": "u1s1",
+    "corpusId": "u1s1",
+    "badge": "编辑展示 16",
+    "highlight": "8 地区线路 · 支持电脑/手机/路由器多终端",
+    "name": "U1S1",
+    "nameEn": "U1S1",
+    "aliases": [],
+    "tagline": "大流量档位、套餐命名有趣的专线机场，最低 ¥20 / 月含 120 GB",
+    "summary": "有一说一（U1S1）的资料显示其线路为 BGP 三网智能优化加 IEPL 专线出口，八个地区（香港、台湾、日本、新加坡、美国、英国、德国、法国）50 个以上节点，各地区数量未写。四档周期套餐从 120 GB / 月起、最高 1500 GB / 月，长周期最低年付 8 折，另有 ¥96 / 年小包与按需定制包；没有不限时流量包。设备数在原稿与第三方资料中有冲突。",
+    "audiences": [
+      "流量用得多的人",
+      "需要多出口地区的人",
+      "多台设备一起用的人"
+    ],
+    "affiliateUrl": "https://pkdj7.vipaff.cc/#/?code=Dw6wziZa",
+    "officialUrl": null,
+    "coupon": {
+      "code": "U1S1",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [
+        "四档周期套餐与定制包（资料只写不适用项）"
+      ],
+      "excludes": [
+        "就是好用包"
+      ],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "2026-10 / 11 第三方曾核对 120 GB 月付 ¥20 实付 ¥16；另一渠道码 akaka 有失效记录"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "英国",
+      "德国",
+      "法国"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "BGP 三网智能优化 + IEPL 专线出口"
+    ],
+    "lineTypeSummary": "BGP 三网智能优化 + IEPL 专线出口",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "ratio": null,
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "路由器"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤",
+      "资料称不推荐导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": true,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "HBO",
+      "DAZN"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude",
+      "Midjourney"
+    ],
+    "streamingNote": "资料列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "每自然月自动重置流量",
+      "所有套餐不限速",
+      "结转规则资料未写"
+    ],
+    "cycleDiscounts": "季付 9 折、半年付 85 折、年付 8 折（资料原文）",
+    "support": {
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入 U1S1 官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 U1S1，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "各地区节点数、倍率、客服渠道与时间、试用、结转规则资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 17,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/u1s1/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/20_有一说一_U1S1_更新版.md",
+    "minMonthlyPrice": 20,
+    "minMonthlyEffectivePrice": 20,
+    "minYearlyPrice": 96,
+    "minFirstPurchase": 20,
+    "minEffectiveMonthlyAvg": 8,
+    "minDataPackPrice": null,
+    "totalPlanCount": 18,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "普通人真够了包",
+          "trafficGb": 120,
+          "prices": {
+            "monthly": {
+              "original": 20,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 20,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 54,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 54,
+              "monthlyEquivalent": 18,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 102,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 102,
+              "monthlyEquivalent": 17,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 192,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 192,
+              "monthlyEquivalent": 16,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "你以为用不到包",
+          "trafficGb": 300,
+          "prices": {
+            "monthly": {
+              "original": 40,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 40,
+              "monthlyEquivalent": 40,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 108,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 108,
+              "monthlyEquivalent": 36,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 204,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 204,
+              "monthlyEquivalent": 34,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 384,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 384,
+              "monthlyEquivalent": 32,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "瘾大就拉满包",
+          "trafficGb": 700,
+          "prices": {
+            "monthly": {
+              "original": 100,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 100,
+              "monthlyEquivalent": 100,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 270,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 270,
+              "monthlyEquivalent": 90,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 510,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 510,
+              "monthlyEquivalent": 85,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 960,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 960,
+              "monthlyEquivalent": 80,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "我全都要包",
+          "trafficGb": 1500,
+          "prices": {
+            "monthly": {
+              "original": 180,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 180,
+              "monthlyEquivalent": 180,
+              "discountedMonthlyEquivalent": null
+            },
+            "quarterly": {
+              "original": 486,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 486,
+              "monthlyEquivalent": 162,
+              "discountedMonthlyEquivalent": null
+            },
+            "half-year": {
+              "original": 918,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 918,
+              "monthlyEquivalent": 153,
+              "discountedMonthlyEquivalent": null
+            },
+            "yearly": {
+              "original": 1728,
+              "discounted": null,
+              "savingsAmount": null,
+              "effectivePayable": 1728,
+              "monthlyEquivalent": 144,
+              "discountedMonthlyEquivalent": null
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "就是好用包",
+          "trafficGb": 60,
+          "price": 96,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8,
+          "notes": [
+            "不适用优惠码 U1S1"
+          ]
+        }
+      ],
+      "dataPacks": [],
+      "custom": [
+        {
+          "plan": "定制包",
+          "trafficGb": null,
+          "price": 600,
+          "cycle": "monthly",
+          "notes": [
+            "流量按需定制"
+          ]
+        }
+      ],
+      "notes": [
+        "每自然月自动重置流量；所有套餐不限速；结转规则资料未写",
+        "优惠码 U1S1 8 折，不适用就是好用包"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "U1S1支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，U1S1标明支持平台包括：Windows、macOS、iOS、Android、路由器。"
+      },
+      {
+        "q": "U1S1是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；资料称不推荐使用订阅链接，避免订阅外泄被他人盗用导致节点拥挤；资料称不推荐导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "U1S1允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "U1S1的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，U1S1最低起步金额为 ¥20。常规月付原价 ¥20/月起；年付方案 ¥96/年起（整期一次支付，折算月均约 ¥8/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "U1S1有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「U1S1」（8 折）。适用范围：四档周期套餐与定制包（资料只写不适用项）。排除范围：就是好用包。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "U1S1的流量重置规则与节点倍率如何计算？",
+        "a": "每自然月自动重置流量；所有套餐不限速；结转规则资料未写。"
+      },
+      {
+        "q": "U1S1的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude、Midjourney；列明适配流媒体包括 Netflix、Disney+、HBO、DAZN。资料列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "U1S1的客服渠道、试用及退款政策是什么？",
+        "a": "退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 U1S1 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 17,
+    "displayOrder": 17,
+    "id": "sogoyun",
+    "slug": "sogoyun",
+    "corpusId": "sogoyun",
+    "badge": "编辑展示 17",
+    "highlight": "13 地区 55 节点 · 含软路由与自研官方端",
+    "name": "Sogo云",
+    "nameEn": "SOGO Cloud",
+    "aliases": [
+      "Sogo 云"
+    ],
+    "tagline": "IEPL 专线机场，节点地区覆盖较广，入门 ¥25 含 150 GB",
+    "summary": "Sogo 云（SOGO Cloud）的资料显示其线路为 IEPL 专线加三网 BGP 优化，香港、台湾、日本、新加坡、美国合计 55 个节点，并称覆盖韩国、马来西亚、英国、法国、德国、土耳其、泰国、巴西等地区。四档周期套餐从 150 GB / 月起，另有 ¥98 / 年小包与四档不限时流量包；只能使用自研官方客户端，近期公开后台调查称第三方订阅功能已暂停。退款条款在公开来源中正面冲突。",
+    "audiences": [
+      "需要多个出口地区的人",
+      "多设备用户",
+      "偶尔使用的人"
+    ],
+    "affiliateUrl": "https://jbvfh.sogotztz2.sbs/#/?code=RMM9ZL0E",
+    "officialUrl": null,
+    "coupon": {
+      "code": "SOGO10000",
+      "discount": "9 折",
+      "rate": 0.9,
+      "appliesTo": [],
+      "excludes": [],
+      "limits": null,
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "第三方后台调查称每号一次、部分小包排除；另有 sss777 渠道码，以结算页为准"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国",
+      "韩国",
+      "马来西亚",
+      "英国",
+      "法国",
+      "德国",
+      "土耳其",
+      "泰国",
+      "巴西"
+    ],
+    "nodeCount": 55,
+    "nodeCountByRegion": {
+      "香港": 20,
+      "台湾": 5,
+      "日本": 10,
+      "新加坡": 10,
+      "美国": 10
+    },
+    "lineTypes": [
+      "IEPL 专线 + 三网 BGP 优化"
+    ],
+    "lineTypeSummary": "IEPL 专线 + 三网 BGP 优化",
+    "protocols": [
+      "VLESS",
+      "Shadowsocks"
+    ],
+    "ratio": "全节点 1x 倍率",
+    "deviceLimit": "不限同时在线设备数",
+    "supportedPlatforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "主流软路由"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "不提供订阅链接，只能使用自研官方客户端；2026-11-10 的公开后台调查称第三方订阅功能已暂停",
+      "不支持导入 Clash、小火箭等第三方客户端",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "official-only",
+      "thirdPartyLabel": "仅限官方客户端登录",
+      "supportsRouter": true,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Disney+",
+      "HBO Max",
+      "Hulu",
+      "YouTube Premium"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Claude",
+      "Midjourney"
+    ],
+    "streamingNote": "资料列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "每 30 天刷新流量",
+      "结转与限速规则资料未写"
+    ],
+    "cycleDiscounts": "资料未写比例；按价格计算约为季付 87–93 折、半年付 8 折、年付 83–97 折",
+    "support": {
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）；公开条款仍有矛盾，具体条件以客服答复为准",
+      "trial": "无免费试用",
+      "payment": "支付宝、微信、USDT（站长 2026-11-13 确认）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入 Sogo 云官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 SOGO10000，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "客服渠道与时间、结转与限速规则资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 17,
+    "evidenceType": "用户提供代码／公开规则存在缺口或冲突",
+    "priceSource": "https://jichangyouxuan.blog/airports/sogoyun/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/17_Sogo_云_SOGO_Cloud_更新版.md",
+    "minMonthlyPrice": 25,
+    "minMonthlyEffectivePrice": 22.5,
+    "minYearlyPrice": 98,
+    "minFirstPurchase": 22.5,
+    "minEffectiveMonthlyAvg": 8.17,
+    "minDataPackPrice": 120,
+    "totalPlanCount": 21,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "基础版",
+          "trafficGb": 150,
+          "prices": {
+            "monthly": {
+              "original": 25,
+              "discounted": 22.5,
+              "savingsAmount": 2.5,
+              "effectivePayable": 22.5,
+              "monthlyEquivalent": 25,
+              "discountedMonthlyEquivalent": 22.5
+            },
+            "quarterly": {
+              "original": 65,
+              "discounted": 58.5,
+              "savingsAmount": 6.5,
+              "effectivePayable": 58.5,
+              "monthlyEquivalent": 21.67,
+              "discountedMonthlyEquivalent": 19.5
+            },
+            "half-year": {
+              "original": 120,
+              "discounted": 108,
+              "savingsAmount": 12,
+              "effectivePayable": 108,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": 18
+            },
+            "yearly": {
+              "original": 250,
+              "discounted": 225,
+              "savingsAmount": 25,
+              "effectivePayable": 225,
+              "monthlyEquivalent": 20.83,
+              "discountedMonthlyEquivalent": 18.75
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "优选版",
+          "trafficGb": 350,
+          "prices": {
+            "monthly": {
+              "original": 45,
+              "discounted": 40.5,
+              "savingsAmount": 4.5,
+              "effectivePayable": 40.5,
+              "monthlyEquivalent": 45,
+              "discountedMonthlyEquivalent": 40.5
+            },
+            "quarterly": {
+              "original": 125,
+              "discounted": 112.5,
+              "savingsAmount": 12.5,
+              "effectivePayable": 112.5,
+              "monthlyEquivalent": 41.67,
+              "discountedMonthlyEquivalent": 37.5
+            },
+            "half-year": {
+              "original": 245,
+              "discounted": 220.5,
+              "savingsAmount": 24.5,
+              "effectivePayable": 220.5,
+              "monthlyEquivalent": 40.83,
+              "discountedMonthlyEquivalent": 36.75
+            },
+            "yearly": {
+              "original": 485,
+              "discounted": 436.5,
+              "savingsAmount": 48.5,
+              "effectivePayable": 436.5,
+              "monthlyEquivalent": 40.42,
+              "discountedMonthlyEquivalent": 36.38
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "强化版",
+          "trafficGb": 550,
+          "prices": {
+            "monthly": {
+              "original": 80,
+              "discounted": 72,
+              "savingsAmount": 8,
+              "effectivePayable": 72,
+              "monthlyEquivalent": 80,
+              "discountedMonthlyEquivalent": 72
+            },
+            "quarterly": {
+              "original": 230,
+              "discounted": 207,
+              "savingsAmount": 23,
+              "effectivePayable": 207,
+              "monthlyEquivalent": 76.67,
+              "discountedMonthlyEquivalent": 69
+            },
+            "half-year": {
+              "original": 450,
+              "discounted": 405,
+              "savingsAmount": 45,
+              "effectivePayable": 405,
+              "monthlyEquivalent": 75,
+              "discountedMonthlyEquivalent": 67.5
+            },
+            "yearly": {
+              "original": 850,
+              "discounted": 765,
+              "savingsAmount": 85,
+              "effectivePayable": 765,
+              "monthlyEquivalent": 70.83,
+              "discountedMonthlyEquivalent": 63.75
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "顶配版",
+          "trafficGb": 1100,
+          "prices": {
+            "monthly": {
+              "original": 150,
+              "discounted": 135,
+              "savingsAmount": 15,
+              "effectivePayable": 135,
+              "monthlyEquivalent": 150,
+              "discountedMonthlyEquivalent": 135
+            },
+            "quarterly": {
+              "original": 440,
+              "discounted": 396,
+              "savingsAmount": 44,
+              "effectivePayable": 396,
+              "monthlyEquivalent": 146.67,
+              "discountedMonthlyEquivalent": 132
+            },
+            "half-year": {
+              "original": 870,
+              "discounted": 783,
+              "savingsAmount": 87,
+              "effectivePayable": 783,
+              "monthlyEquivalent": 145,
+              "discountedMonthlyEquivalent": 130.5
+            },
+            "yearly": {
+              "original": 1750,
+              "discounted": 1575,
+              "savingsAmount": 175,
+              "effectivePayable": 1575,
+              "monthlyEquivalent": 145.83,
+              "discountedMonthlyEquivalent": 131.25
+            }
+          },
+          "notes": []
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "小包·年付版",
+          "trafficGb": 60,
+          "price": 98,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8.17,
+          "notes": []
+        }
+      ],
+      "dataPacks": [
+        {
+          "plan": "基础餐不限时版",
+          "trafficGb": 120,
+          "price": 120,
+          "discountedPrice": null,
+          "pricePerGb": 1,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "优选餐不限时版",
+          "trafficGb": 250,
+          "price": 220,
+          "discountedPrice": null,
+          "pricePerGb": 0.88,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "强化餐不限时版",
+          "trafficGb": 500,
+          "price": 450,
+          "discountedPrice": null,
+          "pricePerGb": 0.9,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        },
+        {
+          "plan": "至尊餐不限时版",
+          "trafficGb": 1000,
+          "price": 850,
+          "discountedPrice": null,
+          "pricePerGb": 0.85,
+          "devices": "不限同时在线设备数",
+          "notes": []
+        }
+      ],
+      "custom": [],
+      "notes": [
+        "每 30 天刷新流量；结转与限速规则资料未写",
+        "优惠码 SOGO10000 9 折；第三方称每号一次、部分小包排除，以结算页为准"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Sogo云支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，Sogo云标明支持平台包括：Windows、macOS、iOS、Android、主流软路由。"
+      },
+      {
+        "q": "Sogo云是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；不提供订阅链接，只能使用自研官方客户端；2026-11-10 的公开后台调查称第三方订阅功能已暂停；不支持导入 Clash、小火箭等第三方客户端；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "Sogo云允许多少台设备同时在线？",
+        "a": "不限同时在线设备数。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "Sogo云的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，Sogo云最低起步金额为 ¥22.5。常规月付原价 ¥25/月起（记录优惠码 SOGO10000 折后首期 ¥22.5）；年付方案 ¥98/年起（整期一次支付，折算月均约 ¥8.17/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "Sogo云有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「SOGO10000」（9 折）。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "Sogo云的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：全节点 1x 倍率。每 30 天刷新流量；结转与限速规则资料未写。"
+      },
+      {
+        "q": "Sogo云的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Claude、Midjourney；列明适配流媒体包括 Netflix、Disney+、HBO Max、Hulu、YouTube Premium。资料列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "Sogo云的客服渠道、试用及退款政策是什么？",
+        "a": "试用规则：无免费试用。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）；公开条款仍有矛盾，具体条件以客服答复为准。"
+      },
+      {
+        "q": "如何辨别 Sogo云 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  },
+  {
+    "rank": 18,
+    "displayOrder": 18,
+    "id": "kuajie",
+    "slug": "kuajie",
+    "corpusId": "kuajie",
+    "badge": "编辑展示 18",
+    "highlight": "Win 10+/macOS 10.15+/iOS 12+/Android 5+ 多端支持",
+    "name": "跨界",
+    "nameEn": null,
+    "aliases": [
+      "跨界云"
+    ],
+    "tagline": "大流量机场，顶档每月 1800 GB，入门 ¥20 含 120 GB",
+    "summary": "跨界（跨界云）的资料显示其为 IPLC 专线、所有节点 1x 倍率，五个地区 50 个以上节点。四档周期套餐从 120 GB / 月的轻云 Lite 起、顶档无界 Infinity 为 1800 GB / 月（三档只有月付与年付），另有 ¥96 / 年小包；没有不限时流量包与定制线路。协议、第三方订阅与在线节点数在不同资料中有差异。",
+    "audiences": [
+      "流量用得多的人",
+      "多设备用户",
+      "想先小额试用的人"
+    ],
+    "affiliateUrl": "https://vip02.kuajieaff.com/#/?code=cyls6TVF",
+    "officialUrl": null,
+    "coupon": {
+      "code": "kuajie",
+      "discount": "8 折",
+      "rate": 0.8,
+      "appliesTo": [],
+      "excludes": [],
+      "limits": "新用户专享",
+      "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+      "note": "资料未写适用套餐范围"
+    },
+    "regions": [
+      "香港",
+      "台湾",
+      "日本",
+      "新加坡",
+      "美国"
+    ],
+    "nodeCount": null,
+    "nodeCountByRegion": null,
+    "lineTypes": [
+      "IPLC 专线"
+    ],
+    "lineTypeSummary": "IPLC 专线",
+    "protocols": [
+      "VLESS"
+    ],
+    "ratio": "所有节点 1x 倍率",
+    "deviceLimit": "不限登录设备数（同时在线上限资料未写）",
+    "supportedPlatforms": [
+      "Windows 10 及以上",
+      "macOS 10.15 及以上",
+      "iOS 12.0 及以上",
+      "Android 5.0 及以上"
+    ],
+    "clientPolicy": [
+      "官方客户端，账号登录即可连接",
+      "原稿称不推荐使用订阅链接、不推荐导入 Clash、小火箭等；第三方页面却推荐 Clash Verge Rev 与 Shadowrocket 订阅导入，以官网与客服当前说明为准",
+      "下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道"
+    ],
+    "clientFlags": {
+      "officialClient": true,
+      "thirdPartyMode": "supported",
+      "thirdPartyLabel": "支持订阅/第三方客户端",
+      "supportsRouter": false,
+      "supportsLinux": false,
+      "usesNextin": false
+    },
+    "streaming": [
+      "Netflix",
+      "Hulu",
+      "HBO",
+      "Disney+",
+      "DAZN"
+    ],
+    "aiTools": [
+      "ChatGPT",
+      "Gemini",
+      "Claude"
+    ],
+    "streamingNote": "资料列出的平台为品牌声称，基于公开品牌资料整理",
+    "trafficRules": [
+      "从购买日起算每月流量",
+      "所有套餐不限速",
+      "结转规则资料未写"
+    ],
+    "cycleDiscounts": "资料未写比例；按价格计算年付约为 8 折",
+    "support": {
+      "channels": [
+        "在线客服"
+      ],
+      "refund": "需联系客服申请退款（站长 2026-11-13 确认）",
+      "payment": "微信、支付宝（第三方另列 USDT）",
+      "antiFraud": "只通过官网注册购买，价格与优惠以结算页为准"
+    },
+    "purchaseSteps": [
+      "进入跨界官网，注册账号（可通过推广链接进入）",
+      "首次购买建议先选月付或最小的套餐试用",
+      "在结算页填写优惠码 kuajie，确认折扣生效后付款",
+      "下载官方客户端，用账号登录",
+      "选择节点连接，建议优先通过月付或轻量套餐确认日常可用性后再考虑长周期方案"
+    ],
+    "caveats": [
+      "跃云、凌云、无界三档的季付与半年付资料未写。",
+      "优惠码适用范围、客服时间、试用、结转规则资料未写。"
+    ],
+    "materialDate": "2026-11-13",
+    "historyPriceDate": "2026-10-20",
+    "historyRecordCount": 8,
+    "evidenceType": "第三方公开记录",
+    "priceSource": "https://jichangyouxuan.blog/airports/kuajie/",
+    "updatedAt": "2026-11-25",
+    "sourceFile": "source-materials/brands/15_跨界_跨界云_更新版.md",
+    "minMonthlyPrice": 20,
+    "minMonthlyEffectivePrice": 16,
+    "minYearlyPrice": 96,
+    "minFirstPurchase": 16,
+    "minEffectiveMonthlyAvg": 8,
+    "minDataPackPrice": null,
+    "totalPlanCount": 10,
+    "planGroups": {
+      "periodic": [
+        {
+          "plan": "轻云 Lite",
+          "trafficGb": 120,
+          "prices": {
+            "monthly": {
+              "original": 20,
+              "discounted": 16,
+              "savingsAmount": 4,
+              "effectivePayable": 16,
+              "monthlyEquivalent": 20,
+              "discountedMonthlyEquivalent": 16
+            },
+            "quarterly": {
+              "original": 54,
+              "discounted": 43.2,
+              "savingsAmount": 10.8,
+              "effectivePayable": 43.2,
+              "monthlyEquivalent": 18,
+              "discountedMonthlyEquivalent": 14.4
+            },
+            "yearly": {
+              "original": 192,
+              "discounted": 153.6,
+              "savingsAmount": 38.4,
+              "effectivePayable": 153.6,
+              "monthlyEquivalent": 16,
+              "discountedMonthlyEquivalent": 12.8
+            }
+          },
+          "notes": []
+        },
+        {
+          "plan": "跃云 Leap",
+          "trafficGb": 330,
+          "prices": {
+            "monthly": {
+              "original": 40,
+              "discounted": 32,
+              "savingsAmount": 8,
+              "effectivePayable": 32,
+              "monthlyEquivalent": 40,
+              "discountedMonthlyEquivalent": 32
+            },
+            "yearly": {
+              "original": 384,
+              "discounted": 307.2,
+              "savingsAmount": 76.8,
+              "effectivePayable": 307.2,
+              "monthlyEquivalent": 32,
+              "discountedMonthlyEquivalent": 25.6
+            }
+          },
+          "notes": [
+            "季付、半年付资料未写"
+          ]
+        },
+        {
+          "plan": "凌云 Soar",
+          "trafficGb": 830,
+          "prices": {
+            "monthly": {
+              "original": 90,
+              "discounted": 72,
+              "savingsAmount": 18,
+              "effectivePayable": 72,
+              "monthlyEquivalent": 90,
+              "discountedMonthlyEquivalent": 72
+            },
+            "yearly": {
+              "original": 864,
+              "discounted": 691.2,
+              "savingsAmount": 172.8,
+              "effectivePayable": 691.2,
+              "monthlyEquivalent": 72,
+              "discountedMonthlyEquivalent": 57.6
+            }
+          },
+          "notes": [
+            "季付、半年付资料未写"
+          ]
+        },
+        {
+          "plan": "无界 Infinity",
+          "trafficGb": 1800,
+          "prices": {
+            "monthly": {
+              "original": 130,
+              "discounted": 104,
+              "savingsAmount": 26,
+              "effectivePayable": 104,
+              "monthlyEquivalent": 130,
+              "discountedMonthlyEquivalent": 104
+            },
+            "yearly": {
+              "original": 1248,
+              "discounted": 998.4,
+              "savingsAmount": 249.6,
+              "effectivePayable": 998.4,
+              "monthlyEquivalent": 104,
+              "discountedMonthlyEquivalent": 83.2
+            }
+          },
+          "notes": [
+            "季付、半年付资料未写"
+          ]
+        }
+      ],
+      "yearlySmall": [
+        {
+          "plan": "跨界年付版",
+          "trafficGb": 60,
+          "price": 96,
+          "discountedPrice": null,
+          "monthlyEquivalent": 8,
+          "notes": []
+        }
+      ],
+      "dataPacks": [],
+      "custom": [],
+      "notes": [
+        "从购买日起算每月流量；所有套餐不限速；结转规则资料未写",
+        "优惠码 kuajie 8 折，新用户专享；适用范围资料未写"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "跨界支持哪些设备和操作系统？",
+        "a": "依据公开品牌资料，跨界标明支持平台包括：Windows 10 及以上、macOS 10.15 及以上、iOS 12.0 及以上、Android 5.0 及以上。"
+      },
+      {
+        "q": "跨界是使用官方客户端还是支持 Clash / Shadowrocket（小火箭）？",
+        "a": "官方客户端，账号登录即可连接；原稿称不推荐使用订阅链接、不推荐导入 Clash、小火箭等；第三方页面却推荐 Clash Verge Rev 与 Shadowrocket 订阅导入，以官网与客服当前说明为准；下载渠道仅限官网；网上出售的订阅链接或网盘分发的客户端均非官方渠道。"
+      },
+      {
+        "q": "跨界允许多少台设备同时在线？",
+        "a": "不限登录设备数（同时在线上限资料未写）。多设备共用同一账号流量时请遵守服务条款，切勿公开分享订阅或账户凭证。"
+      },
+      {
+        "q": "跨界的套餐价格和首次购买门槛是多少？（历史记录参考）",
+        "a": "在历史记录日期（2026-10-20）公开价目中，跨界最低起步金额为 ¥16。常规月付原价 ¥20/月起（记录优惠码 kuajie 折后首期 ¥16）；年付方案 ¥96/年起（整期一次支付，折算月均约 ¥8/月）。实际结账价格请以官网当前结算页为准。"
+      },
+      {
+        "q": "跨界有哪些已收录优惠码？使用时要注意什么？",
+        "a": "资料记录优惠码为「kuajie」（8 折）。限制：新用户专享。支付前请在结算页核实扣减金额。"
+      },
+      {
+        "q": "跨界的流量重置规则与节点倍率如何计算？",
+        "a": "节点倍率：所有节点 1x 倍率。从购买日起算每月流量；所有套餐不限速；结转规则资料未写。"
+      },
+      {
+        "q": "跨界的公开资料是否列明支持 AI 工具与流媒体？",
+        "a": "资料列明适配 AI 工具包括 ChatGPT、Gemini、Claude；列明适配流媒体包括 Netflix、Hulu、HBO、Disney+、DAZN。资料列出的平台为品牌声称，基于公开品牌资料整理"
+      },
+      {
+        "q": "跨界的客服渠道、试用及退款政策是什么？",
+        "a": "客服渠道：在线客服。退款与升级：需联系客服申请退款（站长 2026-11-13 确认）。"
+      },
+      {
+        "q": "如何辨别 跨界 官网真伪并安全下载客户端？",
+        "a": "请仅通过品牌官方入口与账号用户中心内的下载页面获取安装包，不要下载网盘、陌生群或非官方镜像站的客户端，也不要从第三方渠道购买共享账号或订阅链接。"
+      }
+    ]
+  }
+]

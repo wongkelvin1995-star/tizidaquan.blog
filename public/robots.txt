@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# 搜索结果页通过页面内 meta noindex 排除收录，允许爬虫抓取以读取指令
+Disallow: /_astro/*.map
+
+Sitemap: https://tizidaquan.blog/sitemap.xml
+Sitemap: https://tizidaquan.blog/sitemap-index.xml

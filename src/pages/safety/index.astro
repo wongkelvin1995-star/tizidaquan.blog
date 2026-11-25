@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { buildBreadcrumbSchema, buildCollectionSchema } from '../../utils/site';
+
+const safetyGuides = await getCollection('safety', ({ data }) => !data.draft);
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '安全与隐私中心', url: '/safety/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildCollectionSchema({
+    title: '安全与隐私保护中心｜官网核验、防钓鱼、隐私边界与购买风控',
+    description: '包含官网真假识别检查清单、钓鱼网站防骗、代理日志政策客观解析、长期预付风险与客服售后判断标准。',
+    url: '/safety/',
+  }),
+];
+---
+
+<BaseLayout
+  title="安全与隐私保护中心｜官网真假识别、钓鱼防骗与购买风险指南"
+  description="客观讲解机场使用过程中的隐私安全边界、官网真假识别五步清单、钓鱼下载站识别、无日志宣传局限及长期预付购买风险。"
+  canonicalPath="/safety/"
+  schemas={schemas}
+>
+  <section class="bg-zone-safety border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">安全与隐私中心</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">安全、隐私与购买风险中心</h1>
+      <p class="mt-3 text-sm sm:text-base text-slate-700 max-w-3xl leading-relaxed">
+        不吹嘘“绝对匿名”，也不制造无根据恐慌。本中心聚焦于普通用户真正可控的安全防线：官网真假识别、账户凭证隔离、订阅防泄密、购买预付风控以及客服售后透明度核查。
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 space-y-10">
+    <!-- Interactive Website Verification Checklist (Section 28) -->
+    <div class="bento-card p-6 sm:p-8 space-y-5">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-blue-700">交互核对工具 · 官网识别检查清单</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">访问未知网站或下载客户端前，逐项勾选自查</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          注意：浏览器地址栏有 HTTPS 绿锁<strong>不能</strong>证明网站真实；带追踪参数的推广链接（AFF）亦不自动等同于品牌主官网域名，须经以下交叉核验。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-3 md:grid-cols-2" id="safety-checklist">
+        {[
+          { id: 'c1', text: '1. 非通过搜索引擎“广告/推广”竞价结果随意点入的陌生站点。' },
+          { id: 'c2', text: '2. 核对网址拼写无 l/1、o/0 替换或多余 -download/-cn 后缀。' },
+          { id: 'c3', text: '3. 入口来自官网公告频道、防失联邮件历史发件或已标注性质的可靠索引。' },
+          { id: 'c4', text: '4. 登录后能正确查到本人既有订单与剩余流量（而非无需登录直接诱导下载）。' },
+          { id: 'c5', text: '5. 客户端仅从官网用户中心或官方开源 GitHub Releases 下载，未关闭杀毒防护。' },
+          { id: 'c6', text: '6. 使用了独立邮箱与高强度随机密码（未与常用实名账号或网银密码重复）。' },
+        ].map((item) => (
+          <label class="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50/70 p-3.5 cursor-pointer hover:border-blue-300">
+            <input type="checkbox" class="safety-chk mt-1 h-4 w-4 rounded border-slate-300 text-blue-600" />
+            <span class="text-xs sm:text-sm text-slate-800 leading-relaxed">{item.text}</span>
+          </label>
+        ))}
+      </div>
+
+      <div id="safety-chk-status" class="rounded-xl bg-blue-50 border border-blue-200 px-4 py-3 text-xs sm:text-sm font-semibold text-blue-900">
+        当前已核对 0 / 6 项：建议完成全部 6 项核对后再进行注册、付款或客户端安装。
+      </div>
+    </div>
+
+    <!-- All 9 Safety Modules -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {safetyGuides.map((g) => {
+        const slug = g.data.slug || g.id.replace(/\.md$/, '');
+        return (
+          <a href={`/safety/${slug}/`} class="bento-card p-6 flex flex-col justify-between gap-3 group">
+            <div>
+              <span class="rounded-md bg-slate-100 text-slate-700 px-2.5 py-0.5 text-xs font-bold">{g.data.primaryKeyword}</span>
+              <h2 class="mt-2.5 text-lg font-extrabold text-slate-900 group-hover:text-blue-600 leading-snug">{g.data.title}</h2>
+              <p class="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">{g.data.description}</p>
+            </div>
+            <span class="text-xs font-bold text-blue-700 pt-2 border-t border-slate-100">阅读安全专题 →</span>
+          </a>
+        );
+      })}
+    </div>
+
+    <div class="bento-card p-6 flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900">正在遭遇连接异常、官网打不开或节点超时？</h3>
+        <p class="text-xs text-slate-600 mt-0.5">请前往网络故障排查中心使用 11 项症状自查导航助手。</p>
+      </div>
+      <a href="/troubleshooting/" class="btn-primary text-sm">前往网络故障排查中心 →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const chks = document.querySelectorAll('.safety-chk');
+    const statusEl = document.getElementById('safety-chk-status');
+    function update() {
+      const checked = [...chks].filter((c) => c.checked).length;
+      if (checked === 6) {
+        statusEl.className = 'rounded-xl bg-emerald-50 border border-emerald-200 px-4 py-3 text-xs sm:text-sm font-semibold text-emerald-900';
+        statusEl.textContent = '已完成 6 / 6 项基础核对：当前来源与账号隔离规范符合安全建议，切勿向任何网站上传订阅链接。';
+      } else {
+        statusEl.className = 'rounded-xl bg-blue-50 border border-blue-200 px-4 py-3 text-xs sm:text-sm font-semibold text-blue-900';
+        statusEl.textContent = `当前已核对 ${checked} / 6 项：建议完成全部 6 项核对后再进行注册、付款或客户端安装。`;
+      }
+    }
+    chks.forEach((c) => c.addEventListener('change', update));
+  })();
+</script>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, buildBreadcrumbSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '联系与资料纠错', url: '/contact/' },
+];
+---
+
+<BaseLayout
+  title="联系我们与资料纠错反馈｜梯子大全"
+  description="如发现梯子大全文章中的系统版本更新、品牌套餐价格变化、客户端政策调整或链接错误，欢迎通过官方邮箱提交核实纠错。"
+  canonicalPath="/contact/"
+  schemas={[buildBreadcrumbSchema(breadcrumbs)]}
+>
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-6">
+    <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500">
+      <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">联系纠错</span>
+    </nav>
+    <div class="bento-card p-6 sm:p-10 space-y-5">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">联系与内容纠错</h1>
+      <p class="text-base text-slate-700 leading-relaxed">
+        网络工具的系统兼容基线、AI/流媒体平台地区政策以及各品牌套餐与客户端策略都会随时间调整。如您在本站阅读时发现任何与当前官方实际说明存在出入的内容，欢迎随时来信指正。
+      </p>
+      <div class="rounded-2xl bg-blue-50 border border-blue-200 p-5 space-y-2">
+        <div class="text-xs font-bold uppercase tracking-wider text-blue-800">编辑部纠错邮箱</div>
+        <div class="text-lg font-extrabold text-blue-900">{SITE.contactEmail}</div>
+        <p class="text-xs text-slate-600">来信请附带具体页面网址（URL）、对应品牌或系统版本以及官方最新公告截图或公开说明来源，编辑核对后将更新页面并标注更新日期。</p>
+      </div>
+      <div class="rounded-2xl bg-amber-50 border border-amber-200 p-5 text-sm text-amber-900 space-y-1.5">
+        <div class="font-extrabold">隐私保护提醒（请勿发送个人机密）</div>
+        <p>在发送排障咨询或纠错邮件时，<strong>绝对不要附带您的任何机场登录密码、完整个人订阅链接（含 Token）、付款银行卡信息或私钥文件</strong>。本站不提供人工代买、代充或远程控制电脑服务。</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

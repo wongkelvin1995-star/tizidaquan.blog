@@ -1,0 +1,50 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('safety', ({ data }) => !data.draft);
+  return entries.map((entry) => {
+    const slug = (entry.data.slug || entry.id.replace(/\.md$/, '')).replace(/^\/+|\/+$/g, '');
+    return {
+      params: { slug },
+      props: { entry, slug },
+    };
+  });
+}
+
+const { entry, slug } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const relatedLinks = [
+  { title: '安全与隐私保护中心（核验清单）', href: '/safety/', tag: '安全中心' },
+  { title: '机场横向对比与评分标准', href: '/comparison/methodology/', tag: '方法论' },
+  { title: '机场官网打不开怎么找回入口', href: '/troubleshooting/website-unavailable/', tag: '故障排障' },
+  { title: '新手避坑指南', href: '/beginners/avoid-pitfalls/', tag: '防骗指南' },
+];
+---
+
+<KnowledgeLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  category={entry.data.category}
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '安全与隐私', url: '/safety/' },
+    { name: entry.data.primaryKeyword, url: `/safety/${slug}/` },
+  ]}
+  publishDate={entry.data.publishDate}
+  updatedDate={entry.data.updatedDate}
+  documentedVersion={entry.data.documentedVersion}
+  author={entry.data.author}
+  headings={headings}
+  faqs={entry.data.faqs}
+  howToSteps={entry.data.howToSteps}
+  relatedBrands={entry.data.relatedBrands}
+  relatedLinks={relatedLinks}
+  sources={entry.data.sources}
+  indexable={entry.data.indexable}
+  canonicalPath={`/safety/${slug}/`}
+>
+  <Content />
+</KnowledgeLayout>

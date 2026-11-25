@@ -1,0 +1,46 @@
+[
+  {
+    "id": "official-client",
+    "name": "品牌官方自研客户端",
+    "platforms": ["Windows", "macOS", "iOS", "Android", "Linux (部分品牌)"],
+    "summary": "通过账号密码在官方客户端内直接登录连接，内置规则与节点列表，无需手动复制订阅 URL。",
+    "pros": ["上手门槛低，适合新手", "防止订阅链接外泄导致账号风控或节点拥挤"],
+    "cons": ["无法自定义复杂分流脚本", "通常不支持路由器或冷门 Linux 发行版"],
+    "brandsUsing": ["暮光加速", "微风网络", "隐形人", "FLYV", "浪网", "Firefly", "Sogo云"]
+  },
+  {
+    "id": "nextin-ios",
+    "name": "Nextin (iOS 协作端)",
+    "platforms": ["iOS 15+"],
+    "summary": "部分不直接上架独立 App Store 应用的品牌，指引 iOS 用户在合规渠道安装 Nextin 并输入品牌识别码登录。",
+    "pros": ["无需手动导出通用订阅链接", "保持账号密码体系统一"],
+    "cons": ["不同品牌识别码不可混用，需以各自用户中心说明为准"],
+    "brandsUsing": ["微风网络", "无忧链接（第三方资料提及）"]
+  },
+  {
+    "id": "clash-mihomo",
+    "name": "Clash Verge Rev / Mihomo Party",
+    "platforms": ["Windows 10/11", "macOS 10.15+", "Linux"],
+    "summary": "基于 Mihomo (Clash.Meta) 内核的开源桌面客户端，支持 VLESS、Hysteria2、Trojan、Shadowsocks 等现代协议。",
+    "pros": ["规则分流灵活", "支持 TUN 虚拟网卡与系统代理切换"],
+    "cons": ["仅适用于明确开放 Clash/通用订阅的品牌，且不适用全封闭官方端机场"],
+    "officialRepo": "https://github.com/clash-verge-rev/clash-verge-rev"
+  },
+  {
+    "id": "shadowrocket",
+    "name": "Shadowrocket（小火箭）",
+    "platforms": ["iOS", "iPadOS", "macOS (Apple Silicon)"],
+    "summary": "iOS 平台广泛使用的第三方多协议网络代理工具，需在非中国大陆区 App Store 自行付费购买下载。",
+    "pros": ["协议兼容性广", "原生支持订阅扫码与 URL 导入"],
+    "cons": ["中国大陆区 App Store 未上架；不提供第三方订阅链接的机场无法使用"],
+    "officialStoreNote": "仅限海外区 App Store 官方商店购买"
+  },
+  {
+    "id": "clash-android",
+    "name": "Clash Meta for Android / v2rayNG",
+    "platforms": ["Android 5.0+"],
+    "summary": "Android 端常见开源代理客户端，通过导入机场订阅链接或单节点配置工作。",
+    "pros": ["支持分应用代理（绕过国内常用 App）", "开源透明，可核对 Release 校验"],
+    "cons": ["同样受限于品牌是否开放通用订阅链接；HarmonyOS NEXT 不支持 APK 安装"]
+  }
+]

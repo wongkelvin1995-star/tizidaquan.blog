@@ -1,0 +1,391 @@
+[
+  {
+    "brandSlug": "lingdongyun",
+    "brandName": "灵动云",
+    "brandRank": 1,
+    "code": "ld888",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "拂风",
+      "驭浪",
+      "破晓",
+      "凌霄"
+    ],
+    "excludes": [
+      "穿云",
+      "不限时流量包",
+      "至尊私人定制"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "资料写明四档周期套餐均含长周期",
+    "affUrl": "https://varnexa.lingdongaff.com/#/?code=HHoxxHGa",
+    "samplePlanName": "拂风（月付）",
+    "sampleOriginalPrice": 20,
+    "sampleDiscountedPrice": 16
+  },
+  {
+    "brandSlug": "twilight",
+    "brandName": "暮光加速",
+    "brandRank": 2,
+    "code": "mm88",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "周期套餐（基础版、标准版、旗舰版、至尊版）"
+    ],
+    "excludes": [
+      "年付轻量版"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": null,
+    "affUrl": "https://varnexa.twilightaff.com/#/?code=1V9N5bZk",
+    "samplePlanName": null,
+    "sampleOriginalPrice": null,
+    "sampleDiscountedPrice": null
+  },
+  {
+    "brandSlug": "breezenet",
+    "brandName": "微风网络",
+    "brandRank": 3,
+    "code": "weifeng90",
+    "discount": "9 折",
+    "rate": 0.9,
+    "appliesTo": [
+      "乘风",
+      "破风",
+      "御风"
+    ],
+    "excludes": [
+      "清风",
+      "微风·不限时",
+      "信风·不限时",
+      "长风·不限时"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": null,
+    "affUrl": "https://downloadshare.breezenetttt.sbs/#/?code=GnhAtVpF",
+    "samplePlanName": "乘风（Riding）（月付）",
+    "sampleOriginalPrice": 25,
+    "sampleDiscountedPrice": 22.5
+  },
+  {
+    "brandSlug": "feimaoyun",
+    "brandName": "飞猫云",
+    "brandRank": 4,
+    "code": "flycat888",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "季付及以上的周期套餐"
+    ],
+    "excludes": [
+      "月付"
+    ],
+    "limits": "新用户专享",
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": null,
+    "affUrl": "https://flycat1.flycatvipaff.cc/#/?code=Gja6RpJ8",
+    "samplePlanName": null,
+    "sampleOriginalPrice": null,
+    "sampleDiscountedPrice": null
+  },
+  {
+    "brandSlug": "flyv",
+    "brandName": "FLYV",
+    "brandRank": 5,
+    "code": "fly20",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "入门方案",
+      "进阶方案",
+      "高端方案",
+      "商业方案"
+    ],
+    "excludes": [
+      "年付标准轻量版",
+      "不限时流量包",
+      "独享黄金专线"
+    ],
+    "limits": "新用户首单专享，每个账号限用一次",
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "资料写明四档周期套餐均含长周期",
+    "affUrl": "https://varnexa.flyvaff.com/#/?code=PphqCqzD",
+    "samplePlanName": "入门方案（月付）",
+    "sampleOriginalPrice": 25,
+    "sampleDiscountedPrice": 20
+  },
+  {
+    "brandSlug": "wavenet",
+    "brandName": "浪网",
+    "brandRank": 6,
+    "code": "lw888",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "符合条件的常规周期套餐"
+    ],
+    "excludes": [
+      "年付标准"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "资料对“符合条件”的范围未进一步说明",
+    "affUrl": "https://varnexa.wavenetaff.com/#/?code=8lvPHncJ",
+    "samplePlanName": null,
+    "sampleOriginalPrice": null,
+    "sampleDiscountedPrice": null
+  },
+  {
+    "brandSlug": "yinxingren",
+    "brandName": "隐形人",
+    "brandRank": 7,
+    "code": "yxr888",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [],
+    "excludes": [],
+    "limits": "一次性使用",
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "适用套餐范围资料未写（折扣与使用限制为站长 2026-11-13 补充）",
+    "affUrl": "https://varnexa.invisibleaff.com/#/?code=TNqBqWEw",
+    "samplePlanName": "白银纪元（月付）",
+    "sampleOriginalPrice": 24,
+    "sampleDiscountedPrice": 19.2
+  },
+  {
+    "brandSlug": "wuyou",
+    "brandName": "无忧链接",
+    "brandRank": 8,
+    "code": "wuyou666",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "舒心链接",
+      "省心链接",
+      "随心链接",
+      "忘忧链接"
+    ],
+    "excludes": [
+      "MINI 链接"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "第三方 2026-11-09 后台调查记载活动至 11 月 30 日，有效期待结算核实",
+    "affUrl": "https://wep01.worryfreeaff.com/#/?code=wRKHiDZB",
+    "samplePlanName": "舒心链接（月付）",
+    "sampleOriginalPrice": 19,
+    "sampleDiscountedPrice": 15.2
+  },
+  {
+    "brandSlug": "firefly",
+    "brandName": "Firefly",
+    "brandRank": 9,
+    "code": "firefly",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "Lite",
+      "Plus",
+      "Blaze",
+      "Nova"
+    ],
+    "excludes": [
+      "年付版"
+    ],
+    "limits": "新用户专享",
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": null,
+    "affUrl": "https://fly.fireflyxx.cfd/#/?code=WWdYMdoa",
+    "samplePlanName": "Lite（月付）",
+    "sampleOriginalPrice": 25,
+    "sampleDiscountedPrice": 20
+  },
+  {
+    "brandSlug": "quanqiuyun",
+    "brandName": "全球云",
+    "brandRank": 10,
+    "code": "qq88",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "周期套餐、轻量版与不限时流量包（资料只写不适用项）"
+    ],
+    "excludes": [
+      "独享私人专线节点"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": null,
+    "affUrl": "https://n3oplhjnm.quanqiugttt1.club/#/?code=RZW9Z7OZ",
+    "samplePlanName": null,
+    "sampleOriginalPrice": null,
+    "sampleDiscountedPrice": null
+  },
+  {
+    "brandSlug": "v2yun",
+    "brandName": "唯兔云",
+    "brandRank": 11,
+    "code": "rabbit",
+    "discount": "9 折",
+    "rate": 0.9,
+    "appliesTo": [
+      "普通版",
+      "进阶版",
+      "专业版",
+      "至尊版"
+    ],
+    "excludes": [
+      "年付版限量款",
+      "年付加强专线"
+    ],
+    "limits": "新用户专享",
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": null,
+    "affUrl": "https://fast.v2yunvipaff.com/#/?code=Q03xl6H9",
+    "samplePlanName": "普通版（月付）",
+    "sampleOriginalPrice": 19.9,
+    "sampleDiscountedPrice": 17.91
+  },
+  {
+    "brandSlug": "lingmao",
+    "brandName": "灵猫",
+    "brandRank": 12,
+    "code": "lingmao",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "Small",
+      "Big"
+    ],
+    "excludes": [
+      "年付小包"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "另有渠道资料列 lmao888（9 折），哪一个有效待结算确认",
+    "affUrl": "https://vip02.civetaff.com/#/?code=DpcJTfcr",
+    "samplePlanName": "Small（月付）",
+    "sampleOriginalPrice": 25,
+    "sampleDiscountedPrice": 20
+  },
+  {
+    "brandSlug": "flashleap",
+    "brandName": "闪跃",
+    "brandRank": 13,
+    "code": "shanyue",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "闪动 Flicker",
+      "飞跃 Leap",
+      "瞬移 Teleport",
+      "跃迁 Warp"
+    ],
+    "excludes": [
+      "闪跃年付版"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": null,
+    "affUrl": "https://vip02.flashleapaff.com/#/?code=Mn2H0udG",
+    "samplePlanName": "闪动 Flicker（月付）",
+    "sampleOriginalPrice": 24,
+    "sampleDiscountedPrice": 19.2
+  },
+  {
+    "brandSlug": "laddercloud",
+    "brandName": "梯子云",
+    "brandRank": 14,
+    "code": "tzy888",
+    "discount": "结算页实时确认",
+    "rate": null,
+    "appliesTo": [],
+    "excludes": [],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，具体折扣比例以结算页实时显示为准",
+    "note": "来自品牌总索引记录的注册优惠码",
+    "affUrl": "https://varnexa.ladderaff.com/#/?code=kCHBqwtn",
+    "samplePlanName": null,
+    "sampleOriginalPrice": null,
+    "sampleDiscountedPrice": null
+  },
+  {
+    "brandSlug": "lightspeed",
+    "brandName": "光速云",
+    "brandRank": 15,
+    "code": "AMM",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [],
+    "excludes": [
+      "轻量B版（套餐页注明特殊套餐不支持优惠打折）"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "折扣为站长 2026-11-13 确认；适用套餐范围以结算页为准",
+    "affUrl": "https://mdlky.gsyaff.com/#/?code=nnRRD56A",
+    "samplePlanName": "极速A版（月付）",
+    "sampleOriginalPrice": 25,
+    "sampleDiscountedPrice": 20
+  },
+  {
+    "brandSlug": "u1s1",
+    "brandName": "U1S1",
+    "brandRank": 16,
+    "code": "U1S1",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [
+      "四档周期套餐与定制包（资料只写不适用项）"
+    ],
+    "excludes": [
+      "就是好用包"
+    ],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "2026-10 / 11 第三方曾核对 120 GB 月付 ¥20 实付 ¥16；另一渠道码 akaka 有失效记录",
+    "affUrl": "https://pkdj7.vipaff.cc/#/?code=Dw6wziZa",
+    "samplePlanName": null,
+    "sampleOriginalPrice": null,
+    "sampleDiscountedPrice": null
+  },
+  {
+    "brandSlug": "sogoyun",
+    "brandName": "Sogo云",
+    "brandRank": 17,
+    "code": "SOGO10000",
+    "discount": "9 折",
+    "rate": 0.9,
+    "appliesTo": [],
+    "excludes": [],
+    "limits": null,
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "第三方后台调查称每号一次、部分小包排除；另有 sss777 渠道码，以结算页为准",
+    "affUrl": "https://jbvfh.sogotztz2.sbs/#/?code=RMM9ZL0E",
+    "samplePlanName": "基础版（月付）",
+    "sampleOriginalPrice": 25,
+    "sampleDiscountedPrice": 22.5
+  },
+  {
+    "brandSlug": "kuajie",
+    "brandName": "跨界",
+    "brandRank": 18,
+    "code": "kuajie",
+    "discount": "8 折",
+    "rate": 0.8,
+    "appliesTo": [],
+    "excludes": [],
+    "limits": "新用户专享",
+    "usage": "在结算页优惠码栏填写，实付金额以结算页显示为准",
+    "note": "资料未写适用套餐范围",
+    "affUrl": "https://vip02.kuajieaff.com/#/?code=cyls6TVF",
+    "samplePlanName": "轻云 Lite（月付）",
+    "sampleOriginalPrice": 20,
+    "sampleDiscountedPrice": 16
+  }
+]

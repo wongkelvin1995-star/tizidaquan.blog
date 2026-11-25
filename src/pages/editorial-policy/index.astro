@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, buildBreadcrumbSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '编辑规范与资料来源', url: '/editorial-policy/' },
+];
+---
+
+<BaseLayout
+  title="编辑规范与资料核对政策｜梯子大全"
+  description="公开梯子大全的内容编辑规范：坚持有日期依据的真实历史数据、不发布虚构测速报告、不冒充任何官方渠道并标注合理证据边界。"
+  canonicalPath="/editorial-policy/"
+  schemas={[buildBreadcrumbSchema(breadcrumbs)]}
+>
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-6">
+    <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500">
+      <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">编辑规范</span>
+    </nav>
+    <div class="bento-card p-6 sm:p-10 space-y-5 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">编辑原则与资料核对规范</h1>
+      <p>{SITE.name}（{SITE.domain}）全部百科文章与 18 家品牌资料均遵守以下四项底线规范：</p>
+      <ol class="list-decimal pl-5 space-y-2.5">
+        <li><strong>真实资料依据优先</strong>：品牌套餐金额、优惠码、设备并发与客户端政策均源自可追溯的有日期档案；缺失明确证据的字段直接不予展示，绝不凭猜测填补。</li>
+        <li><strong>历史价格明确标注记录日期</strong>：所有引用历史价目均注明原始记录日期，明确提醒以官网实时结算页为准，不将年付折算月均包装成实际月付价。</li>
+        <li><strong>禁止虚构测速报告与主观体验</strong>：本站不制作任何节点延迟排名、晚高峰测速图、丢包率榜单或虚构个人使用评价，亦不声称替用户测试或永久保证某个流媒体/AI 平台解锁状态。</li>
+        <li><strong>安全与合法性前提</strong>：所有设备与系统教程绝不诱导用户永久关闭系统防火墙、杀毒软件或安装非正规来源可执行文件；旧系统（如 Windows 7）及华为 HarmonyOS NEXT 的限制均作真实披露。</li>
+      </ol>
+    </div>
+  </section>
+</BaseLayout>

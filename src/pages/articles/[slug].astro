@@ -1,0 +1,47 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('articles', ({ data }) => !data.draft);
+  return entries.map((entry) => ({
+    params: { slug: entry.id.replace(/\.md$/, '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const slug = entry.id.replace(/\.md$/, '');
+const relatedLinks = [
+  { title: '设备与操作系统教程中心', href: '/devices/', tag: '设备配置' },
+  { title: '机场新手入门百科', href: '/beginners/', tag: '基础概念' },
+  { title: '网络故障排查中心', href: '/troubleshooting/', tag: '问题排障' },
+  { title: '18家机场品牌总目录', href: '/brands/', tag: '品牌资料' },
+];
+---
+
+<KnowledgeLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  category={entry.data.category}
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '深度文章', url: '/articles/' },
+    { name: entry.data.brand || entry.data.category, url: `/articles/${slug}/` },
+  ]}
+  publishDate={entry.data.publishDate}
+  updatedDate={entry.data.updatedDate}
+  documentedVersion={entry.data.documentedVersion}
+  author={entry.data.author}
+  headings={headings}
+  faqs={entry.data.faqs}
+  howToSteps={entry.data.howToSteps}
+  relatedBrands={entry.data.relatedBrands}
+  relatedLinks={relatedLinks}
+  sources={entry.data.sources}
+  indexable={entry.data.indexable}
+  canonicalPath={`/articles/${slug}/`}
+>
+  <Content />
+</KnowledgeLayout>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" fill="none" role="img" aria-label="多设备网络知识与科技地球插画">
+  <defs>
+    <linearGradient id="globeGrad" x1="120" y1="60" x2="440" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DBEAFE" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#CFFAFE" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#EDE9FE" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="60" y1="100" x2="500" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <filter id="cardShadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Tech Globe -->
+  <circle cx="280" cy="220" r="148" fill="url(#globeGrad)" />
+  <circle cx="280" cy="220" r="148" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="6 6" />
+  <circle cx="280" cy="220" r="108" stroke="#2563EB" stroke-opacity="0.22" stroke-width="1.5" />
+  <ellipse cx="280" cy="220" rx="64" ry="148" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="1.5" />
+  <ellipse cx="280" cy="220" rx="148" ry="52" stroke="#8B5CF6" stroke-opacity="0.25" stroke-width="1.5" />
+
+  <!-- Network Connecting Arcs -->
+  <path d="M126 150C196 112 364 112 436 164" stroke="url(#lineGrad)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 5" />
+  <path d="M114 292C190 338 370 338 446 286" stroke="url(#lineGrad)" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M280 72V368" stroke="#2563EB" stroke-opacity="0.18" stroke-width="1.5" />
+
+  <!-- Center Knowledge Node -->
+  <g filter="url(#cardShadow)">
+    <rect x="218" y="176" width="124" height="88" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <rect x="234" y="192" width="32" height="32" rx="10" fill="#EFF6FF" />
+    <path d="M245 201V215M255 201V215M241 205H259M241 211H259" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" />
+    <text x="275" y="207" fill="#0F172A" font-family="'PingFang SC', sans-serif" font-size="13" font-weight="700">百科内核</text>
+    <text x="275" y="223" fill="#64748B" font-family="ui-sans-serif, sans-serif" font-size="10">18 Brands</text>
+    <rect x="234" y="234" width="92" height="14" rx="7" fill="#F1F5F9" />
+    <rect x="234" y="234" width="66" height="14" rx="7" fill="#2563EB" fill-opacity="0.18" />
+    <text x="280" y="244" text-anchor="middle" fill="#2563EB" font-family="ui-sans-serif, sans-serif" font-size="9" font-weight="700">100+ TOPICS</text>
+  </g>
+
+  <!-- Floating Device 1: Laptop (Windows / macOS / Linux) -->
+  <g filter="url(#cardShadow)" class="float-slow">
+    <rect x="44" y="84" width="136" height="84" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <rect x="60" y="98" width="48" height="30" rx="5" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6" />
+    <path d="M54 132H114" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" />
+    <text x="118" y="112" fill="#0F172A" font-family="'PingFang SC', sans-serif" font-size="12" font-weight="700">桌面系统</text>
+    <text x="118" y="128" fill="#64748B" font-family="ui-sans-serif, sans-serif" font-size="10">Win / Mac</text>
+    <rect x="60" y="142" width="104" height="12" rx="6" fill="#ECFEFF" />
+    <text x="112" y="151" text-anchor="middle" fill="#0891B2" font-family="'PingFang SC', sans-serif" font-size="9" font-weight="600">Win 11 · macOS · Linux</text>
+  </g>
+
+  <!-- Floating Device 2: Smartphone (iPhone / Android) -->
+  <g filter="url(#cardShadow)" class="float-delayed">
+    <rect x="382" y="74" width="136" height="88" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <rect x="398" y="90" width="26" height="44" rx="6" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1.6" />
+    <line x1="407" y1="95" x2="415" y2="95" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round" />
+    <text x="434" y="108" fill="#0F172A" font-family="'PingFang SC', sans-serif" font-size="12" font-weight="700">移动终端</text>
+    <text x="434" y="124" fill="#64748B" font-family="ui-sans-serif, sans-serif" font-size="10">iOS / Android</text>
+    <rect x="398" y="140" width="104" height="12" rx="6" fill="#F5F3FF" />
+    <text x="450" y="149" text-anchor="middle" fill="#7C3AED" font-family="'PingFang SC', sans-serif" font-size="9" font-weight="600">iPhone · 小米 · OPPO · 华为</text>
+  </g>
+
+  <!-- Floating Device 3: AI & Streaming -->
+  <g filter="url(#cardShadow)" class="float-delayed">
+    <rect x="50" y="274" width="146" height="84" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <circle cx="76" cy="304" r="14" fill="#ECFEFF" stroke="#06B6D4" stroke-width="1.6" />
+    <path d="M71 304L75 308L82 300" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="98" y="301" fill="#0F172A" font-family="'PingFang SC', sans-serif" font-size="12" font-weight="700">AI 与流媒体</text>
+    <text x="98" y="317" fill="#64748B" font-family="ui-sans-serif, sans-serif" font-size="10">Policy &amp; Regions</text>
+    <rect x="66" y="330" width="114" height="14" rx="7" fill="#EFF6FF" />
+    <text x="123" y="340" text-anchor="middle" fill="#2563EB" font-family="ui-sans-serif, sans-serif" font-size="9" font-weight="600">ChatGPT · Claude · Netflix</text>
+  </g>
+
+  <!-- Floating Device 4: Router & Troubleshooting -->
+  <g filter="url(#cardShadow)" class="float-slow">
+    <rect x="372" y="274" width="146" height="84" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <rect x="388" y="294" width="32" height="18" rx="5" fill="#ECFDF5" stroke="#10B981" stroke-width="1.6" />
+    <path d="M396 294V286M412 294V286" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" />
+    <text x="428" y="301" fill="#0F172A" font-family="'PingFang SC', sans-serif" font-size="12" font-weight="700">路由与排障</text>
+    <text x="428" y="317" fill="#64748B" font-family="ui-sans-serif, sans-serif" font-size="10">OpenWrt &amp; DNS</text>
+    <rect x="388" y="330" width="114" height="14" rx="7" fill="#ECFDF5" />
+    <text x="445" y="340" text-anchor="middle" fill="#059669" font-family="'PingFang SC', sans-serif" font-size="9" font-weight="600">OpenWrt · 安全核验 · 排障</text>
+  </g>
+
+  <!-- Connection Nodes -->
+  <circle cx="180" cy="126" r="5" fill="#2563EB" />
+  <circle cx="382" cy="118" r="5" fill="#8B5CF6" />
+  <circle cx="196" cy="316" r="5" fill="#06B6D4" />
+  <circle cx="372" cy="316" r="5" fill="#10B981" />
+</svg>

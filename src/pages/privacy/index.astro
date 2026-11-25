@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, buildBreadcrumbSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '隐私声明', url: '/privacy/' },
+];
+---
+
+<BaseLayout
+  title="隐私声明｜梯子大全 tizidaquan.blog"
+  description="说明梯子大全（tizidaquan.blog）纯静态知识站点对访客浏览、站内中文搜索与交互排障工具的本地运行与零隐私采集政策。"
+  canonicalPath="/privacy/"
+  schemas={[buildBreadcrumbSchema(breadcrumbs)]}
+>
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-6">
+    <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500">
+      <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">隐私声明</span>
+    </nav>
+    <div class="bento-card p-6 sm:p-10 space-y-5 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">隐私声明</h1>
+      <p><strong>{SITE.name}（{SITE.url}）</strong> 为纯静态生成的知识百科网站，遵循最小化数据原则：</p>
+      <h2 class="text-lg font-extrabold text-slate-900">1. 不收集账号密码与订阅链接</h2>
+      <p>本站不设用户登录注册系统，也不会在任何页面、智能设备选择助手或网络排障助手中要求或读取用户的真实机场账户、密码、访问令牌或私人订阅 URL。</p>
+      <h2 class="text-lg font-extrabold text-slate-900">2. 本地纯静态中文搜索</h2>
+      <p>全站中文检索功能完全依托预先打包的静态索引文件在您的浏览器本地执行匹配计算，您的搜索输入不会上传至任何第三方账号追踪数据库。</p>
+      <h2 class="text-lg font-extrabold text-slate-900">3. 第三方外链提示</h2>
+      <p>当您点击前往品牌官网或开源项目 GitHub 页面时，将离开本站点并受目标网站各自隐私政策约束。本站对第三方外链入口性质已作明确标注。</p>
+    </div>
+  </section>
+</BaseLayout>

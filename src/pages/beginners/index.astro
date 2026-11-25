@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { buildBreadcrumbSchema, buildCollectionSchema } from '../../utils/site';
+
+const beginnerGuides = await getCollection('beginners', ({ data }) => !data.draft);
+
+const GLOSSARY = [
+  { term: '机场', def: '按流量或周期提供多地区加密代理节点服务的网络服务商俗称（源于早期图标为纸飞机）。', href: '/beginners/what-is-airport/' },
+  { term: 'VPN', def: '虚拟专用网络，传统上对全设备网络创建完整加密隧道且常按设备数计费，机制与规则分流机场不同。', href: '/tools/vpn-and-proxy/' },
+  { term: '节点', def: '部署在海外各地区的具体代理转发服务器接入点（常标有地区、编号与线路名称）。', href: '/beginners/nodes/' },
+  { term: '订阅', def: '包含个人鉴权配置与全部节点列表的动态同步网址（部分品牌现已改为直接登录官方端同步）。', href: '/beginners/subscription/' },
+  { term: '代理', def: '由客户端将特定海外域名流量经过安全通道转发给中间服务器，而非本地直连的规则行为。', href: '/beginners/proxy-modes/' },
+  { term: '直连', def: '国内网站、本地局域网不经过海外节点而直接走家庭或手机本地宽带访问（Direct）。', href: '/beginners/proxy-modes/' },
+  { term: '流量', def: '按上行加下行双向传输数据总量统计的套餐可用配额（例如 100 GB/月）。', href: '/beginners/traffic-calculation/' },
+  { term: '倍率', def: '连接指定节点时实际扣除流量的乘数系数（如 1× 扣实际量，2× 则双倍扣除）。', href: '/beginners/traffic-multiplier/' },
+  { term: '流量重置', def: '周期套餐每月或每 30 天清零已用量并重新充入新额度的规则（当期余量通常不结转）。', href: '/beginners/traffic-reset/' },
+  { term: '系统代理', def: '操作系统向浏览器等软件告知本地代理端口的开关机制，异常崩溃残留会导致断网。', href: '/beginners/system-proxy/' },
+  { term: 'DNS', def: '将域名翻译成服务器 IP 的解析系统；客户端规则配合不当会导致域名解析污染或泄露。', href: '/troubleshooting/dns/' },
+  { term: '客户端', def: '安装在电脑或手机上用于登录账号或导入订阅的软件（如品牌官方端、Clash、Shadowrocket）。', href: '/beginners/client-download/' },
+];
+
+const STAGES = [
+  {
+    stage: '第一阶段：认识机场及网络工具',
+    items: [
+      { title: '机场是什么？原理与角色分工', href: '/beginners/what-is-airport/' },
+      { title: 'VPN 和机场有什么区别？', href: '/tools/vpn-and-proxy/' },
+    ],
+  },
+  {
+    stage: '第二阶段：理解节点、订阅及客户端',
+    items: [
+      { title: '机场订阅是什么？（官方端 vs 开放订阅）', href: '/beginners/subscription/' },
+      { title: '机场节点是什么意思？看懂命名标签', href: '/beginners/nodes/' },
+      { title: '订阅链接在哪里找及如何安全复制', href: '/beginners/subscription-links/' },
+      { title: '机场客户端怎么安全下载？', href: '/beginners/client-download/' },
+    ],
+  },
+  {
+    stage: '第三阶段：选择适合自己的套餐',
+    items: [
+      { title: '第一次买机场怎么选？（四步决策法）', href: '/beginners/choosing-service/' },
+      { title: '机场流量怎么算？（含高清视频估算）', href: '/beginners/traffic-calculation/' },
+      { title: '机场账号怎么注册与邮箱隔离', href: '/beginners/registration/' },
+    ],
+  },
+  {
+    stage: '第四阶段：设备使用及账户管理',
+    items: [
+      { title: '机场购买后怎么使用？（分端上手）', href: '/beginners/after-purchase/' },
+      { title: '机场订阅怎么导入？（格式与更新）', href: '/beginners/import-subscription/' },
+      { title: '机场节点怎么选择与切换？', href: '/beginners/selecting-nodes/' },
+      { title: '代理模式与直连模式区别（Rule/Global）', href: '/beginners/proxy-modes/' },
+      { title: '系统代理是什么意思？（对比 TUN）', href: '/beginners/system-proxy/' },
+    ],
+  },
+  {
+    stage: '第五阶段：流量规则、升级与续费',
+    items: [
+      { title: '机场倍率是什么意思？', href: '/beginners/traffic-multiplier/' },
+      { title: '机场流量重置时间与用完处理', href: '/beginners/traffic-reset/' },
+      { title: '机场套餐升级教程（补差价注意）', href: '/beginners/plan-upgrade/' },
+      { title: '机场订阅到期怎么办？（续费与首单码）', href: '/beginners/subscription-expired/' },
+    ],
+  },
+  {
+    stage: '第六阶段：安全避坑与常见问题',
+    items: [
+      { title: '机场新手避坑指南（防锁机/假永久）', href: '/beginners/avoid-pitfalls/' },
+      { title: '机场使用常见问题 20 问汇总', href: '/beginners/faq/' },
+    ],
+  },
+];
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '新手入门知识百科', url: '/beginners/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildCollectionSchema({
+    title: '机场新手入门知识百科与术语词典',
+    description: '分六阶段系统掌握机场是什么、节点与订阅原理、流量计算与倍率、安全选购避坑及核心网络术语解释。',
+    url: '/beginners/',
+  }),
+];
+---
+
+<BaseLayout
+  title="机场新手入门百科｜科学上网入门指南、术语词典与选购使用路径"
+  description="零基础机场新手知识手册：分六阶段掌握机场概念、节点、订阅、流量倍率、代理模式、购买选型与安全避坑，内含12项核心术语词典。"
+  canonicalPath="/beginners/"
+  schemas={schemas}
+>
+  <section class="bg-zone-beginners border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">新手知识百科</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">机场新手入门知识百科（六阶段学习手册）</h1>
+      <p class="mt-3 text-sm sm:text-base text-slate-700 max-w-3xl leading-relaxed">
+        用容易理解的中文帮您从零构建完整认知：先理解基本概念与客户端差异，再学会估算流量与避开消费陷阱，不盲从复杂术语或虚假营销话术。
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 space-y-12">
+    <!-- 12-Term Glossary Component -->
+    <div class="bento-card p-6 sm:p-8 space-y-4">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-700">核心术语词典（点击直达深度解释）</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">12 个必懂网络与机场基础名词</h2>
+      </div>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {GLOSSARY.map((item) => (
+          <a href={item.href} class="rounded-2xl border border-slate-200 bg-slate-50/70 p-4 hover:border-emerald-400 hover:bg-emerald-50/40 transition-colors group">
+            <div class="flex items-center justify-between">
+              <span class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700">{item.term}</span>
+              <span class="text-xs font-bold text-emerald-700">详解 →</span>
+            </div>
+            <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">{item.def}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- 6-Stage Learning Path -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-slate-900">六阶段系统学习阅读路径</h2>
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {STAGES.map((st) => (
+          <div class="bento-card p-6 space-y-3">
+            <h3 class="text-base font-extrabold text-emerald-800 border-b border-emerald-100 pb-2">{st.stage}</h3>
+            <ul class="space-y-2 text-sm">
+              {st.items.map((it) => (
+                <li>
+                  <a href={it.href} class="font-semibold text-slate-800 hover:text-blue-600 hover:underline flex items-center justify-between gap-2">
+                    <span>{it.title}</span>
+                    <span class="text-xs text-slate-400 shrink-0">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- All 19 Guides Check -->
+    <div class="bento-card p-6 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-2">
+      <span>当前新手百科共收录 <strong>{beginnerGuides.length}</strong> 篇独立专题文档（含订阅链接查找/复制合并专题）。</span>
+      <a href="/devices/" class="font-bold text-blue-600 hover:underline">已准备好设备？前往设备教程中心 →</a>
+    </div>
+  </section>
+</BaseLayout>

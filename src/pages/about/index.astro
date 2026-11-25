@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, buildBreadcrumbSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '关于梯子大全', url: '/about/' },
+];
+---
+
+<BaseLayout
+  title="关于梯子大全（Ladder Encyclopedia）｜独立网络知识百科定位"
+  description="了解梯子大全（tizidaquan.blog）的百科定位、内容覆盖范围（设备教程、AI与流媒体知识、新手入门、安全排障与18家品牌资料整理）及中立核对原则。"
+  canonicalPath="/about/"
+  schemas={[buildBreadcrumbSchema(breadcrumbs)]}
+>
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-6">
+    <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500">
+      <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">关于本站</span>
+    </nav>
+    <div class="bento-card p-6 sm:p-10 space-y-5">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">关于 {SITE.name}（{SITE.enName}）</h1>
+      <p class="text-base text-slate-700 leading-relaxed">
+        <strong>梯子大全（{SITE.domain}）</strong> 是一个专注于中文网络知识百科的独立信息站点，致力于帮助中文搜索用户系统了解多设备操作系统配置、AI 与流媒体网络环境差异、代理基础概念、账户安全核验以及常见连接故障的排查方法。
+      </p>
+      <h2 class="text-xl font-extrabold text-slate-900 pt-2">本站核心服务板块</h2>
+      <ul class="list-disc pl-5 space-y-2 text-sm sm:text-base text-slate-700">
+        <li><strong>设备与操作系统教程</strong>：覆盖 Windows 11/10/7、macOS、iPhone、iPad、Android（含 OPPO/小米/华为鸿蒙版本差异）、Linux、路由器、OpenWrt、Chrome 与 Edge。</li>
+        <li><strong>AI 与流媒体网络知识</strong>：梳理 ChatGPT、Claude、Gemini、Netflix、YouTube、Disney+、TikTok 的官方区域政策与合法状态自查方式。</li>
+        <li><strong>新手百科与安全排障</strong>：分六阶段解释机场、订阅、节点、倍率与安全防骗知识，并提供 11 类常见故障的自查导航工具。</li>
+        <li><strong>18 家品牌真实资料档案</strong>：统一汇总整理有日期记录的公开套餐、客户端策略与购买注意事项。</li>
+      </ul>
+      <h2 class="text-xl font-extrabold text-slate-900 pt-2">站点独立声明</h2>
+      <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+        本站为独立知识百科网站，<strong>非任何机场品牌官方网站</strong>，亦不直接运营代理服务器节点或销售任何网络订阅。相关资料来源、商业链接属性与纠错机制请参阅 <a href="/editorial-policy/" class="text-blue-600 font-semibold hover:underline">编辑规范</a> 与 <a href="/affiliate-disclosure/" class="text-blue-600 font-semibold hover:underline">推广披露说明</a>。
+      </p>
+    </div>
+  </section>
+</BaseLayout>

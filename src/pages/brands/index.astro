@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandCard from '../../components/BrandCard.astro';
+import brandsData from '../../data/brands.json';
+import { buildBreadcrumbSchema, buildCollectionSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '18家机场品牌目录', url: '/brands/' },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildCollectionSchema({
+    title: '18家机场品牌资料总目录与设备兼容档案',
+    description: '按编辑精选顺序展示18家机场品牌的真实客户端政策、覆盖地区、设备限制、AI/流媒体公开记录与历史价格档案。',
+    url: '/brands/',
+    items: brandsData.map((b) => ({ name: b.name, url: `/brands/${b.slug}/` })),
+  }),
+];
+---
+
+<BaseLayout
+  title="18家机场品牌资料目录｜客户端政策、设备支持与历史价目档案"
+  description="汇总18家机场品牌真实资料（灵动云、暮光加速、微风网络、飞猫云、隐形人、FLYV等），提供客户端兼容、设备数量限制、地区覆盖与历史参考价格检索。"
+  canonicalPath="/brands/"
+  schemas={schemas}
+>
+  <section class="bg-zone-hero border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">机场品牌目录</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">18 家机场品牌资料总目录</h1>
+      <p class="mt-3 text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
+        本目录仅收录具备可核对原始档案的 18 家品牌。页面展示序列（01–18）属于编辑展示与导航排序，<strong>不构成客观性能、速度或安全性排名</strong>。所有价格均为带有记录日期的历史参考价，实时结账金额以各品牌官网结算页为准。
+      </p>
+
+      <!-- Client-side filter controls -->
+      <div class="mt-6 flex flex-wrap gap-2" id="brand-filter-bar">
+        {[
+          { id: 'all', label: `全部品牌 (${brandsData.length})` },
+          { id: 'official-only', label: '仅限官方客户端' },
+          { id: 'third-party', label: '支持或可申请第三方订阅' },
+          { id: 'linux', label: '资料提及 Linux' },
+          { id: 'router', label: '资料提及路由器/软路由' },
+        ].map((f, i) => (
+          <button
+            type="button"
+            data-brand-filter={f.id}
+            class:list={[
+              'bf-btn min-h-[42px] px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-colors cursor-pointer',
+              i === 0 ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400',
+            ]}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div id="brand-grid" class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {brandsData.map((b) => (
+        <div
+          class="brand-grid-item"
+          data-mode={b.clientFlags.thirdPartyMode}
+          data-linux={String(b.clientFlags.supportsLinux)}
+          data-router={String(b.clientFlags.supportsRouter)}
+        >
+          <BrandCard brand={b} />
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const btns = document.querySelectorAll('.bf-btn');
+    const items = document.querySelectorAll('.brand-grid-item');
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-brand-filter');
+        btns.forEach((b) => {
+          const active = b.getAttribute('data-brand-filter') === filter;
+          b.className = `bf-btn min-h-[42px] px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
+            active ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400'
+          }`;
+        });
+
+        items.forEach((el) => {
+          const mode = el.getAttribute('data-mode');
+          const hasLinux = el.getAttribute('data-linux') === 'true';
+          const hasRouter = el.getAttribute('data-router') === 'true';
+          let show = true;
+          if (filter === 'official-only') show = mode === 'official-only';
+          else if (filter === 'third-party') show = mode === 'supported' || mode === 'conditional';
+          else if (filter === 'linux') show = hasLinux;
+          else if (filter === 'router') show = hasRouter;
+          el.classList.toggle('hidden', !show);
+        });
+      });
+    });
+  })();
+</script>

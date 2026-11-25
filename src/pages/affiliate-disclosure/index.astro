@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, buildBreadcrumbSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '推广披露与商业声明', url: '/affiliate-disclosure/' },
+];
+---
+
+<BaseLayout
+  title="推广链接披露与商业声明｜梯子大全"
+  description="说明梯子大全（tizidaquan.blog）部分品牌外链带有推广追踪代码（AFF）的性质，以及编辑展示顺序并非客观性能排名的商业披露。"
+  canonicalPath="/affiliate-disclosure/"
+  schemas={[buildBreadcrumbSchema(breadcrumbs)]}
+>
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-6">
+    <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500">
+      <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">推广披露</span>
+    </nav>
+    <div class="bento-card p-6 sm:p-10 space-y-5 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">推广披露与商业声明</h1>
+      <p>为了维持 {SITE.name}（{SITE.url}）的独立信息整理与服务器维护，本站现就相关链接与展示规则作出如下公开说明：</p>
+      <ul class="list-disc pl-5 space-y-2.5">
+        <li><strong>部分品牌入口包含推广追踪参数（AFF）</strong>：当您通过本站部分品牌详情页或卡片上的“官网入口 / 注册链接”跳转并最终下单时，本站可能会依据合作计划获得一定比例的推广佣金，这不会增加您本人在官网结算页面应支付的套餐费用。</li>
+        <li><strong>推广链接均已标注安全属性</strong>：本站所有商业推广外链均附加 <code>rel="sponsored nofollow noopener noreferrer"</code> 属性，且原样保留原始追踪参数。</li>
+        <li><strong>展示顺序非客观性能排名</strong>：首页及品牌列表的 01–18 顺序属于本站编辑整理与商业展示安排，不代表任何客观测速名次、绝对安全性排序或价格高低排序。</li>
+        <li><strong>非品牌官方网站声明</strong>：本站为独立第三方知识百科博客，不代表任何机场服务商，对交易过程、服务变动及售后争议不承担连带履约责任。</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,420 @@
+---
+---
+
+<section class="bento-card p-6 sm:p-8" id="device-assistant">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-100">
+    <div>
+      <span class="inline-flex items-center rounded-full bg-cyan-50 border border-cyan-200 px-3 py-0.5 text-xs font-bold text-cyan-800">
+        四步交互导航 · 设备选择助手
+      </span>
+      <h2 class="mt-2 text-xl sm:text-2xl font-extrabold text-slate-900">智能设备与操作系统教程助手</h2>
+      <p class="mt-1 text-sm text-slate-600">依次选择设备类型、操作系统与使用需求，直接匹配本站对应的实操百科与兼容性注意事项。</p>
+    </div>
+    <button type="button" id="da-reset" class="btn-secondary text-xs shrink-0 self-start sm:self-center cursor-pointer">
+      重置选择
+    </button>
+  </div>
+
+  <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-12">
+    <div class="lg:col-span-7 space-y-5">
+      <!-- Step 1 -->
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-wider text-blue-700 mb-2">第一步：选择设备类型</div>
+        <div id="da-step1" class="flex flex-wrap gap-2">
+          {[
+            { id: 'desktop', label: '电脑 (桌面/笔记本)' },
+            { id: 'mobile', label: '手机' },
+            { id: 'tablet', label: '平板电脑' },
+            { id: 'router', label: '路由器 / 软路由' },
+            { id: 'browser', label: '网页浏览器' },
+          ].map((item) => (
+            <button
+              type="button"
+              data-da-type={item.id}
+              class="da-type-btn min-h-[44px] px-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-sm font-semibold text-slate-700 hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-wider text-blue-700 mb-2">第二步：选择操作系统 / 设备品牌</div>
+        <div id="da-step2" class="flex flex-wrap gap-2">
+          <span class="text-xs text-slate-500">请先在上方选择设备类型</span>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-wider text-blue-700 mb-2">第三步：选择当前使用需求</div>
+        <div id="da-step3" class="flex flex-wrap gap-2">
+          {[
+            { id: 'install', label: '客户端安装' },
+            { id: 'subscription', label: '账户与订阅导入' },
+            { id: 'config', label: '系统与网络配置' },
+            { id: 'issues', label: '常见故障排查' },
+            { id: 'multi', label: '多设备共用' },
+            { id: 'safety', label: '来源与安全知识' },
+          ].map((need) => (
+            <button
+              type="button"
+              data-da-need={need.id}
+              class="da-need-btn min-h-[44px] px-3.5 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs sm:text-sm font-semibold text-slate-700 hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer"
+            >
+              {need.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 Result -->
+    <div class="lg:col-span-5">
+      <div class="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50/70 via-white to-cyan-50/70 p-5 h-full flex flex-col justify-between" id="da-result">
+        <div class="space-y-3">
+          <div class="text-xs font-extrabold uppercase tracking-wider text-blue-700">第四步：匹配教程与兼容说明</div>
+          <h3 id="da-res-title" class="text-lg font-extrabold text-slate-900">Windows 11 科学上网与客户端配置教程</h3>
+          <p id="da-res-os" class="text-xs font-semibold text-cyan-800 bg-cyan-50 border border-cyan-200 rounded-lg px-2.5 py-1 inline-block">
+            适用版本：Windows 11 (22H2 / 23H2 / 24H2，x64 / ARM64)
+          </p>
+          <p id="da-res-client" class="text-sm text-slate-700 leading-relaxed">
+            <strong>客户端说明：</strong>优先核对所购机场是否仅限官方客户端登录；开放订阅品牌可配合 Clash Verge Rev 或 Mihomo Party 使用系统代理或 TUN 模式。
+          </p>
+          <div id="da-res-caution" class="rounded-xl bg-amber-50/90 border border-amber-200 p-3 text-xs text-amber-900 leading-relaxed">
+            <strong>使用注意：</strong>安装前通过系统默认安全校验核对来源，请勿关闭防火墙核心防护或从网盘下载来源不明的程序。
+          </div>
+          <div id="da-res-related" class="pt-1 space-y-1.5 text-xs">
+            <div class="font-bold text-slate-700">相关延伸文章：</div>
+            <div class="flex flex-wrap gap-2">
+              <a href="/devices/auto-start/" class="text-blue-700 hover:underline font-semibold">代理软件开机自启设置</a>
+              <a href="/beginners/system-proxy/" class="text-blue-700 hover:underline font-semibold">系统代理是什么意思</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 pt-4 border-t border-blue-100 flex flex-wrap gap-2">
+          <a id="da-res-link" href="/devices/windows-11/" class="btn-primary text-sm w-full sm:w-auto">
+            阅读完整设备教程 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const OS_BY_TYPE = {
+      desktop: [
+        { id: 'windows-11', label: 'Windows 11' },
+        { id: 'windows-10', label: 'Windows 10' },
+        { id: 'windows-7', label: 'Windows 7 (旧系统)' },
+        { id: 'macos', label: 'macOS (Intel / M系列)' },
+        { id: 'linux', label: 'Linux (Ubuntu/Debian等)' },
+      ],
+      mobile: [
+        { id: 'iphone', label: 'iPhone (iOS)' },
+        { id: 'android', label: 'Android 通用安卓' },
+        { id: 'oppo', label: 'OPPO (ColorOS)' },
+        { id: 'xiaomi', label: '小米 / Redmi (HyperOS)' },
+        { id: 'huawei', label: '华为 (HarmonyOS)' },
+      ],
+      tablet: [
+        { id: 'ipad', label: 'iPad (iPadOS)' },
+        { id: 'android', label: '安卓平板 (Android)' },
+      ],
+      router: [
+        { id: 'openwrt', label: 'OpenWrt 软路由/旁路由' },
+        { id: 'router', label: '家用路由器' },
+      ],
+      browser: [
+        { id: 'chrome', label: 'Google Chrome' },
+        { id: 'edge', label: 'Microsoft Edge' },
+      ],
+    };
+
+    const GUIDES = {
+      'windows-11': {
+        title: 'Windows 11 科学上网与客户端配置教程',
+        url: '/devices/windows-11/',
+        os: 'Windows 11 22H2 / 23H2 / 24H2 (64位 x64 与 ARM64)',
+        client: '支持全部 18 家品牌的 Windows 官方客户端；开放订阅品牌可搭配 Clash Verge Rev 或 Mihomo Party。',
+        caution: '请勿关闭 Windows 安全中心核心防护；区分浏览器“系统代理”与全局接管“TUN 虚拟网卡”。',
+        related: [
+          { title: '代理软件开机自启设置', url: '/devices/auto-start/' },
+          { title: 'Clash 代理无法访问网站排查', url: '/troubleshooting/clash-access/' },
+        ],
+      },
+      'windows-10': {
+        title: 'Windows 10 机场配置与版本兼容教程',
+        url: '/devices/windows-10/',
+        os: 'Windows 10 22H2（需留意微软消费版官方支持结束周期与 LTSC 差异）',
+        client: '支持品牌官方 Windows 客户端及 Clash Verge Rev / v2rayN，部分 UI 需安装 WebView2 运行库。',
+        caution: '若桌面端白屏或无法启动，优先检查 Microsoft Edge WebView2 运行库与系统 TLS 补丁状态。',
+        related: [
+          { title: 'Edge 浏览器代理设置', url: '/devices/edge/' },
+          { title: '系统代理是什么意思', url: '/beginners/system-proxy/' },
+        ],
+      },
+      'windows-7': {
+        title: 'Windows 7 代理客户端选择与安全限制说明',
+        url: '/devices/windows-7/',
+        os: 'Windows 7 SP1（微软已于 2020 年停止安全更新）',
+        client: '多数新版品牌客户端与现代内核已停止支持 Win7，部分品牌要求至少 Windows 10（如微风、Firefly、跨界）。',
+        caution: 'Win7 存在根证书过期、TLS 1.3 支持不全及系统漏洞风险，建议升级系统或改用 OpenWrt 路由器分担代理。',
+        related: [
+          { title: '路由器科学上网教程', url: '/devices/router/' },
+          { title: '机场安全吗', url: '/safety/airport-security/' },
+        ],
+      },
+      macos: {
+        title: 'Mac (macOS) 科学上网与网络扩展教程',
+        url: '/devices/macos/',
+        os: 'macOS 10.15 Catalina 及以上（推荐 macOS 13–15，兼容 Apple Silicon 与 Intel）',
+        client: '18 家品牌均主要提供 macOS 官方客户端或支持通用订阅的 Clash Verge Rev / Stash。',
+        caution: '首次打开应用需在“系统设置 > 隐私与安全性”核准已签名程序，使用增强模式需启用 Network Extension。',
+        related: [
+          { title: '电脑和手机共用机场订阅', url: '/devices/multi-device/' },
+          { title: '代理模式和直连模式区别', url: '/beginners/proxy-modes/' },
+        ],
+      },
+      linux: {
+        title: 'Linux 科学上网与终端代理配置指南',
+        url: '/devices/linux/',
+        os: 'Ubuntu 20.04+ / Debian 11+ / Arch Linux (x86_64 / ARM64)',
+        client: '隐形人、闪跃、光速云等资料列明支持 Linux；其余封闭官方端机场无法在无官方 Linux 包的环境下使用。',
+        caution: '购买前务必确认品牌是否提供 Linux 包或开放通用订阅链接；命令行需正确设置 HTTP_PROXY/ALL_PROXY。',
+        related: [
+          { title: 'OpenWrt 代理配置教程', url: '/devices/openwrt/' },
+          { title: '机场客户端怎么下载', url: '/beginners/client-download/' },
+        ],
+      },
+      iphone: {
+        title: 'iPhone 机场使用教程：官方端、Nextin 与海外区工具说明',
+        url: '/devices/iphone/',
+        os: 'iOS 12.0 至 iOS 15.0+（视具体品牌端或 Nextin 要求而定）',
+        client: '需区分两条路径：① 官方客户端/Nextin 登录（如微风、无忧、FLYV等）；② 海外区 App Store 购买 Shadowrocket 后导入开放订阅。',
+        caution: '严禁使用他人共享的 Apple ID 登录手机系统设置 iCloud，存在远程锁机风险；仅可在媒体与购买项目内合规操作。',
+        related: [
+          { title: '苹果手机小火箭安装指南', url: '/devices/iphone/shadowrocket-install/' },
+          { title: '机场新手避坑指南', url: '/beginners/avoid-pitfalls/' },
+        ],
+      },
+      ipad: {
+        title: 'iPad (iPadOS) 科学上网与流媒体配置指南',
+        url: '/devices/ipad/',
+        os: 'iPadOS 15.0 及以上',
+        client: '与 iPhone 共用同一套官方应用、Nextin 或海外区 App Store 购买的工具生态。',
+        caution: '在 iPad 上使用 Netflix、Disney+ 或 ChatGPT App 时，需留意 App Store 下载地区与当前节点地区一致。',
+        related: [
+          { title: 'Netflix 机场使用知识', url: '/streaming/netflix/' },
+          { title: '多设备同时在线说明', url: '/devices/multi-device/' },
+        ],
+      },
+      android: {
+        title: '安卓手机机场通用教程与安装包安全规范',
+        url: '/devices/android/',
+        os: 'Android 5.0 及以上（主流现代客户端建议 Android 8.0+）',
+        client: '品牌官方 Android APK 或从官方 GitHub Release 下载的 Clash Meta for Android / v2rayNG。',
+        caution: '仅从机场官网用户中心或开源项目官方仓库获取 APK，并确保授予系统 VPN 连接授权与后台运行权限。',
+        related: [
+          { title: '安卓手机 Clash 安装指南', url: '/devices/android/clash-install/' },
+          { title: '机场频繁断线排查', url: '/troubleshooting/disconnections/' },
+        ],
+      },
+      oppo: {
+        title: 'OPPO / 一加 (ColorOS) 代理设置与后台防断线指南',
+        url: '/devices/android/oppo/',
+        os: 'ColorOS 12–15 (基于 Android)',
+        client: '遵循通用 Android 客户端流程，支持品牌官方端或开放订阅的 Clash Meta for Android。',
+        caution: 'OPPO 手机常见的锁屏断连源于“耗电保护”与“自启动限制”，需按系统内置电池优化选项允许应用后台运行。',
+        related: [
+          { title: '安卓手机通用教程', url: '/devices/android/' },
+          { title: '机场频繁断线怎么办', url: '/troubleshooting/disconnections/' },
+        ],
+      },
+      xiaomi: {
+        title: '小米 / Redmi (HyperOS / MIUI) 机场订阅与权限指南',
+        url: '/devices/android/xiaomi/',
+        os: '小米澎湃 OS (HyperOS) / MIUI 13–14',
+        client: '遵循通用 Android 客户端流程；注意检查所购品牌是否支持订阅导入还是仅限官方 App。',
+        caution: '需在安全中心核查安装包来源并配置“省电无限制”和最近任务锁定，同时排查小米系统“私人 DNS”冲突。',
+        related: [
+          { title: '机场 DNS 问题排查', url: '/troubleshooting/dns/' },
+          { title: '安卓手机 Clash 安装指南', url: '/devices/android/clash-install/' },
+        ],
+      },
+      huawei: {
+        title: '华为手机科学上网教程：区分 HarmonyOS 3/4 与 NEXT',
+        url: '/devices/android/huawei/',
+        os: 'HarmonyOS 3.x / 4.x（兼容 Android APK）vs HarmonyOS NEXT（不兼容 APK）',
+        client: 'HarmonyOS 3/4 可正常安装官方 Android 端或 Clash Meta；HarmonyOS NEXT 为纯血鸿蒙，不可运行传统 Android APK。',
+        caution: '购买前务必在“设置 > 关于手机”确认系统版本，若为 HarmonyOS NEXT 建议改用支持路由器代理或确认原生适配情况。',
+        related: [
+          { title: '路由器科学上网教程', url: '/devices/router/' },
+          { title: '第一次买机场怎么选', url: '/beginners/choosing-service/' },
+        ],
+      },
+      router: {
+        title: '家用路由器科学上网支持条件与固件门槛说明',
+        url: '/devices/router/',
+        os: '需刷入 OpenWrt / Asuswrt-Merlin 等第三方固件的路由器设备',
+        client: '需机场品牌明确支持第三方通用订阅链接（例如全球云、U1S1 等资料提及支持路由器，而仅限官方端的机场不支持）。',
+        caution: '运营商自带光猫及原厂封闭固件路由器通常无法运行代理插件；不建议低内存入门路由强行跑复杂分流规则。',
+        related: [
+          { title: 'OpenWrt 代理配置教程', url: '/devices/openwrt/' },
+          { title: '机场订阅链接失效排查', url: '/troubleshooting/subscription-invalid/' },
+        ],
+      },
+      openwrt: {
+        title: 'OpenWrt 软路由/旁路由代理与 DNS 防泄露指南',
+        url: '/devices/openwrt/',
+        os: 'OpenWrt 22.03 / 23.05 / 24.10 (x86_64 或 ARM 架构)',
+        client: 'OpenClash / HomeProxy / PassWall，要求所选机场开放标准 Clash 或 sing-box 订阅。',
+        caution: '重点关注旁路由网关/DNS 指派环路、Fake-IP 缓存与 RAM 占用；封闭自研客户端品牌（如微风、隐形人、Sogo云等）不适用此方案。',
+        related: [
+          { title: '机场 DNS 问题排查', url: '/troubleshooting/dns/' },
+          { title: '机场订阅怎么导入', url: '/beginners/import-subscription/' },
+        ],
+      },
+      chrome: {
+        title: 'Chrome 浏览器代理设置与安全 DNS 冲突排查',
+        url: '/devices/chrome/',
+        os: 'Google Chrome 桌面版（Windows / macOS / Linux）',
+        client: 'Chrome 默认读取操作系统代理；进阶用户可配合本地代理端口与浏览器分流扩展使用。',
+        caution: '浏览器扩展本身不能翻墙，必须依赖后台运行中的客户端；若部分网站打不开，检查 Chrome 设置中的“使用安全 DNS”。',
+        related: [
+          { title: '系统代理是什么意思', url: '/beginners/system-proxy/' },
+          { title: '显示连接但无法上网排查', url: '/troubleshooting/connected-no-internet/' },
+        ],
+      },
+      edge: {
+        title: 'Microsoft Edge 浏览器代理设置与安全网络说明',
+        url: '/devices/edge/',
+        os: 'Microsoft Edge（Windows 10/11 / macOS）',
+        client: '默认继承系统代理设置，并与 Windows Internet 选项保持同步。',
+        caution: '排查故障时需注意 Edge 内置“安全 DNS”及安全网络选项是否绕过了本地代理分流规则。',
+        related: [
+          { title: 'Windows 11 科学上网教程', url: '/devices/windows-11/' },
+          { title: '机场 DNS 问题排查', url: '/troubleshooting/dns/' },
+        ],
+      },
+    };
+
+    const NEED_LINKS = {
+      install: { label: '客户端安全下载核对', url: '/beginners/client-download/' },
+      subscription: { label: '订阅链接查找与导入原理', url: '/beginners/subscription-links/' },
+      config: { label: '代理模式与系统代理区别', url: '/beginners/proxy-modes/' },
+      issues: { label: '节点连接失败与故障排查', url: '/troubleshooting/node-connection/' },
+      multi: { label: '电脑和手机共用订阅说明', url: '/devices/multi-device/' },
+      safety: { label: '官网真假识别与账号安全', url: '/safety/website-verification/' },
+    };
+
+    let selectedType = 'desktop';
+    let selectedOs = 'windows-11';
+    let selectedNeed = 'install';
+
+    const step1Btns = document.querySelectorAll('.da-type-btn');
+    const step2Box = document.getElementById('da-step2');
+    const step3Btns = document.querySelectorAll('.da-need-btn');
+    const resetBtn = document.getElementById('da-reset');
+
+    const resTitle = document.getElementById('da-res-title');
+    const resOs = document.getElementById('da-res-os');
+    const resClient = document.getElementById('da-res-client');
+    const resCaution = document.getElementById('da-res-caution');
+    const resRelated = document.getElementById('da-res-related');
+    const resLink = document.getElementById('da-res-link');
+
+    function renderStep2() {
+      const list = OS_BY_TYPE[selectedType] || [];
+      if (!list.some((x) => x.id === selectedOs)) {
+        selectedOs = list[0]?.id || 'windows-11';
+      }
+      step2Box.innerHTML = list
+        .map(
+          (item) => `<button type="button" data-da-os="${item.id}" class="da-os-btn min-h-[44px] px-3.5 py-2 rounded-xl border text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
+            item.id === selectedOs
+              ? 'bg-blue-600 text-white border-blue-600'
+              : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-blue-400'
+          }">${item.label}</button>`
+        )
+        .join('');
+
+      step2Box.querySelectorAll('.da-os-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          selectedOs = btn.getAttribute('data-da-os');
+          renderStep2();
+          renderResult();
+        });
+      });
+    }
+
+    function renderButtons() {
+      step1Btns.forEach((btn) => {
+        const active = btn.getAttribute('data-da-type') === selectedType;
+        btn.className = `da-type-btn min-h-[44px] px-4 py-2 rounded-xl border text-sm font-semibold transition-colors cursor-pointer ${
+          active ? 'bg-blue-600 text-white border-blue-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-blue-400 hover:bg-blue-50'
+        }`;
+      });
+      step3Btns.forEach((btn) => {
+        const active = btn.getAttribute('data-da-need') === selectedNeed;
+        btn.className = `da-need-btn min-h-[44px] px-3.5 py-2 rounded-xl border text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
+          active ? 'bg-cyan-600 text-white border-cyan-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-blue-400 hover:bg-blue-50'
+        }`;
+      });
+    }
+
+    function renderResult() {
+      const g = GUIDES[selectedOs] || GUIDES['windows-11'];
+      const needExtra = NEED_LINKS[selectedNeed];
+      resTitle.textContent = g.title;
+      resOs.textContent = `适用环境：${g.os}`;
+      resClient.innerHTML = `<strong>客户端说明：</strong>${g.client}`;
+      resCaution.innerHTML = `<strong>使用注意：</strong>${g.caution}`;
+      const links = [...g.related];
+      if (needExtra && !links.some((l) => l.url === needExtra.url)) {
+        links.unshift({ title: `${needExtra.label}（匹配需求）`, url: needExtra.url });
+      }
+      resRelated.innerHTML = `
+        <div class="font-bold text-slate-700">相关延伸文章：</div>
+        <div class="flex flex-wrap gap-x-3 gap-y-1.5">
+          ${links.map((l) => `<a href="${l.url}" class="text-blue-700 hover:underline font-semibold">${l.title}</a>`).join('')}
+        </div>`;
+      resLink.setAttribute('href', g.url);
+    }
+
+    step1Btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        selectedType = btn.getAttribute('data-da-type');
+        renderButtons();
+        renderStep2();
+        renderResult();
+      });
+    });
+
+    step3Btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        selectedNeed = btn.getAttribute('data-da-need');
+        renderButtons();
+        renderResult();
+      });
+    });
+
+    resetBtn?.addEventListener('click', () => {
+      selectedType = 'desktop';
+      selectedOs = 'windows-11';
+      selectedNeed = 'install';
+      renderButtons();
+      renderStep2();
+      renderResult();
+    });
+
+    renderButtons();
+    renderStep2();
+    renderResult();
+  })();
+</script>

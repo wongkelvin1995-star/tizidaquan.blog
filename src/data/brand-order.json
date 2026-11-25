@@ -1,0 +1,164 @@
+[
+  {
+    "rank": 1,
+    "slug": "lingdongyun",
+    "corpusId": "lingdongyun",
+    "name": "灵动云",
+    "nameEn": "LingDongYun",
+    "badge": "编辑精选 01",
+    "highlight": "IEPL/IPLC 专线 · 全节点 1× 倍率 · 不限设备"
+  },
+  {
+    "rank": 2,
+    "slug": "twilight",
+    "corpusId": "muguang-jiasu",
+    "name": "暮光加速",
+    "nameEn": "Twilight",
+    "badge": "编辑精选 02",
+    "highlight": "Windows/macOS/iOS/Android 官方客户端 · 60 节点"
+  },
+  {
+    "rank": 3,
+    "slug": "breezenet",
+    "corpusId": "weifeng-wangluo",
+    "name": "微风网络",
+    "nameEn": "Breezenet",
+    "badge": "编辑精选 03",
+    "highlight": "Windows 10+/macOS 10.15+/iOS 15+(Nextin)/Android 5+"
+  },
+  {
+    "rank": 4,
+    "slug": "feimaoyun",
+    "corpusId": "feimaoyun",
+    "name": "飞猫云",
+    "nameEn": "FlyCat",
+    "badge": "编辑精选 04",
+    "highlight": "15 地区 63 节点 · 支持官方客户端与 Clash/小火箭"
+  },
+  {
+    "rank": 5,
+    "slug": "flyv",
+    "corpusId": "flyv",
+    "name": "FLYV",
+    "nameEn": "FlyV",
+    "badge": "编辑精选 05",
+    "highlight": "内置分流规则官方客户端 · 覆盖 Windows/macOS/iOS/Android"
+  },
+  {
+    "rank": 6,
+    "slug": "wavenet",
+    "corpusId": "langwang",
+    "name": "浪网",
+    "nameEn": "WaveNet",
+    "badge": "编辑精选 06",
+    "highlight": "纯专线架构 · Windows/macOS/Android/iOS/iPadOS"
+  },
+  {
+    "rank": 7,
+    "slug": "yinxingren",
+    "corpusId": "yinxingren",
+    "name": "隐形人",
+    "nameEn": "InvisibleMan",
+    "badge": "编辑精选 07",
+    "highlight": "Windows/macOS/Linux/iOS/Android 官方客户端 · 60 节点"
+  },
+  {
+    "rank": 8,
+    "slug": "wuyou",
+    "corpusId": "wuyou",
+    "name": "无忧链接",
+    "nameEn": "WorryFree",
+    "badge": "编辑精选 08",
+    "highlight": "多地区专线 · 四大系统官方端及 Nextin 支持"
+  },
+  {
+    "rank": 9,
+    "slug": "firefly",
+    "corpusId": "firefly",
+    "name": "Firefly",
+    "nameEn": "Firefly",
+    "badge": "编辑精选 09",
+    "highlight": "Win 10+/macOS 10.15+/Android 5+/iOS 12+ 官方客户端"
+  },
+  {
+    "rank": 10,
+    "slug": "quanqiuyun",
+    "corpusId": "quanqiuyun",
+    "name": "全球云",
+    "nameEn": "GlobalCloud",
+    "badge": "编辑精选 10",
+    "highlight": "9 大地区节点 · 支持电脑/手机/路由器多端"
+  },
+  {
+    "rank": 11,
+    "slug": "v2yun",
+    "corpusId": "weituyun",
+    "name": "唯兔云",
+    "nameEn": "OnlyRabbit",
+    "badge": "编辑精选 11",
+    "highlight": "12 地区多线接入 · 多档周期与不限时流量包"
+  },
+  {
+    "rank": 12,
+    "slug": "lingmao",
+    "corpusId": "lingmao",
+    "name": "灵猫",
+    "nameEn": "CivetNet",
+    "badge": "编辑精选 12",
+    "highlight": "港台日新美节点 · 账号登录官方客户端模式"
+  },
+  {
+    "rank": 13,
+    "slug": "flashleap",
+    "corpusId": "shanyue",
+    "name": "闪跃",
+    "nameEn": "FlashLeap",
+    "badge": "编辑精选 13",
+    "highlight": "Win/Mac/Linux/iOS/Android 覆盖 · 不限设备"
+  },
+  {
+    "rank": 14,
+    "slug": "laddercloud",
+    "corpusId": "tiziyun",
+    "name": "梯子云",
+    "nameEn": "LadderCloud",
+    "badge": "编辑展示 14",
+    "highlight": "分级中转与 IEPL/企业专线 · 多档流量梯度"
+  },
+  {
+    "rank": 15,
+    "slug": "lightspeed",
+    "corpusId": "guangsuyun",
+    "name": "光速云",
+    "nameEn": "LightSpeed",
+    "badge": "编辑展示 15",
+    "highlight": "13 地区覆盖 · Win/macOS/Linux/iOS/Android"
+  },
+  {
+    "rank": 16,
+    "slug": "u1s1",
+    "corpusId": "u1s1",
+    "name": "U1S1",
+    "nameEn": "U1S1",
+    "badge": "编辑展示 16",
+    "highlight": "8 地区线路 · 支持电脑/手机/路由器多终端"
+  },
+  {
+    "rank": 17,
+    "slug": "sogoyun",
+    "corpusId": "sogoyun",
+    "name": "Sogo云",
+    "nameEn": "SOGO Cloud",
+    "badge": "编辑展示 17",
+    "highlight": "13 地区 55 节点 · 含软路由与自研官方端"
+  },
+  {
+    "rank": 18,
+    "slug": "kuajie",
+    "corpusId": "kuajie",
+    "name": "跨界",
+    "nameEn": "KuaJie",
+    "badge": "编辑展示 18",
+    "highlight": "Win 10+/macOS 10.15+/iOS 12+/Android 5+ 多端支持"
+  }
+]

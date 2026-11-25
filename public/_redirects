@@ -1,0 +1,4 @@
+# Cloudflare Pages 域名规范与 301 重定向规则
+https://www.tizidaquan.blog/* https://tizidaquan.blog/:splat 301!
+http://tizidaquan.blog/* https://tizidaquan.blog/:splat 301!
+http://www.tizidaquan.blog/* https://tizidaquan.blog/:splat 301!

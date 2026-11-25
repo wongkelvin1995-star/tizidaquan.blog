@@ -1,0 +1,285 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import {
+  SITE,
+  buildArticleSchema,
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  buildHowToSchema,
+  type BreadcrumbItem,
+} from '../utils/site';
+import brandsData from '../data/brands.json';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  breadcrumbs: BreadcrumbItem[];
+  publishDate: string;
+  updatedDate: string;
+  documentedVersion?: string | null;
+  author?: string;
+  headings?: Heading[];
+  faqs?: Array<{ q: string; a: string }>;
+  howToSteps?: Array<{ name: string; text: string }>;
+  relatedBrands?: string[];
+  relatedLinks?: Array<{ title: string; href: string; tag?: string }>;
+  sources?: string[];
+  indexable?: boolean;
+  canonicalPath?: string;
+}
+
+const {
+  title,
+  description,
+  category,
+  breadcrumbs,
+  publishDate,
+  updatedDate,
+  documentedVersion,
+  author = SITE.author,
+  headings = [],
+  faqs = [],
+  howToSteps = [],
+  relatedBrands = [],
+  relatedLinks = [],
+  sources = [],
+  indexable = true,
+  canonicalPath = Astro.url.pathname,
+} = Astro.props;
+
+const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const matchedBrands = brandsData.filter((b) => relatedBrands.includes(b.slug));
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildArticleSchema({
+    title,
+    description,
+    url: canonicalPath,
+    publishDate,
+    updatedDate,
+    author,
+    section: category,
+    isBlogPosting: true,
+  }),
+  buildFaqSchema(faqs),
+  howToSteps.length > 0 ? buildHowToSchema({ name: title, description, steps: howToSteps }) : null,
+];
+
+const SIDEBAR_CATS = [
+  { label: '设备与系统教程', href: '/devices/' },
+  { label: 'AI 工具网络知识', href: '/ai/' },
+  { label: '流媒体网络知识', href: '/streaming/' },
+  { label: '新手入门百科', href: '/beginners/' },
+  { label: '安全与隐私中心', href: '/safety/' },
+  { label: '网络故障排查', href: '/troubleshooting/' },
+  { label: '工具与协议科普', href: '/tools/' },
+  { label: '18家机场品牌库', href: '/brands/' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  indexable={indexable}
+  ogType="article"
+  publishDate={publishDate}
+  updatedDate={updatedDate}
+  schemas={schemas}
+>
+  <div class="bg-slate-50/70 border-b border-slate-200/80">
+    <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm text-slate-500">
+        {breadcrumbs.map((bc, idx) => (
+          <>
+            {idx > 0 && <span aria-hidden="true">/</span>}
+            {idx === breadcrumbs.length - 1 ? (
+              <span class="font-semibold text-slate-800 truncate max-w-[260px] sm:max-w-none">{bc.name}</span>
+            ) : (
+              <a href={bc.url} class="hover:text-blue-600 transition-colors">{bc.name}</a>
+            )}
+          </>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+      <!-- Left Category Sidebar (Desktop) -->
+      <aside class="hidden lg:block lg:col-span-2">
+        <div class="sticky top-24 space-y-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-2xs">
+            <div class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-3">百科知识导航</div>
+            <ul class="space-y-1 text-sm">
+              {SIDEBAR_CATS.map((cat) => (
+                <li>
+                  <a
+                    href={cat.href}
+                    class:list={[
+                      'block rounded-xl px-3 py-2 font-semibold transition-colors',
+                      canonicalPath.startsWith(cat.href)
+                        ? 'bg-blue-50 text-blue-700'
+                        : 'text-slate-700 hover:bg-slate-50 hover:text-blue-600',
+                    ]}
+                  >
+                    {cat.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Center Main Article Column (720–860px) -->
+      <article class="lg:col-span-7 max-w-[860px] w-full mx-auto">
+        <header class="bento-card p-6 sm:p-8 mb-6">
+          <div class="flex flex-wrap items-center gap-2 mb-3">
+            <span class="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-3 py-0.5 text-xs font-bold text-blue-700">
+              {category}
+            </span>
+            {documentedVersion && (
+              <span class="inline-flex items-center rounded-full bg-cyan-50 border border-cyan-200 px-3 py-0.5 text-xs font-semibold text-cyan-800">
+                适用环境：{documentedVersion}
+              </span>
+            )}
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            {title}
+          </h1>
+
+          <p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">{description}</p>
+
+          <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500">
+            <span>作者：<strong class="text-slate-700">{author}</strong></span>
+            <span>发布时间：<time datetime={publishDate}>{publishDate}</time></span>
+            <span>更新日期：<time datetime={updatedDate}>{updatedDate}</time></span>
+            <a href="/contact/" class="text-blue-600 hover:underline font-medium">内容纠错反馈</a>
+          </div>
+        </header>
+
+        <!-- Mobile Collapsible TOC -->
+        {tocHeadings.length > 0 && (
+          <details class="lg:hidden bento-card mb-6 overflow-hidden">
+            <summary class="cursor-pointer px-5 py-3.5 text-sm font-bold text-slate-900 flex items-center justify-between min-h-[44px]">
+              <span>展开本文目录（{tocHeadings.length} 节）</span>
+              <span class="text-xs text-blue-600">点击切换</span>
+            </summary>
+            <nav aria-label="移动端文章目录" class="border-t border-slate-100 px-5 py-3 space-y-1.5 text-sm">
+              {tocHeadings.map((h) => (
+                <a
+                  href={`#${h.slug}`}
+                  class:list={[
+                    'block py-1 text-slate-700 hover:text-blue-600',
+                    h.depth === 3 ? 'pl-4 text-xs text-slate-500' : 'font-semibold',
+                  ]}
+                >
+                  {h.text}
+                </a>
+              ))}
+            </nav>
+          </details>
+        )}
+
+        <!-- Article Body -->
+        <div class="bento-card p-6 sm:p-9 prose-encyclopedia" data-pagefind-body>
+          <slot />
+        </div>
+
+        <!-- Related Brands -->
+        {matchedBrands.length > 0 && (
+          <section class="mt-8 bento-card p-6">
+            <h2 class="text-lg font-extrabold text-slate-900 mb-3">相关机场品牌真实资料参考</h2>
+            <p class="text-xs text-slate-500 mb-4">以下为涉及对应设备或场景的品牌档案摘要，客户端政策与套餐数据均来自公开有日期资料：</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {matchedBrands.map((b) => (
+                <a
+                  href={`/brands/${b.slug}/`}
+                  class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 p-3.5 hover:border-blue-400 hover:bg-blue-50/40 transition-colors"
+                >
+                  <div>
+                    <div class="font-bold text-slate-900 text-sm">{b.name}</div>
+                    <div class="text-xs text-slate-500 mt-0.5">{b.clientFlags.thirdPartyLabel}</div>
+                  </div>
+                  <span class="text-xs font-bold text-blue-600 shrink-0">查看档案 →</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- FAQ Accordion -->
+        <FaqAccordion faqs={faqs} />
+
+        <!-- Sources & Correction -->
+        <footer class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 text-xs sm:text-sm text-slate-600 space-y-3">
+          {sources.length > 0 && (
+            <div>
+              <div class="font-bold text-slate-800 mb-1">参考资料与依据来源：</div>
+              <ul class="list-disc pl-5 space-y-1">
+                {sources.map((src) => (
+                  <li class="break-all">{src}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div class="pt-2 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
+            <span>如发现系统版本变化、软件更新或品牌条款调整，欢迎通过 <a href="/contact/" class="text-blue-600 font-semibold hover:underline">纠错与联系页面</a> 提交反馈。</span>
+            <a href="/editorial-policy/" class="text-blue-600 font-semibold hover:underline">查看编辑规范</a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Right TOC & Related Reading (Desktop) -->
+      <aside class="hidden lg:block lg:col-span-3">
+        <div class="sticky top-24 space-y-5">
+          {tocHeadings.length > 0 && (
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-2xs">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-3">文章目录</div>
+              <nav aria-label="文章目录" class="space-y-1.5 max-h-[55vh] overflow-y-auto pr-1 text-sm">
+                {tocHeadings.map((h) => (
+                  <a
+                    href={`#${h.slug}`}
+                    class:list={[
+                      'block rounded-lg px-2 py-1 text-slate-600 hover:bg-blue-50 hover:text-blue-700 transition-colors leading-snug',
+                      h.depth === 3 ? 'pl-5 text-xs' : 'font-semibold text-slate-800',
+                    ]}
+                  >
+                    {h.text}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          {relatedLinks.length > 0 && (
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-2xs">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-3">延伸知识阅读</div>
+              <ul class="space-y-2.5 text-sm">
+                {relatedLinks.map((rl) => (
+                  <li>
+                    <a href={rl.href} class="group block rounded-xl border border-slate-100 p-2.5 hover:border-blue-200 hover:bg-blue-50/40 transition-colors">
+                      {rl.tag && <div class="text-[11px] font-bold text-blue-600 mb-0.5">{rl.tag}</div>}
+                      <div class="font-semibold text-slate-800 group-hover:text-blue-700 leading-snug">{rl.title}</div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

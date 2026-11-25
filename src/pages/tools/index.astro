@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import clientsData from '../../data/client-compatibility.json';
+import brandsData from '../../data/brands.json';
+import { buildBreadcrumbSchema, buildCollectionSchema, buildFaqSchema } from '../../utils/site';
+
+const breadcrumbs = [
+  { name: '首页', url: '/' },
+  { name: '梯子与网络工具知识', url: '/tools/' },
+];
+
+const FAQS = [
+  {
+    q: '网络工具（梯子）有哪些常见分类？应该选官方端还是第三方开源软件？',
+    a: '常见工具分为三大类：① 品牌自研官方客户端（含 iOS Nextin 协作登录模式），账号登录即用、防订阅泄露；② 开源跨平台通用客户端（Clash Verge Rev、Mihomo Party、Clash Meta for Android、sing-box），适合开放第三方订阅的品牌与路由器用户；③ 传统商业 VPN 软件，按设备包月且以全局隧道为主。',
+  },
+  {
+    q: '为什么梯子大全不制作“2026梯子推荐前十名测速排行榜”？',
+    a: '关于梯子推荐、魔法上网与 Clash/Shadowrocket 软件教程的深度主站归属兄弟站 mofatizi.blog；梯子大全专注作为设备兼容性、基础概念、AI/流媒体规则与排障百科，且坚持不发布虚构测速与主观使用排行。',
+  },
+];
+
+const schemas = [
+  buildBreadcrumbSchema(breadcrumbs),
+  buildCollectionSchema({
+    title: '网络工具与代理客户端知识中心（梯子知识百科）',
+    description: '系统整理网络工具类型、官方客户端与Clash/Shadowrocket生态适用前提、设备兼容及安全购买条件。',
+    url: '/tools/',
+  }),
+  buildFaqSchema(FAQS),
+];
+---
+
+<BaseLayout
+  title="网络工具与梯子知识百科｜客户端生态、适用设备与购买条件说明"
+  description="系统介绍2026常见网络代理工具与客户端类型（官方端、Nextin、Clash Verge Rev、Shadowrocket），区分工具适用设备、订阅政策及与传统VPN的差异。"
+  canonicalPath="/tools/"
+  schemas={schemas}
+>
+  <section class="bg-zone-hero border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="面包屑导航" class="text-xs sm:text-sm text-slate-500 mb-3">
+        <a href="/" class="hover:text-blue-600">首页</a> / <span class="font-semibold text-slate-800">梯子与网络工具知识</span>
+      </nav>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900">网络工具与代理客户端知识百科</h1>
+      <p class="mt-3 text-sm sm:text-base text-slate-700 max-w-3xl leading-relaxed">
+        本栏目从工具架构、适用操作系统、客户端获取来源与购买前提条件出发，帮助您理清“梯子”与各类网络代理工具的真实生态差异（不制作虚构测速排行，也不重复复制客户端界面操作长文）。
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="/tools/vpn-and-proxy/" class="btn-primary text-sm">VPN 和机场有什么区别？ →</a>
+        <a href="/devices/" class="btn-secondary text-sm">按设备查看使用教程 →</a>
+        <a href="/brands/" class="btn-secondary text-sm">查看 18 家品牌目录 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 space-y-10">
+    <!-- Client Ecosystem Cards -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-extrabold text-slate-900">五大主流网络工具与客户端形态</h2>
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {clientsData.map((cl) => (
+          <article class="bento-card p-6 flex flex-col justify-between gap-4">
+            <div class="space-y-2.5">
+              <h3 class="text-lg font-extrabold text-slate-900">{cl.name}</h3>
+              <div class="flex flex-wrap gap-1.5">
+                {cl.platforms.map((p) => (
+                  <span class="rounded bg-blue-50 border border-blue-200 px-2 py-0.5 text-[11px] font-bold text-blue-700">{p}</span>
+                ))}
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">{cl.summary}</p>
+              <div class="text-xs text-emerald-800 bg-emerald-50 border border-emerald-200 rounded-xl p-2.5">
+                <strong>特点：</strong>{cl.pros.join('；')}
+              </div>
+              <div class="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-xl p-2.5">
+                <strong>限制：</strong>{cl.cons.join('；')}
+              </div>
+            </div>
+            {cl.brandsUsing && (
+              <div class="text-xs text-slate-500 pt-2 border-t border-slate-100">
+                典型采用品牌：{cl.brandsUsing.join('、')}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <!-- Purchase Conditions & Auxiliary Links for Keywords 081-100 -->
+    <div class="bento-card p-6 sm:p-8 space-y-4">
+      <h2 class="text-xl font-extrabold text-slate-900">按需求进入对应专业知识模块（081–100 知识承接导航）</h2>
+      <p class="text-sm text-slate-600">
+        与其寻找笼统的“推荐排行榜”，不如直接按您关心的真实问题进入对应专业模块：
+      </p>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { title: '看重长期稳定性：如何评估服务持续性？', href: '/safety/reliability/', tag: '可靠性评估' },
+          { title: '预算敏感：首次购买如何选低门槛方案？', href: '/beginners/choosing-service/', tag: '选购条件' },
+          { title: '感觉速度慢：本地与链路排障全流程', href: '/troubleshooting/slow-connection/', tag: '速度排查' },
+          { title: 'VPN 与机场代理：技术与成本全对比', href: '/tools/vpn-and-proxy/', tag: '深度对比' },
+          { title: '节点怎么切换：场景选区与倍率规律', href: '/beginners/selecting-nodes/', tag: '节点切换' },
+          { title: '18 家机场品牌完整资料与协议矩阵', href: '/brands/', tag: '品牌索引' },
+        ].map((item) => (
+          <a href={item.href} class="rounded-xl border border-slate-200 p-4 hover:border-blue-400 hover:bg-blue-50/30 transition-colors">
+            <span class="text-[11px] font-bold text-blue-700">{item.tag}</span>
+            <div class="text-sm font-extrabold text-slate-900 mt-1">{item.title} →</div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Quick Brand Protocol Matrix -->
+    <div class="space-y-3">
+      <h2 class="text-xl font-extrabold text-slate-900">18 家品牌客户端开放策略一览</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>品牌</th>
+              <th>客户端与订阅策略</th>
+              <th>资料提及协议</th>
+              <th>支持系统范围</th>
+            </tr>
+          </thead>
+          <tbody>
+            {brandsData.map((b) => (
+              <tr>
+                <td class="font-bold"><a href={`/brands/${b.slug}/`} class="text-blue-700 hover:underline">{b.name}</a></td>
+                <td class="text-xs">{b.clientFlags.thirdPartyLabel}</td>
+                <td class="text-xs">{b.protocols?.length ? b.protocols.join('、') : '以官方客户端内置为准'}</td>
+                <td class="text-xs">{b.supportedPlatforms ? b.supportedPlatforms.join(' / ') : '桌面端与移动端官网下载'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <FaqAccordion faqs={FAQS} />
+  </section>
+</BaseLayout>

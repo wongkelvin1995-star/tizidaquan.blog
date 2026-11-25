@@ -1,0 +1,95 @@
+---
+import KnowledgeLayout from '../../../layouts/KnowledgeLayout.astro';
+
+const title = 'VPN和机场有什么区别？加密隧道、规则分流、价格成本与加速器对比';
+const description = '深入对比传统商业VPN、机场代理服务与游戏加速器：解析传输协议差异、全局加密与智能规则分流原理、按设备计费与按流量计费的成本区别及适用场景。';
+const faqs = [
+  {
+    q: '机场和传统商业 VPN 哪个更划算？',
+    a: '对国内中文用户而言，若日常主要用来查资料、使用 AI 工具和看海外流媒体，按月流量计费、支持国内外智能分流且起步月付在 ¥15–¥30 左右的机场通常成本更低；若在海外出差需要对全部端口建立强隔离全局加密隧道或必须购买正规企业团队按席位授权，商业 VPN 则更合规统一。',
+  },
+  {
+    q: '为什么不能用机场代替专门的网游加速器来打国服或外服竞技游戏？',
+    a: '传统游戏加速器针对游戏 UDP 数据包、特定游戏区服 NAT 类型与游戏进程路由做了专门优化且常只代理游戏进程；机场主要服务于网页 HTTPS、流媒体与日常工具（部分节点甚至未优化游戏低抖动 UDP 转发），两者定位不同。',
+  },
+];
+---
+
+<KnowledgeLayout
+  title={title}
+  description={description}
+  category="网络工具科普"
+  breadcrumbs={[
+    { name: '首页', url: '/' },
+    { name: '梯子知识', url: '/tools/' },
+    { name: 'VPN与机场区别', url: '/tools/vpn-and-proxy/' },
+  ]}
+  publishDate="2026-11-25"
+  updatedDate="2026-11-25"
+  documentedVersion="网络传输架构与计费模式对比"
+  faqs={faqs}
+  relatedBrands={['lingdongyun', 'breezenet', 'flyv']}
+  relatedLinks={[
+    { title: '网络工具与客户端生态总览', href: '/tools/', tag: '工具百科' },
+    { title: '代理模式与直连模式区别', href: '/beginners/proxy-modes/', tag: '分流原理' },
+    { title: '第一次买机场怎么选', href: '/beginners/choosing-service/', tag: '选购决策' },
+  ]}
+  sources={['IETF IPsec / WireGuard 与 TLS 代理技术概念说明', '18家品牌计费与设备限制档案']}
+  canonicalPath="/tools/vpn-and-proxy/"
+>
+  <p>
+    <strong>直接结论</strong>：<strong>传统商业 VPN</strong> 的核心特征是“全局加密虚拟网卡隧道 + 按台数限设备 + 固定包月无限流量”，而<strong>机场代理服务</strong>的核心特征是“应用层/规则智能分流 + 按每月流量配额计费 + 普遍支持多终端共用”。至于“<strong>VPN 加速器</strong>”，网游加速器专门优化游戏进程与 UDP NAT，并不适合用来访问海外网页或 AI 工具。
+  </p>
+
+  <h2>一、传统 VPN、机场代理与游戏加速器的四维对比</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>对比维度</th>
+        <th>传统商业 VPN</th>
+        <th>机场网络代理服务</th>
+        <th>专用游戏加速器</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>核心网络协议</strong></td>
+        <td>WireGuard、OpenVPN、IPsec / IKEv2</td>
+        <td>Trojan、VLESS、VMess、Shadowsocks、Hysteria2</td>
+        <td>游戏专用加密隧道与运营商互联加速节点</td>
+      </tr>
+      <tr>
+        <td><strong>流量分流方式</strong></td>
+        <td>默认全局接管所有流量（Split Tunneling 需手动繁琐配置）</td>
+        <td>默认规则分流（Rule）：国内直连、海外走代理，互不干扰</td>
+        <td>仅拦截指定游戏进程数据，不接管浏览器网页</td>
+      </tr>
+      <tr>
+        <td><strong>计费与设备限制</strong></td>
+        <td>通常按美金年付为主（约 $3–$12/月），限制同时在线 5–10 台设备</td>
+        <td>多为人民币按月/年流量计费（¥15–¥30/月起，常规档多不限个人设备）</td>
+        <td>按月卡/年卡按游戏端计时，仅限游戏加速使用</td>
+      </tr>
+      <tr>
+        <td><strong>典型适用场景</strong></td>
+        <td>海外出差办公、公共 Wi-Fi 全流量加密、企业远程内网接入</td>
+        <td>查外文资料、ChatGPT/Claude/Gemini、YouTube/Netflix 等</td>
+        <td>Steam/PS5/Switch 联机降丢包与改善 NAT 类型</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>二、为什么很多国内用户感觉“机场比传统大牌 VPN 更好用”？</h2>
+  <ol>
+    <li><strong>规则分流省去了频繁开关的麻烦</strong>：开了机场客户端的规则模式后，微信、淘宝、国内网银照样走家里原生宽带，不需要像老式全局 VPN 那样看国内视频就得断开、查资料再连上。</li>
+    <li><strong>跨境传输路径差异</strong>：部分传统海外大牌 VPN 主要面向欧美用户保护公共 Wi-Fi 隐私设计，其标准 WireGuard / OpenVPN 特征在复杂跨境网络环境下容易受阻；而现代机场协议多基于标准 TLS 加密伪装与 BGP/专线入口中转。</li>
+    <li><strong>门槛与支付灵活</strong>：相比动辄一次性购买一两年美金订阅的海外大牌 VPN，支持月付或百元内轻量年付/不限时包的机场试错成本低得多。</li>
+  </ol>
+
+  <h2>三、什么时候反而不应该用机场，而应该用合规 VPN？</h2>
+  <ul>
+    <li><strong>企业远程办公接入公司内网</strong>：务必使用公司 IT 部门配发的正式企业 VPN（如 Cisco AnyConnect、WireGuard 企业网关等）。</li>
+    <li><strong>极高强度的全系统隔离要求</strong>：不要把个人日常机场当作“绝对匿名”的军用隐身工具，任何商业代理都存在自身边界，详见 <a href="/safety/airport-security/">机场安全吗</a>。</li>
+  </ul>
+</KnowledgeLayout>
